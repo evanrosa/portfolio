@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className="text-3xl font-bold underline">evan</h1>
+        <h1 className="text-3xl font-bold underline font-code">evan</h1>
       </main>
 
       <footer className={styles.footer}>
