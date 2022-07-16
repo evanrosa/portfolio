@@ -1,13 +1,18 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Navigation from '../components/header';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <header>
+        <Navigation/>
+      </header>
 
       <main className={styles.main}>
         <h1 className="text-3xl font-bold underline font-code">evan</h1>

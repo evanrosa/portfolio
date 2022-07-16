@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "lint": "next lint",
+    "test:e2e": "playwright test",
     "prettier": "prettier --config .prettierrc --write ./**/*.{js,ts,tsx}",
     "dev": "next dev",
     "build": "next build",
