@@ -1,3 +1,7 @@
+Contains typescript, prettier, eslint, nextjs, tailwindcss
+
+https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env
+
 # With Docker - Multiple Deployment Environments
 
 This examples shows how to use Docker with Next.js and deploy to multiple environment with different env values. Based on the [deployment documentation](https://nextjs.org/docs/deployment#docker-image).
