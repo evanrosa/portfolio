@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Navigation from '../components/header';
+import React from 'react';
+import IndexLayout from '../components/layouts/interface';
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <Head>
@@ -10,12 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <Navigation/>
-      </header>
-
       <main className={styles.main}>
-        <h1 className="text-3xl font-bold underline font-code">evan</h1>
       </main>
 
       <footer className={styles.footer}>
@@ -30,3 +26,6 @@ export default function Home() {
     </div>
   );
 }
+
+Home.Layout = IndexLayout;
+export default Home;
