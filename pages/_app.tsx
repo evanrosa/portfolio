@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import baseTheme from '../themes/darkTheme';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 
 import type { NextComponentType } from 'next';
 import type { AppProps } from 'next/app';
@@ -10,9 +12,12 @@ type CustomAppProps = AppProps & { Component: CustomNextComponent };
 function MyApp({ Component, pageProps }: CustomAppProps) {
   const Layout: CustomNextComponent | typeof Fragment = Component.Layout ? Component.Layout : Fragment;
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider theme={baseTheme}>
+      <CssBaseline />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 

@@ -10,13 +10,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Jul 22 10:02:02 2022
+# Make data base, printed on Tue Aug  9 17:20:09 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -50,13 +49,11 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 NVM_BIN = /Users/evro/.nvm/versions/node/v14.16.0/bin
 # environment
-LaunchInstanceID = 17CCF175-21D9-410B-AEED-1767ED4241FE
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.rReDcIahBH/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mqBkr1vSzI/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -74,11 +71,11 @@ HOME = /Users/evro
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/evro/Library/Application Support/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = /Users/evro/Library/Application Support/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LOGNAME = evro
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 NVM_CD_FLAGS = -q
 # environment
@@ -114,7 +111,7 @@ TMPDIR = /var/folders/cp/y_wm33cd463fshnp8b9k5q640000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/evro/Library/Application Support/Code/1.69.1-main.sock
+VSCODE_IPC_HOOK = /Users/evro/Library/Application Support/Code/1.70.0-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -126,7 +123,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/evro/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.13056777.13056783
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.15502365.15502371
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -147,8 +144,6 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186b2
 # automatic
 ^F = $(notdir $^)
 # default
@@ -160,9 +155,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 596
+VSCODE_PID = 1885
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
+# Load=71/1024=7%, Rehash=0, Collisions=1/95=1%
 
 # Pattern-specific Variable Values
 
@@ -170,7 +165,7 @@ VSCODE_PID = 596
 
 # Directories
 
-# . (device 16777234, inode 13385442): 32 files, no impossibilities.
+# . (device 16777230, inode 13385442): 32 files, no impossibilities.
 
 # 32 files, no impossibilities in 1 directories.
 
@@ -310,6 +305,6 @@ stop-production:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jul 22 10:02:02 2022
+# Finished Make data base on Tue Aug  9 17:20:09 2022
 
  
