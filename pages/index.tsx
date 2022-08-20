@@ -9,6 +9,7 @@ import Contact from '../components/contact';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
+import { motion, Variants } from 'framer-motion';
 
 function Home({ projects }: ProjectsProps) {
   return (
@@ -28,6 +29,7 @@ function Home({ projects }: ProjectsProps) {
         </main>
       </Container>
 
+      {/* Inspired by - https://brittanychiang.com/ */}
     </>
   );
 }

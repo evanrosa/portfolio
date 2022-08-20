@@ -42,10 +42,11 @@ export default function Job() {
   };
 
   return (
-    <Container>
+    <Container sx={{ padding: '100px 0 ' }} >
       <section id="#Experience">
         <Typography variant="h2">Where I've worked</Typography>
-        <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
+        <Box sx={{height: '700px'}}>
+           <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
           <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -66,24 +67,24 @@ export default function Job() {
                 Digital Turbine
               </a>
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle2">
               <time dateTime="2020-03">March 2020</time> - Present
             </Typography>
             <ul>
               <li>
-                <Typography variant="body2">
+                <Typography variant="caption">
                   Tasked with managing all Google Analytics 360 properties and Google Tag Manager integrations (i.e.
                   custom events etc) for all telecommunication partners.
                 </Typography>
               </li>
               <li>
-                <Typography variant="body2">
+                <Typography variant="caption">
                   Optimized data flows for Google Analytics into BigQuery which includes standardizations on data
                   collection and implementing best practices for developing teams to integrate with GA and GTM.
                 </Typography>
               </li>
               <li>
-                <Typography variant="body2">
+                <Typography variant="caption">
                   Tasked with writing python and javascript scripts for analytic optimizations which include APIs such
                   as Selenium, Google Tag Manager, Google Analytics Reporting/Admin, and more. Specifically, I'm
                   currently utilizing GTM and GA4 APIs to build out analytic environments programmatically rather than
@@ -92,7 +93,7 @@ export default function Job() {
                 </Typography>
               </li>
               <li>
-                <Typography variant="body2">
+                <Typography variant="caption">
                   Currently leading efforts on GA4 migrations which will include setting up and designing data workflows
                   in GTM that are in line with GA4 requirements. I've also created independent environments within
                   Google Tag Manager, GA4, and Firebase to distinguish test users from live users. Moreover, during this
@@ -244,6 +245,7 @@ export default function Job() {
               </li>
             </ul>
           </TabPanel>
+        </Box>
         </Box>
       </section>
     </Container>

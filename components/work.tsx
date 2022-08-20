@@ -17,6 +17,7 @@ export default function Work({ projects }: ProjectPost) {
   return (
     <>
       <Container>
+        <Typography variant="h2">Things I've built in Web2</Typography>
         <section>
           <a href="https://ayobafoods.com/" target={'_blank'}>
             <Box
