@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Link from 'next/link'
+import Link from 'next/link';
 
 interface Props {
   window?: () => Window;
@@ -63,13 +63,13 @@ export default function DrawerAppBar(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            <Link href='#' scroll={false}> &#60;evro.eth/&#62; </Link>
+            {' '}
+            &#60;evro.eth/&#62;{' '}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-
-              <Link href={`#`+item} scroll={false}>
-                <Button key={item} sx={{ color: '#fff' }} id={`#`+item}>
+              <Link href={`#` + item} scroll={false}>
+                <Button key={item} sx={{ color: '#fff' }} id={`#` + item}>
                   <a>{item}</a>
                 </Button>
               </Link>

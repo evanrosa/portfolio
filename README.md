@@ -1,3 +1,6 @@
+Follow NVM to use appropriate node version
+https://itnext.io/nvm-the-easiest-way-to-switch-node-js-environments-on-your-machine-in-a-flash-17babb7d5f1b
+
 Contains typescript, prettier, eslint, nextjs, tailwindcss
 
 https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env
