@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Typography, Container } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
+import { Typography, Container, Box } from '@mui/material';
 import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -26,8 +25,8 @@ export default function About() {
       <Container sx={{ paddingBottom: '100px' }}>
         {/* ABOUT */}
         <section id="#About">
-          <Grid container spacing={2}>
-            <Grid xs={8}>
+          <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
+            <Grid xs={12} md={8}>
               <Typography variant="h2">About Me</Typography>
               <Typography variant="subtitle2" sx={{ padding: '15px 0px' }}>
                 So, I started my journey in Web2 as the analytics guy bascially running reports and things of that sort.
@@ -39,55 +38,55 @@ export default function About() {
                 and established organizations. My main focus today is my day job which I'm currently a data engineer
                 building and optimizing data workflows which include data gathering, cleaning, sorting etc. My other
                 main focus is within the Web3 ethereum ecosystem where I particpate in NFT communities and build Web3
-                apps. I'm currently learning solidity for contract building but here are some other technologies I work
-                with:
+                apps.
+              </Typography>
+              <Typography variant="subtitle2" sx={{ padding: '15px 0px' }}>
+                I'm currently learning GCP and solidity for ethereum smart contract building but here are some other
+                technologies I work with:
               </Typography>
 
               <Grid container spacing={2}>
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="caption">JavaScript</Typography>
+                      <Typography variant="body2">JavaScript</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">React/Nextjs</Typography>
+                      <Typography variant="body2">React/Nextjs</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Typescript</Typography>
+                      <Typography variant="body2">Typescript</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Python</Typography>
+                      <Typography variant="body2">Python</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">SQL</Typography>
-                    </li>
-                    <li>
-                      <Typography variant="caption">Node/NPM/Yarn</Typography>
+                      <Typography variant="body2">SQL</Typography>
                     </li>
                   </ul>
                 </Grid>
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="caption">Git/GitLab/Github</Typography>
+                      <Typography variant="body2">Node/NPM/Yarn</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Google Cloud Platform</Typography>
+                      <Typography variant="body2">Git/GitLab/Github</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Google BigQuery</Typography>
+                      <Typography variant="body2">Google BigQuery</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Google Analytics</Typography>
+                      <Typography variant="body2">Google Analytics</Typography>
                     </li>
                     <li>
-                      <Typography variant="caption">Google Tag Manager</Typography>
+                      <Typography variant="body2">Google Tag Manager</Typography>
                     </li>
                   </ul>
                 </Grid>
               </Grid>
             </Grid>
-            <Grid xs={4}>
+            <Grid xs={12} md={4}>
               <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
