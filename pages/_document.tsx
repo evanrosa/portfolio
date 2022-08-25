@@ -17,19 +17,6 @@ class WebDocument extends Document {
             })(window,document,'script','dataLayer','GTM-NL3W835');`,
             }}
           ></Script>
-          <Script
-            id="darkmode"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-              if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-              } else {
-                  document.documentElement.classList.remove('dark')
-              }
-            `,
-            }}
-          ></Script>
         </Head>
         <body>
           <noscript

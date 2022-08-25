@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
+import SubHeaderNavigation from './ThemeToggler'
 
 interface Props {
   window?: () => Window;
@@ -54,7 +55,7 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
-        <Toolbar sx={{ bgcolor: 'common.layout.red' }}>
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -68,14 +69,15 @@ export default function DrawerAppBar(props: Props) {
             {' '}
             &#60;evro.eth/&#62;{' '}
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block'} }}>
             {navItems.map((item) => (
               <Link href={`#` + item} scroll={false}>
-                <Button key={item} sx={{ color: '#fff' }} id={`#` + item}>
+                <Button key={item} id={`#` + item} sx={{textTransform:'capitalize'}}>
                   <a>{item}</a>
                 </Button>
               </Link>
             ))}
+            <SubHeaderNavigation/>
           </Box>
         </Toolbar>
       </AppBar>

@@ -33,11 +33,7 @@ export default function Job() {
           aria-labelledby={`vertical-tab-${index}`}
           {...other}
         >
-          {value === index && (
-            <Box sx={{ p: 3 }}>
-              {children}
-            </Box>
-          )}
+          {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
         </div>
       );
     } else {
@@ -76,14 +72,14 @@ export default function Job() {
 
         {isDesktop ? (
           <Box sx={{ height: '700px' }}>
-            <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 250 }}>
+            <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
               <Tabs
                 orientation="vertical"
                 variant="scrollable"
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
-                sx={{ borderRight: 1, borderColor: 'divider' }}
+                sx={{ borderRight: 1, borderColor: 'divider', minWidth: '175px' }}
               >
                 <Tab label="Digital Turbine" {...a11yProps(0)} />
                 <Tab label="Booz Allen Hamilton" {...a11yProps(1)} />
@@ -91,7 +87,7 @@ export default function Job() {
               </Tabs>
               <TabPanel value={value} index={0}>
                 <Typography variant="h3">
-                  Data Engineer at{' '}
+                  Data Engineer at <br />
                   <a href="https://www.digitalturbine.com/" target={'_blank'}>
                     Digital Turbine
                   </a>
@@ -136,7 +132,7 @@ export default function Job() {
               </TabPanel>
               <TabPanel value={value} index={1}>
                 <Typography variant="h3">
-                  Lead Web Analyst Associate at{' '}
+                  Lead Web Analyst at <br />
                   <a href="https://www.bah.com/" target={'_blank'}>
                     Booz Allen Hamilton
                   </a>
@@ -186,7 +182,7 @@ export default function Job() {
               </TabPanel>
               <TabPanel value={value} index={2}>
                 <Typography variant="h3">
-                  Web Analyst Associate at{' '}
+                  Web Analyst Associate at <br />
                   <a href="https://www.acs.org/" target={'_blank'}>
                     The American Chemical Society
                   </a>
@@ -246,7 +242,7 @@ export default function Job() {
             </Box>
             <TabPanel value={value} index={0}>
               <Typography variant="h3">
-                Data Engineer at
+                Data Engineer at <br />
                 <a href="https://www.digitalturbine.com/" target={'_blank'}>
                   Digital Turbine
                 </a>
@@ -291,7 +287,7 @@ export default function Job() {
             </TabPanel>
             <TabPanel value={value} index={1}>
               <Typography variant="h3">
-                Lead Web Analyst Associate at
+                Lead Web Analyst at <br />
                 <a href="https://www.bah.com/" target={'_blank'}>
                   Booz Allen Hamilton
                 </a>
@@ -341,7 +337,7 @@ export default function Job() {
             </TabPanel>
             <TabPanel value={value} index={2}>
               <Typography variant="h3">
-                Web Analyst Associate at
+                Web Analyst Associate at <br />
                 <a href="https://www.acs.org/" target={'_blank'}>
                   The American Chemical Society
                 </a>
