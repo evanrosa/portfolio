@@ -3,16 +3,9 @@ import { amber, deepOrange, grey, blue, common } from '@mui/material/colors';
 const palette = {
   light: {
     primary: {
-      main: '#EBF2FA',
-      light: '#EBF2FA',
-      dark: '#0a192f',
-    },
-  },
-  dark: {
-    primary: {
-      main: '#0a192f',
-      light: '#EBF2FA',
-      dark: '#0a192f',
+      main: '#ebf2fa' /* Sky */,
+      light: '#8892b0' /* Grey */,
+      dark: '#0a192f' /* Dark Blue */,
     },
   },
 };
@@ -32,41 +25,32 @@ export const getDesignTokens = (mode) => ({
             paper: palette.light.primary.main,
           },
 
-          divider: amber[200],
+          divider: palette.light.primary.dark,
           text: {
-            primary: grey[900],
-            secondary: grey[800],
+            primary: palette.light.primary.dark,
+            secondary: palette.light.primary.light,
           },
         }
       : {
           primary: {
-            main: palette.dark.primary.main,
-            light: palette.dark.primary.light,
-            dark: palette.dark.primary.dark,
+            main: palette.light.primary.main,
+            light: palette.light.primary.light,
+            dark: palette.light.primary.dark,
           },
-          divider: palette.dark.primary.dark,
+          divider: palette.light.primary.light,
           background: {
-            default: palette.dark.primary.dark,
-            paper: palette.dark.primary.dark,
+            default: palette.light.primary.dark,
+            paper: palette.light.primary.dark,
           },
+
           text: {
-            primary: palette.dark.primary.light,
-            secondary: grey[500],
+            primary: palette.light.primary.main,
+            secondary: palette.light.primary.light,
           },
         }),
   },
   typography: {
-    fontFamily: [
-      'Source Code Pro',
-      'Oswald',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
-    body1: {
-      fontFamily: 'Source Code Pro, Poppins, Arial, sans-serif',
-    },
+    fontFamily: ['Source Code Pro', 'Roboto', 'Arial', 'sans-serif'].join(','),
   },
 });
 
@@ -85,8 +69,34 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               root: {
                 color: palette.light.primary.dark,
+                borderColor: palette.light.primary.dark,
               },
-            }
+            },
+          },
+          MuiLink: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.dark,
+              },
+            },
+          },
+          MuiTab: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.dark,
+                '&.Mui-selected': {
+                  color: palette.light.primary.light,
+                },
+              },
+            },
+          },
+
+          MuiTabs: {
+            styleOverrides: {
+              indicator: {
+                backgroundColor: palette.light.primary.dark,
+              },
+            },
           },
         }
       : {
@@ -94,6 +104,28 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               colorPrimary: {
                 backgroundColor: palette.light.primary.dark,
+              },
+            },
+          },
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.main,
+                borderColor: palette.light.primary.main,
+              },
+            },
+          },
+          MuiLink: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.light,
+              },
+            },
+          },
+          MuiTab: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.light,
               },
             },
           },

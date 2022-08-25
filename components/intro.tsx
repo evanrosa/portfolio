@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Typography, Container } from '@mui/material';
+import { Button, Typography, Container, Link } from '@mui/material';
 
 export default function Intro() {
   return (
@@ -24,13 +24,13 @@ export default function Intro() {
           <Typography variant="h2" pb={4} style={{ fontWeight: 400 }}>
             Building awesome apps in Web2 while maintaining my sanity in the Web3.
           </Typography>
-          <Typography variant="subtitle2" pb={3}>
+          <Typography variant="body2" pb={3}>
             Data engineer by trade working with APIs, creating and managing Web2 analytic architretures, & working on
             cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
-              <a href="https://www.digitalturbine.com/" target={'_blank'}>
+              <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                 Digital Turbine
-              </a>
+              </Link>
             </span>
             . At night, or whenever I have free time, I'm learning how to build Web3 apps. I'm currently a hodler of
             Loser Club, Illogics, Tiny Astro among others.

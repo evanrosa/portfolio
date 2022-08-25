@@ -10,17 +10,8 @@ export default function SubHeaderNavigation() {
   const colorMode = React.useContext(ColorModeContext);
 
   return (
-
-      <IconButton
-        sx={{ ml: 1 }}
-        onClick={colorMode.toggleColorMode}
-        color="inherit"
-      >
-        {theme.palette.mode === 'dark' ? (
-          <Brightness4Icon />
-        ) : (
-          <Brightness7Icon />
-        )}
-      </IconButton>
+    <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+      {theme.palette.mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
+    </IconButton>
   );
 }

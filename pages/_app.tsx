@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { ThemeProvider, CssBaseline,  createTheme, responsiveFontSizes } from '@mui/material';
+import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { getDesignTokens, getThemedComponents } from '../themes/mainTheme';
@@ -31,21 +31,17 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
     []
   );
 
-  let theme = useMemo(
-    () =>
-      createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))),
-    [mode]
-  );
+  let theme = useMemo(() => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))), [mode]);
 
   theme = responsiveFontSizes(theme);
   return (
     <ColorModeContext.Provider value={colorMode}>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </ColorModeContext.Provider>
   );
 }

@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
-import SubHeaderNavigation from './ThemeToggler'
+import SubHeaderNavigation from './ThemeToggler';
 
 interface Props {
   window?: () => Window;
@@ -69,15 +69,16 @@ export default function DrawerAppBar(props: Props) {
             {' '}
             &#60;evro.eth/&#62;{' '}
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block'} }}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
             {navItems.map((item) => (
               <Link href={`#` + item} scroll={false}>
-                <Button key={item} id={`#` + item} sx={{textTransform:'capitalize'}}>
+                <Button key={item} id={`#` + item} sx={{ textTransform: 'capitalize' }}>
                   <a>{item}</a>
                 </Button>
               </Link>
             ))}
-            <SubHeaderNavigation/>
+
+            <SubHeaderNavigation />
           </Box>
         </Toolbar>
       </AppBar>
