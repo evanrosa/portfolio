@@ -51,6 +51,9 @@ export const getDesignTokens = (mode) => ({
   },
   typography: {
     fontFamily: ['Source Code Pro', 'Roboto', 'Arial', 'sans-serif'].join(','),
+    body1:{
+    fontFamily: ['Noto Sans JP', 'Arial', 'sans-serif'].join(','),
+    }
   },
 });
 
@@ -106,8 +109,6 @@ export const getThemedComponents = (mode) => ({
           MuiAppBar: {
             styleOverrides: {
               colorPrimary: {
-                boxShadow:
-                  '0px 2px 4px -1px rgb(0 0 0 / 0%), 0px 4px 5px 0px rgb(0 0 0 / 0%), 0px 1px 10px 0px rgb(0 0 0 / 0%);',
                 backgroundImage: 'none',
               },
             },

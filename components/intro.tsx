@@ -24,7 +24,7 @@ export default function Intro() {
           <Typography variant="h3" component="h2" pb={4} style={{ fontWeight: 900 }}>
             Building apps in Web2 while learning Web3.
           </Typography>
-          <Typography variant="body2" pb={3}>
+          <Typography variant="body1" pb={3}>
             Data engineer by trade working with APIs, creating and managing Web2 analytic architretures, & working on
             cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
