@@ -111,7 +111,11 @@ export default function DrawerAppBar(props: Props) {
               {navItems.map((item) => (
                 <Link href={`#` + item} passHref>
                   <Button key={item} sx={{ textTransform: 'capitalize' }}>
-                    {item}
+                    
+                    <Typography variant="body2">
+                        {item}
+                    </Typography>
+                    
                   </Button>
                 </Link>
               ))}

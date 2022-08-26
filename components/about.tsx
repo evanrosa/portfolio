@@ -28,19 +28,19 @@ export default function About() {
           <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
             <Grid xs={12} md={8}>
               <Typography variant="h2">About Me</Typography>
-              <Typography variant="subtitle2" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
                 So, I started my journey in Web2 as the analytics guy bascially running reports and things of that sort.
                 I grew tired of that and started learning the code behind the numbers; it opened a new world of creation
                 and understanding behavior that I grew fond of.
               </Typography>
-              <Typography variant="subtitle2" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
                 Fast forward through time and I've had the privledge of working at non-profits, government contracts,
                 and established organizations. My main focus today is my day job which I'm currently a data engineer
                 building and optimizing data workflows which include data gathering, cleaning, sorting etc. My other
                 main focus is within the Web3 ethereum ecosystem where I particpate in NFT communities and build Web3
                 apps.
               </Typography>
-              <Typography variant="subtitle2" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
                 I'm currently learning GCP and solidity for ethereum smart contract building but here are some other
                 technologies I work with:
               </Typography>
@@ -49,38 +49,38 @@ export default function About() {
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="body2">JavaScript</Typography>
+                      <Typography variant="body1">JavaScript</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">React/Nextjs</Typography>
+                      <Typography variant="body1">React/Nextjs</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Typescript</Typography>
+                      <Typography variant="body1">Typescript</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Python</Typography>
+                      <Typography variant="body1">Python</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">SQL</Typography>
+                      <Typography variant="body1">SQL</Typography>
                     </li>
                   </ul>
                 </Grid>
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="body2">Node/NPM/Yarn</Typography>
+                      <Typography variant="body1">Node/NPM/Yarn</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Git/GitLab/Github</Typography>
+                      <Typography variant="body1">Git/GitLab/Github</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Google BigQuery</Typography>
+                      <Typography variant="body1">Google BigQuery</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Google Analytics</Typography>
+                      <Typography variant="body1">Google Analytics</Typography>
                     </li>
                     <li>
-                      <Typography variant="body2">Google Tag Manager</Typography>
+                      <Typography variant="body1">Google Tag Manager</Typography>
                     </li>
                   </ul>
                 </Grid>

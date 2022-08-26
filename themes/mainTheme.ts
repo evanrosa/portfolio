@@ -50,10 +50,20 @@ export const getDesignTokens = (mode) => ({
         }),
   },
   typography: {
-    fontFamily: ['Source Code Pro', 'Roboto', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['Anek Telugu', 'Roboto', 'Arial', 'sans-serif'].join(','),
+    h1:{
+    fontFamily: ['Source Code Pro','Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
+    h6:{
+    fontFamily: ['Source Code Pro','Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
+    body2:{
+    fontFamily: ['Source Code Pro','Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
     body1:{
-    fontFamily: ['Noto Sans JP', 'Arial', 'sans-serif'].join(','),
+      fontSize: 18,
     }
+    
   },
 });
 
