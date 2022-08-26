@@ -18,8 +18,8 @@ export default function Work({ projects }: ProjectPost) {
     <>
       <Container>
         <Typography variant="h2">Things I've built in Web2</Typography>
-        <section>
-          <a href="https://ayobafoods.com/" target={'_blank'}>
+        <section id="Work">
+          <a href="https://ayobafoods.com/" target={'_blank'} rel="noreferrer">
             <Box
               sx={{
                 display: 'flex',
@@ -54,7 +54,7 @@ export default function Work({ projects }: ProjectPost) {
                 return (
                   <Grid xs={12} sm={6} md={3}>
                     <Link href={{ pathname: `${projects.frontMatter.website}` }}>
-                      <a target={'_blank'}>
+                      <a target={'_blank'} rel="noreferrer">
                         <Card sx={{ maxWidth: 345 }} key={projects.slug}>
                           <CardMedia
                             component="img"

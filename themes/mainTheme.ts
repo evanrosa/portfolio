@@ -61,7 +61,9 @@ export const getThemedComponents = (mode) => ({
           MuiAppBar: {
             styleOverrides: {
               colorPrimary: {
-                backgroundColor: palette.light.primary.main,
+                boxShadow:
+                  '0px 2px 4px -1px rgb(0 0 0 / 0%), 0px 4px 5px 0px rgb(0 0 0 / 0%), 0px 1px 10px 0px rgb(0 0 0 / 0%);',
+                backgroundImage: 'none',
               },
             },
           },
@@ -77,6 +79,7 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               root: {
                 color: palette.light.primary.dark,
+                textDecoration: 'none',
               },
             },
           },
@@ -103,7 +106,9 @@ export const getThemedComponents = (mode) => ({
           MuiAppBar: {
             styleOverrides: {
               colorPrimary: {
-                backgroundColor: palette.light.primary.dark,
+                boxShadow:
+                  '0px 2px 4px -1px rgb(0 0 0 / 0%), 0px 4px 5px 0px rgb(0 0 0 / 0%), 0px 1px 10px 0px rgb(0 0 0 / 0%);',
+                backgroundImage: 'none',
               },
             },
           },
@@ -119,6 +124,7 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               root: {
                 color: palette.light.primary.light,
+                textDecoration: 'none',
               },
             },
           },

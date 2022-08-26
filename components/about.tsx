@@ -24,7 +24,7 @@ export default function About() {
     <>
       <Container sx={{ paddingBottom: '100px' }}>
         {/* ABOUT */}
-        <section id="#About">
+        <section id="About">
           <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
             <Grid xs={12} md={8}>
               <Typography variant="h2">About Me</Typography>

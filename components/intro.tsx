@@ -20,9 +20,9 @@ export default function Intro() {
           evro.eth
         </Typography>
 
-        <section>
-          <Typography variant="h2" pb={4} style={{ fontWeight: 400 }}>
-            Building awesome apps in Web2 while maintaining my sanity in the Web3.
+        <section id="evro">
+          <Typography variant="h3" component="h2" pb={4} style={{ fontWeight: 900 }}>
+            Building apps in Web2 while learning Web3.
           </Typography>
           <Typography variant="body2" pb={3}>
             Data engineer by trade working with APIs, creating and managing Web2 analytic architretures, & working on

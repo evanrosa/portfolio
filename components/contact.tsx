@@ -6,7 +6,7 @@ export default function Contact() {
     <>
       <Container>
         {/* ABOUT */}
-        <section id="#About">
+        <section id="Contact">
           <Typography variant="subtitle1">So, after reading all that...</Typography>
           <Typography variant="h2">Let's Get In Touch</Typography>
 

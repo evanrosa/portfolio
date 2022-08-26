@@ -67,7 +67,7 @@ export default function Job() {
 
   return (
     <Container sx={{ padding: '100px 0 ' }}>
-      <section id="#Experience">
+      <section id="Experience">
         <Typography variant="h2">Where I've worked</Typography>
 
         {isDesktop ? (
@@ -88,7 +88,7 @@ export default function Job() {
               <TabPanel value={value} index={0}>
                 <Typography variant="h6" component="h3">
                   Data Engineer at{' '}
-                  <Link href="https://www.digitalturbine.com/" target={'_blank'}>
+                  <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                     Digital Turbine
                   </Link>
                 </Typography>
@@ -121,7 +121,7 @@ export default function Job() {
               <TabPanel value={value} index={1}>
                 <Typography variant="h6" component="h3">
                   Lead Web Analyst at{' '}
-                  <Link href="https://www.bah.com/" target={'_blank'}>
+                  <Link href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
                     Booz Allen Hamilton
                   </Link>
                 </Typography>
@@ -155,7 +155,7 @@ export default function Job() {
               <TabPanel value={value} index={2}>
                 <Typography variant="h6" component="h3">
                   Web Analyst at{' '}
-                  <Link href="https://www.acs.org/" target={'_blank'}>
+                  <Link href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
                     American Chemical Society
                   </Link>
                 </Typography>
@@ -201,7 +201,7 @@ export default function Job() {
             <TabPanel value={value} index={0}>
               <Typography variant="h6" component="h3">
                 Data Engineer at{' '}
-                <Link href="https://www.digitalturbine.com/" target={'_blank'}>
+                <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                   Digital Turbine
                 </Link>
               </Typography>
@@ -234,7 +234,7 @@ export default function Job() {
             <TabPanel value={value} index={1}>
               <Typography variant="h6" component="h3">
                 Lead Web Analyst at{' '}
-                <Link href="https://www.bah.com/" target={'_blank'}>
+                <Link href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
                   Booz Allen Hamilton
                 </Link>
               </Typography>
@@ -268,7 +268,7 @@ export default function Job() {
             <TabPanel value={value} index={2}>
               <Typography variant="h6" component="h3">
                 Web Analyst at{' '}
-                <Link href="https://www.acs.org/" target={'_blank'}>
+                <Link href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
                   American Chemical Society
                 </Link>
               </Typography>

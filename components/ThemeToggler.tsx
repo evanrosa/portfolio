@@ -5,7 +5,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { ColorModeContext } from '../themes/color-context';
 
-export default function SubHeaderNavigation() {
+export default function ThemeToggle() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
 
