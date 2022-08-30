@@ -36,7 +36,9 @@ export default function Intro() {
             Loser Club, Illogics, Tiny Astro among others.
           </Typography>
 
-          <Button variant="outlined">Check out my wallet</Button>
+          <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+            Check out my wallet
+          </Button>
         </section>
       </Container>
     </>

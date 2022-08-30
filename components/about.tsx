@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Typography, Container, Box } from '@mui/material';
+import { Typography, Container, Divider } from '@mui/material';
 import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -27,7 +27,12 @@ export default function About() {
         <section id="About">
           <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
             <Grid xs={12} md={8}>
-              <Typography variant="h2">About Me</Typography>
+              <Divider textAlign="left">
+                <Typography variant="h4" component="h2" className="countContent">
+                  About Me
+                </Typography>
+              </Divider>
+
               <Typography variant="body1" sx={{ padding: '15px 0px' }}>
                 So, I started my journey in Web2 as the analytics guy bascially running reports and things of that sort.
                 I grew tired of that and started learning the code behind the numbers; it opened a new world of creation
@@ -49,38 +54,38 @@ export default function About() {
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="body1">JavaScript</Typography>
+                      <Typography variant="subtitle1">JavaScript</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">React/Nextjs</Typography>
+                      <Typography variant="subtitle1">React/Nextjs</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Typescript</Typography>
+                      <Typography variant="subtitle1">Typescript</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Python</Typography>
+                      <Typography variant="subtitle1">Python</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">SQL</Typography>
+                      <Typography variant="subtitle1">SQL</Typography>
                     </li>
                   </ul>
                 </Grid>
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="body1">Node/NPM/Yarn</Typography>
+                      <Typography variant="subtitle1">Node/NPM/Yarn</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Git/GitLab/Github</Typography>
+                      <Typography variant="subtitle1">Git/GitLab/Github</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Google BigQuery</Typography>
+                      <Typography variant="subtitle1">Google BigQuery</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Google Analytics</Typography>
+                      <Typography variant="subtitle1">Google Analytics</Typography>
                     </li>
                     <li>
-                      <Typography variant="body1">Google Tag Manager</Typography>
+                      <Typography variant="subtitle1">Google Tag Manager</Typography>
                     </li>
                   </ul>
                 </Grid>

@@ -1,8 +1,9 @@
 ---
 title: Google APIs
-headline: Software that allows you to build Google Tag Manager and GA4 architectures at scale utilizing Google APIs.
-description: This software will use the GTM and GA4 APIs to build out multiple tagging and reporting architectures with code, managed with a yaml file, rather than relying on the UI.
+headline: Build out analytics at scale with GTM and GA4
+description: Developed proprietary software that allows you to build out tagging and reporting architectures at scale, all managed with a yaml file using GTM and GA4 APIs in python.
 website: https://developers.google.com/tag-platform/tag-manager/api/v2/reference
+thumbnailUrl: '/projects/gtm.jpg'
 ---
 
 Start writing markdown here...
