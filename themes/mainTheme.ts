@@ -90,6 +90,10 @@ export const getThemedComponents = (mode) => ({
               root: {
                 color: palette.light.primary.dark,
                 borderColor: palette.light.primary.dark,
+                '&:hover': {
+                  color: palette.light.primary.light,
+                  borderColor: palette.light.primary.light,
+                },
               },
             },
           },

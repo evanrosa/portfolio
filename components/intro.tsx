@@ -36,9 +36,14 @@ export default function Intro() {
             Loser Club, Illogics, Tiny Astro among others.
           </Typography>
 
-          <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
-            Check out my wallet
-          </Button>
+          <Link href="https://opensea.io/0xA662C6253AF152807660Fb7DB6776ca7a35a380C" target={'_blank'} rel="noreferrer">
+            <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+              Check out my wallet
+            </Button>
+          </Link>
+
+
+
         </section>
       </Container>
     </>

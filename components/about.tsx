@@ -54,38 +54,38 @@ export default function About() {
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="subtitle1">JavaScript</Typography>
+                      <Typography variant="subtitle1" component="p">JavaScript</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">React/Nextjs</Typography>
+                      <Typography variant="subtitle1" component="p">React/Nextjs</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Typescript</Typography>
+                      <Typography variant="subtitle1" component="p">Typescript</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Python</Typography>
+                      <Typography variant="subtitle1" component="p">Python</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">SQL</Typography>
+                      <Typography variant="subtitle1" component="p">SQL</Typography>
                     </li>
                   </ul>
                 </Grid>
                 <Grid xs={6}>
                   <ul>
                     <li>
-                      <Typography variant="subtitle1">Node/NPM/Yarn</Typography>
+                      <Typography variant="subtitle1" component="p">Node/NPM/Yarn</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Git/GitLab/Github</Typography>
+                      <Typography variant="subtitle1" component="p">Git/GitLab/Github</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Google BigQuery</Typography>
+                      <Typography variant="subtitle1" component="p">Google BigQuery</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Google Analytics</Typography>
+                      <Typography variant="subtitle1" component="p">Google Analytics</Typography>
                     </li>
                     <li>
-                      <Typography variant="subtitle1">Google Tag Manager</Typography>
+                      <Typography variant="subtitle1" component="p">Google Tag Manager</Typography>
                     </li>
                   </ul>
                 </Grid>

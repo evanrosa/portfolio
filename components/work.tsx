@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Image from 'next/image'
+import { textAlign } from '@mui/system';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -33,7 +34,7 @@ export default function Work({ projects }: ProjectPost) {
           </Typography>
         </Divider>
         <section id="Work">
-          <Grid container spacing={4} direction="row" sx={{ paddingBottom: 30}} paddingTop={4}>
+          <Grid container spacing={4} direction="row" sx={{ paddingBottom: 30, textAlign: { xs: '-webkit-center' }}} paddingTop={4}>
             {!projects && <div>No projects!</div>}
             {projects &&
               projects.map((projects) => {
@@ -50,13 +51,13 @@ export default function Work({ projects }: ProjectPost) {
              
                             </CardMedia>
                             <CardContent>
-                              <Typography gutterBottom variant="h4" component="h5">
+                              <Typography gutterBottom variant="h4" component="h3">
                                 {projects.frontMatter.title}
                               </Typography>
-                              <Typography variant="body1" color="text.secondary">
+                              <Typography variant="body1" component="h4">
                                 {projects.frontMatter.headline}
                               </Typography>
-                              <Typography variant="body1" color="text.secondary">
+                              <Typography variant="body1">
                                 {projects.frontMatter.description}
                               </Typography>
                             </CardContent>
@@ -71,13 +72,13 @@ export default function Work({ projects }: ProjectPost) {
                             >
                             </CardMedia>
                             <CardContent>
-                              <Typography gutterBottom variant="h4" component="h5">
+                              <Typography gutterBottom variant="h4" component="h3">
                                 {projects.frontMatter.title}
                               </Typography>
-                              <Typography variant="body1" color="text.secondary">
+                              <Typography variant="body1" component="h4">
                                 {projects.frontMatter.headline}
                               </Typography>
-                              <Typography variant="body1" color="text.secondary">
+                              <Typography variant="body2">
                                 {projects.frontMatter.description}
                               </Typography>
                             </CardContent>

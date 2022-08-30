@@ -96,25 +96,25 @@ export default function Job() {
                     Digital Turbine
                   </Link>
                 </Typography>
-                <Typography variant="subtitle1">
+                <Typography variant="subtitle1" component="div">
                   <time dateTime="2020-03">March 2020</time> - Present
                 </Typography>
                 <ul>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Tasked with managing Google Analytics 360 & Google Tag Manager integrations for all partners which
                       include optimzations to data flows for BQ ingestion.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Currently utilizing GTM and GA4 APIs to build out analytic environments programmatically at scale;
                       this would allow for the creation of multiple analytic and tagging environments with only a config
                       file.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Currently leading efforts on GA4 migrations which will include setting up and designing data
                       workflows in GTM that are in line with GA4 requirements. Moreover, I'm tasked with optimizing GA
                       data collection into Big Query by auditing data as it comes in during intraday/daily.
@@ -129,28 +129,28 @@ export default function Job() {
                     Booz Allen Hamilton
                   </Link>
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle1" component="div">
                   <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
                 </Typography>
                 <ul>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Conduct metrics data analysis and implement analytics reports on a ad-hoc, monthly and quarterly
                       basis while also providing recommendations for website improvements.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Ensure 100% accuracy of analytics tagging across various websites
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Setup and implement automated reports with metrics from different data sources
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Implement steps to migrate website properties from Google Analytics Legacy to GA3.
                     </Typography>
                   </li>
@@ -163,19 +163,19 @@ export default function Job() {
                     American Chemical Society
                   </Link>
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle1" component="div">
                   <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
                 </Typography>
                 <ul>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Support the Assistant Director, Platform Advertising and Analytics, with scheduled and ad hoc
                       report generation, including the monthly Sales and Marketing Web Usage Report, Annual Web Usage
                       Report and necessary data for editorial board meetings.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Create and maintain advertising reports for the ACS Web Editions platform and CEN as well as
                       advertising reports for ACS managed web ads on external websites. Perform ad-hoc advertising
                       reporting queries as needed. Support the Market Development Manager, Online Advertising with
@@ -183,7 +183,7 @@ export default function Job() {
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant="subtitle2">
+                    <Typography variant="subtitle2" component="p">
                       Test and validate web analytics and reports with each new deployment, product release and/or
                       enhancement in each of the reporting systems, including Literatum, Web Analytics, Google Analytics
                       and Dart for Publishers (DFP).
@@ -209,25 +209,25 @@ export default function Job() {
                   Digital Turbine
                 </Link>
               </Typography>
-              <Typography variant="subtitle2">
+              <Typography variant="subtitle1" component="div">
                 <time dateTime="2020-03">March 2020</time> - Present
               </Typography>
               <ul>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Tasked with managing Google Analytics 360 & Google Tag Manager integrations for all partners which
                     include optimzations to data flows for BQ ingestion.
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Currently utilizing GTM and GA4 APIs to build out analytic environments programmatically at scale;
                     this would allow for the creation of multiple analytic and tagging environments with only a config
                     file.
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Currently leading efforts on GA4 migrations which will include setting up and designing data
                     workflows in GTM that are in line with GA4 requirements. Moreover, I'm tasked with optimizing GA
                     data collection into Big Query by auditing data as it comes in during intraday/daily.
@@ -242,28 +242,28 @@ export default function Job() {
                   Booz Allen Hamilton
                 </Link>
               </Typography>
-              <Typography variant="subtitle2">
+              <Typography variant="subtitle1" component="div">
                 <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
               </Typography>
               <ul>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Conduct metrics data analysis and implement analytics reports on a ad-hoc, monthly and quarterly
                     basis while also providing recommendations for website improvements.
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Ensure 100% accuracy of analytics tagging across various websites
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Setup and implement automated reports with metrics from different data sources
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Implement steps to migrate website properties from Google Analytics Legacy to GA3.
                   </Typography>
                 </li>
@@ -276,19 +276,19 @@ export default function Job() {
                   American Chemical Society
                 </Link>
               </Typography>
-              <Typography variant="subtitle2">
+              <Typography variant="subtitle1" component="div">
                 <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
               </Typography>
               <ul>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Support the Assistant Director, Platform Advertising and Analytics, with scheduled and ad hoc report
                     generation, including the monthly Sales and Marketing Web Usage Report, Annual Web Usage Report and
                     necessary data for editorial board meetings.
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Create and maintain advertising reports for the ACS Web Editions platform and CEN as well as
                     advertising reports for ACS managed web ads on external websites. Perform ad-hoc advertising
                     reporting queries as needed. Support the Market Development Manager, Online Advertising with
@@ -296,7 +296,7 @@ export default function Job() {
                   </Typography>
                 </li>
                 <li>
-                  <Typography variant="subtitle2">
+                  <Typography variant="subtitle2" component="p">
                     Test and validate web analytics and reports with each new deployment, product release and/or
                     enhancement in each of the reporting systems, including Literatum, Web Analytics, Google Analytics
                     and Dart for Publishers (DFP).

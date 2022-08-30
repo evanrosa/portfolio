@@ -29,7 +29,7 @@ export default function Contact() {
 
 
           <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
-            Primary
+            crypto.evro@gmail.com
           </Button>
         </section>
       </Container>
