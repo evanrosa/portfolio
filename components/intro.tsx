@@ -22,7 +22,7 @@ export default function Intro() {
 
         <section id="evro">
           <Typography variant="h3" component="h2" pb={4} style={{ fontWeight: 900 }}>
-            Building apps in Web2 while learning Web3.
+            Building in Web2 while maintaining my sanity in Web3.
           </Typography>
           <Typography variant="body1" pb={3}>
             Data engineer by trade working with APIs, creating and managing Web2 analytic architretures, & working on
@@ -36,7 +36,14 @@ export default function Intro() {
             Loser Club, Illogics, Tiny Astro among others.
           </Typography>
 
-          <Button variant="outlined">Check out my wallet</Button>
+          <Link href="https://opensea.io/0xA662C6253AF152807660Fb7DB6776ca7a35a380C" target={'_blank'} rel="noreferrer">
+            <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+              Check out my wallet
+            </Button>
+          </Link>
+
+
+
         </section>
       </Container>
     </>

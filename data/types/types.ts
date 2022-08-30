@@ -1,11 +1,11 @@
 export type ProjectsFrontMatter = {
+  thumbnailUrl: string
   title: string
   headline: string
   description: string
   publishedDate: string
   tags: string[]
   website: string
-
 }
 
 export type ProjectsLayoutProps = {
@@ -32,4 +32,5 @@ export interface ProjectsProps extends ProjectPost {
   title: string
   headline: string
   description: string
+  image: string
 }

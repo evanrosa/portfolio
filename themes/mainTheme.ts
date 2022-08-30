@@ -42,7 +42,6 @@ export const getDesignTokens = (mode) => ({
             default: palette.light.primary.dark,
             paper: palette.light.primary.dark,
           },
-
           text: {
             primary: palette.light.primary.main,
             secondary: palette.light.primary.light,
@@ -50,10 +49,26 @@ export const getDesignTokens = (mode) => ({
         }),
   },
   typography: {
-    fontFamily: ['Source Code Pro', 'Roboto', 'Arial', 'sans-serif'].join(','),
-    body1:{
-    fontFamily: ['Noto Sans JP', 'Arial', 'sans-serif'].join(','),
-    }
+    fontFamily: ['Anek Telugu', 'Roboto', 'Arial', 'sans-serif'].join(','),
+    h1: {
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
+    h6: {
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
+    body2: {
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
+    },
+    subtitle1: {
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
+      fontSize: 14,
+    },
+    body1: {
+      fontSize: 18,
+    },
+    subtitle2: {
+      fontSize: 16,
+    },
   },
 });
 
@@ -75,6 +90,10 @@ export const getThemedComponents = (mode) => ({
               root: {
                 color: palette.light.primary.dark,
                 borderColor: palette.light.primary.dark,
+                '&:hover': {
+                  color: palette.light.primary.light,
+                  borderColor: palette.light.primary.light,
+                },
               },
             },
           },
@@ -133,6 +152,27 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               root: {
                 color: palette.light.primary.light,
+                fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
+                textTransform: 'none',
+              },
+            },
+          },
+          MuiTypography: {
+            styleOverrides: {
+              root: {
+                color: palette.light.primary.light,
+              },
+              h1: {
+                color: palette.light.primary.main,
+              },
+              h4: {
+                color: palette.light.primary.main,
+              },
+              body2: {
+                color: palette.light.primary.main,
+              },
+              h6: {
+                color: palette.light.primary.main,
               },
             },
           },

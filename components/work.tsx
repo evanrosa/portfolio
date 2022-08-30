@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Paper, Card, CardActions, CardContent, CardMedia, Button, Typography, Container } from '@mui/material';
+import { Paper, Card, CardActions, CardContent, CardMedia, Divider, Typography, Container } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Image from 'next/image'
+import { textAlign } from '@mui/system';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -14,67 +17,74 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Work({ projects }: ProjectPost) {
+  const IsNotDesktop = useMediaQuery('(max-width:600px)');
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMobile(IsNotDesktop);
+  });
+
   return (
     <>
       <Container>
-        <Typography variant="h2">Things I've built in Web2</Typography>
+        <Divider textAlign="left">
+          <Typography variant="h4" component="h2" className="countContent">
+            Things I've Built In Web2
+          </Typography>
+        </Divider>
         <section id="Work">
-          <a href="https://ayobafoods.com/" target={'_blank'} rel="noreferrer">
-            <Box
-              sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                '& > :not(style)': {
-                  m: 1,
-                  width: 700,
-                  height: 500,
-                },
-              }}
-            >
-              <Paper elevation={24}>
-                <Typography gutterBottom variant="h5" component="div">
-                  01. Ayoba Foods
-                </Typography>
-
-                <Typography variant="body2" color="text.secondary">
-                  Premium Cuts of Homemade South African Biltong
-                </Typography>
-
-                <Typography variant="body2" color="text.secondary">
-                  I collaborated with Ayoba Foods to rebuild their e-commerce shopify website. This was one of the first
-                  websites I've built and I still hold a strong relationship to the Ayoba team to this day.
-                </Typography>
-              </Paper>
-            </Box>
-          </a>
-          <Grid container spacing={2} direction="row">
+          <Grid container spacing={4} direction="row" sx={{ paddingBottom: 30, textAlign: { xs: '-webkit-center' }}} paddingTop={4}>
             {!projects && <div>No projects!</div>}
             {projects &&
               projects.map((projects) => {
                 return (
-                  <Grid xs={12} sm={6} md={3}>
+                  <Grid xs={12} sm={6} md={4} lg={4}>
                     <Link href={{ pathname: `${projects.frontMatter.website}` }}>
-                      <a target={'_blank'} rel="noreferrer">
-                        <Card sx={{ maxWidth: 345 }} key={projects.slug}>
-                          <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="140"
-                            image="/static/images/cards/contemplative-reptile.jpg"
-                          />
-                          <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                              {projects.frontMatter.title}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              {projects.frontMatter.headline}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              {projects.frontMatter.description}
-                            </Typography>
-                          </CardContent>
-                          <CardActions></CardActions>
-                        </Card>
+                      <a target={'_blank'} rel="noreferrer" className="noUnderline">
+                        {isMobile ? (
+                          <Card sx={{ maxWidth: 345 }} key={projects.slug}>
+                            <CardMedia
+                            component='img'
+                            image={projects.frontMatter.thumbnailUrl}
+                            >
+             
+                            </CardMedia>
+                            <CardContent>
+                              <Typography gutterBottom variant="h4" component="h3">
+                                {projects.frontMatter.title}
+                              </Typography>
+                              <Typography variant="body1" component="h4">
+                                {projects.frontMatter.headline}
+                              </Typography>
+                              <Typography variant="body1">
+                                {projects.frontMatter.description}
+                              </Typography>
+                            </CardContent>
+                            <CardActions></CardActions>
+                          </Card>
+                        ) : (
+                          <Card sx={{ maxWidth: 345, minHeight: 375 }} key={projects.slug}>
+                            <CardMedia
+                            component='img'
+                            image={projects.frontMatter.thumbnailUrl}
+                            height="200"
+                            >
+                            </CardMedia>
+                            <CardContent>
+                              <Typography gutterBottom variant="h4" component="h3">
+                                {projects.frontMatter.title}
+                              </Typography>
+                              <Typography variant="body1" component="h4">
+                                {projects.frontMatter.headline}
+                              </Typography>
+                              <Typography variant="body2">
+                                {projects.frontMatter.description}
+                              </Typography>
+                            </CardContent>
+                            <CardActions></CardActions>
+                          </Card>
+                        )}
                       </a>
                     </Link>
                   </Grid>
