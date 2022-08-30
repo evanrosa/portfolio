@@ -75,7 +75,7 @@ export default function Job() {
         </Divider>
 
         {isDesktop ? (
-          <Box sx={{ height: '450px' }}>
+          <Box sx={{ height: '450px' }} paddingTop={4}>
             <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
               <Tabs
                 orientation="vertical"

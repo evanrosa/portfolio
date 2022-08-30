@@ -33,19 +33,19 @@ export default function About() {
                 </Typography>
               </Divider>
 
-              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" paddingTop={4}>
                 So, I started my journey in Web2 as the analytics guy bascially running reports and things of that sort.
                 I grew tired of that and started learning the code behind the numbers; it opened a new world of creation
                 and understanding behavior that I grew fond of.
               </Typography>
-              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" sx={{ padding: '10px 0px' }}>
                 Fast forward through time and I've had the privledge of working at non-profits, government contracts,
                 and established organizations. My main focus today is my day job which I'm currently a data engineer
                 building and optimizing data workflows which include data gathering, cleaning, sorting etc. My other
                 main focus is within the Web3 ethereum ecosystem where I particpate in NFT communities and build Web3
                 apps.
               </Typography>
-              <Typography variant="body1" sx={{ padding: '15px 0px' }}>
+              <Typography variant="body1" sx={{ padding: '10px 0px' }}>
                 I'm currently learning GCP and solidity for ethereum smart contract building but here are some other
                 technologies I work with:
               </Typography>

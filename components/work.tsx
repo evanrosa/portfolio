@@ -33,7 +33,7 @@ export default function Work({ projects }: ProjectPost) {
           </Typography>
         </Divider>
         <section id="Work">
-          <Grid container spacing={4} direction="row" sx={{paddingTop: 2, paddingBottom: 30}}>
+          <Grid container spacing={4} direction="row" sx={{ paddingBottom: 30}} paddingTop={4}>
             {!projects && <div>No projects!</div>}
             {projects &&
               projects.map((projects) => {
