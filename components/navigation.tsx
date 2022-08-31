@@ -19,18 +19,41 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { motion } from 'framer-motion';
+import { display } from '@mui/system';
+
+/* PROPS */
 
 interface Props {
-  window?: () => Window;
-}
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+
   window?: () => Window;
   children: React.ReactElement;
 }
+
+/* FRAMER MOTION VARIANTS */
+const navVariants = {
+  hidden: {
+    opacity: 0,
+    y: '-10vw',
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring', when: 'beforeChildren', staggerChildren: 0.2 },
+  },
+};
+
+const navLinkVariants = {
+  hidden: {
+    opacity: 0,
+    y: '-1vw',
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring', mass: 2.5, stiffness: 25 },
+  },
+};
 
 const drawerWidth = 240;
 const navItems = ['About', 'Experience', 'Work', 'Contact'];
@@ -54,14 +77,12 @@ function HideOnScroll(props: Props) {
 export default function DrawerAppBar(props: Props) {
   const IsNotMobile = useMediaQuery('(min-width:600px)');
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
-  const [isDesktop, setIsDesktop] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(false);
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   React.useEffect(() => {
-    setIsDesktop(IsNotMobile);
     setIsMobile(IsNotDesktop);
   });
 
@@ -77,7 +98,7 @@ export default function DrawerAppBar(props: Props) {
         </Typography>
       </Link>
       <Divider />
-      <List>
+      <List className="mobile-list">
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -92,25 +113,30 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} variants={navVariants} component={motion.div} initial="hidden" animate="visible">
       <HideOnScroll {...props}>
         <AppBar component="nav">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Link href="/">
               <Typography
                 variant="h6"
-                component="div"
+                variants={navLinkVariants}
+                component={motion.div}
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
               >
-                {' '}
-                &#60;evro.eth/&#62;{' '}
+                &#60;evro.eth/&#62;
               </Typography>
             </Link>
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`#` + item} passHref>
-                  <Button key={item} sx={{ textTransform: 'capitalize' }}>
+                  <Button
+                    key={item}
+                    sx={{ textTransform: 'capitalize' }}
+                    variants={navLinkVariants}
+                    component={motion.div}
+                  >
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
@@ -118,28 +144,34 @@ export default function DrawerAppBar(props: Props) {
                 </Link>
               ))}
 
-              <ThemeToggle />
+              <motion.div variants={navLinkVariants}>
+                <ThemeToggle />
+              </motion.div>
             </Box>
             {isMobile ? (
               <Link href="/">
-                <Typography variant="h6" component="div" sx={{ cursor: 'pointer' }}>
+                <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
                   &#60;evro.eth/&#62;{' '}
                 </Typography>
               </Link>
             ) : null}
             <div />
-            <Box>
-              {!isDesktop ? <ThemeToggle /> : null}
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
-              >
-                <MenuIcon />
-              </IconButton>
+            <Box sx={{ display: 'flex' }}>
+              <Box variants={navLinkVariants} component={motion.div}>
+                {isMobile ? <ThemeToggle /> : null}
+              </Box>
+              <Box variants={navLinkVariants} component={motion.div}>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
             </Box>
           </Toolbar>
         </AppBar>
