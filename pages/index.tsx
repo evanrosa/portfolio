@@ -9,9 +9,20 @@ import Contact from '../components/contact';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
-import { motion, Variants } from 'framer-motion';
+import { motion, useScroll, Variants } from 'framer-motion';
+
+const sectionVariants: Variants = {
+  hidden: {
+    y: '100vw',
+  },
+  visible: {
+    y: '0',
+    transition: { type: 'tween', duration: 1 },
+  },
+};
 
 function Home({ projects }: ProjectsProps) {
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <Head>
@@ -21,7 +32,10 @@ function Home({ projects }: ProjectsProps) {
       </Head>
       <Container fixed>
         <main>
-          <Intro />
+          <motion.div variants={sectionVariants} initial="hidden" animate="visible">
+            <Intro />
+          </motion.div>
+
           <About />
           <Job />
           <Work projects={projects} />
