@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Box, Typography, Container, Divider } from '@mui/material';
+import Box from '@mui/material/Box';
 
 const loaderVariants = {
   animationOne: {
@@ -20,7 +20,7 @@ const loaderVariants = {
   },
 };
 
-const Loader = () => {
+const Loader = ({ finishLoading }) => {
   return (
     <Box
       sx={{

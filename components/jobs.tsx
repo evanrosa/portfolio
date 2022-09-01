@@ -1,6 +1,12 @@
 import * as React from 'react';
-import { Box, Typography, Tab, Tabs, Container, Link, Divider } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import Divider from '@mui/material/Divider';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -15,7 +21,7 @@ export default function Job() {
 
   React.useEffect(() => {
     setIsDesktop(IsNotMobile);
-  });
+  }, [IsNotMobile]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);

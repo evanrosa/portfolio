@@ -1,32 +1,27 @@
 import * as React from 'react';
-import {
-  AppBar,
-  Box,
-  Divider,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Toolbar,
-  Typography,
-  Button,
-  Slide,
-  useScrollTrigger,
-} from '@mui/material';
+
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { motion, Variants } from 'framer-motion';
 
-/* PROPS */
+import AppBar from '@mui/material/AppBar';
 
-interface Props {
-  window?: () => Window;
-  children: React.ReactElement;
-}
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Slide from '@mui/material/Slide';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+/* PROPS */
 
 /* FRAMER MOTION VARIANTS */
 
@@ -45,7 +40,7 @@ const navLinkVariants: Variants = {
 const drawerWidth = 240;
 const navItems = ['About', 'Experience', 'Work', 'Contact'];
 
-function HideOnScroll(props: Props) {
+function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -61,7 +56,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export default function DrawerAppBar(props: Props) {
+export default function DrawerAppBar(props) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -70,7 +65,7 @@ export default function DrawerAppBar(props: Props) {
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
-  });
+  }, [IsNotDesktop]);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -116,7 +111,7 @@ export default function DrawerAppBar(props: Props) {
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
-                <Link href={`#` + item} passHref>
+                <Link href={`#` + item} passHref key={item}>
                   <Button
                     key={item}
                     sx={{ textTransform: 'capitalize' }}

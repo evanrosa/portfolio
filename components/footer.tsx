@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import { motion } from 'framer-motion';
 

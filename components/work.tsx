@@ -1,11 +1,18 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import { Paper, Card, CardActions, CardContent, CardMedia, Divider, Typography, Container } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { motion } from 'framer-motion';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Image from 'next/image';
+
 
 export default function Work({ projects }: ProjectPost) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
@@ -14,7 +21,7 @@ export default function Work({ projects }: ProjectPost) {
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
-  });
+  }, [IsNotDesktop]);
 
   return (
     <>
@@ -36,19 +43,32 @@ export default function Work({ projects }: ProjectPost) {
             {projects &&
               projects.map((projects) => {
                 return (
-                  <Grid xs={12} sm={6} md={4} lg={4}>
+                  <Grid xs={12} sm={6} md={4} lg={4} key={projects.slug}>
                     <motion.div
                       whileHover={{
                         scale: 1.1,
                         transition: { duration: 0.5 },
                       }}
                       whileTap={{ scale: 0.9 }}
+                      
                     >
                       <Link href={{ pathname: `${projects.frontMatter.website}` }}>
                         <a target={'_blank'} rel="noreferrer" className="noUnderline">
                           {isMobile ? (
-                            <Card sx={{ maxWidth: 345 }} key={projects.slug}>
-                              <CardMedia component="img" image={projects.frontMatter.thumbnailUrl}></CardMedia>
+                            <Card sx={{ maxWidth: 345 }} >
+
+                              <CardMedia>
+                                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                                  <Image
+                                    src={projects.frontMatter.thumbnailUrl}
+                                    layout="responsive"
+                                    width={100} height={100}
+                                    alt="project image"
+                                  />
+                                </div>
+                              </CardMedia>
+
+                              
                               <CardContent>
                                 <Typography gutterBottom variant="h4" component="h3">
                                   {projects.frontMatter.title}
@@ -61,7 +81,7 @@ export default function Work({ projects }: ProjectPost) {
                               <CardActions></CardActions>
                             </Card>
                           ) : (
-                            <Card sx={{ maxWidth: 345, minHeight: 375 }} key={projects.slug}>
+                            <Card sx={{ maxWidth: 345, minHeight: 375 }}>
                               <CardMedia
                                 component="img"
                                 image={projects.frontMatter.thumbnailUrl}

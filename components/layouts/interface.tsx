@@ -3,6 +3,7 @@ import DrawerAppBar from '../navigation';
 import Footer from '../footer';
 import { motion, Variants } from 'framer-motion';
 
+
 const interfaceVariants: Variants = {
   hidden: {
     opacity: 1,
@@ -17,7 +18,7 @@ function IndexLayout({ children }: PropsWithChildren<{}>): ReactElement {
     return (
         <motion.div variants={interfaceVariants} initial="hidden" animate="visible">
             <header>
-                <DrawerAppBar children={undefined}/>
+                <DrawerAppBar/>
             </header>
             {children}
             <Footer />

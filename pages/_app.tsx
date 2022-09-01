@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
   const Layout: CustomNextComponent | typeof Fragment = Component.Layout ? Component.Layout : Fragment;
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const [mode, setMode] = useState();
+  const [mode, setMode] = useState<string | undefined>();
 
   useEffect(() => {
     setMode(prefersDarkMode ? 'dark' : 'light');

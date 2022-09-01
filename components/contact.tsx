@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { Button, Typography, Container, Divider } from '@mui/material';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Unstable_Grid2';
 import { motion } from 'framer-motion';
 

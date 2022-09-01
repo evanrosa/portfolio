@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { Box, Button, Typography, Container, Link } from '@mui/material';
 import { motion, Variants } from 'framer-motion';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 
 const fontVariants: Variants = {
   hidden: {
@@ -48,11 +52,7 @@ export default function Intro() {
             . At night, or whenever I have free time, I'm learning how to build Web3 apps. I'm currently a hodler of
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link
-                href="https://twitter.com/loserclubreborn"
-                target={'_blank'}
-                rel="noreferrer"
-              >
+              <Link href="https://twitter.com/loserclubreborn" target={'_blank'} rel="noreferrer">
                 Loser Club
               </Link>
             </span>
