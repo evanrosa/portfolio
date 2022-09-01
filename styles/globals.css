@@ -28,3 +28,9 @@ body {
 .noUnderline{
     text-decoration: none;
 }
+
+.mobile-list li::before {
+    content: "";
+    list-style-type: none;
+}
+

@@ -9,20 +9,9 @@ import Contact from '../components/contact';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
-import { motion, useScroll, Variants } from 'framer-motion';
-
-const sectionVariants: Variants = {
-  hidden: {
-    y: '100vw',
-  },
-  visible: {
-    y: '0',
-    transition: { type: 'tween', duration: 1 },
-  },
-};
+import { motion } from 'framer-motion';
 
 function Home({ projects }: ProjectsProps) {
-  const { scrollYProgress } = useScroll();
   return (
     <>
       <Head>
@@ -32,14 +21,43 @@ function Home({ projects }: ProjectsProps) {
       </Head>
       <Container fixed>
         <main>
-          <motion.div variants={sectionVariants} initial="hidden" animate="visible">
-            <Intro />
+          <Intro />
+
+          <motion.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
+            <About />
           </motion.div>
 
-          <About />
-          <Job />
-          <Work projects={projects} />
-          <Contact />
+          <motion.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
+            <Job />
+          </motion.div>
+
+          <motion.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
+            <Work projects={projects} />
+          </motion.div>
+
+          <motion.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
+            <Contact />
+          </motion.div>
         </main>
       </Container>
 

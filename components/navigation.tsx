@@ -15,35 +15,22 @@ import {
   Slide,
   useScrollTrigger,
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { motion } from 'framer-motion';
-import { display } from '@mui/system';
+import { motion, Variants } from 'framer-motion';
 
 /* PROPS */
 
 interface Props {
-
   window?: () => Window;
   children: React.ReactElement;
 }
 
 /* FRAMER MOTION VARIANTS */
-const navVariants = {
-  hidden: {
-    opacity: 0,
-    y: '-10vw',
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: 'spring', when: 'beforeChildren', staggerChildren: 0.2 },
-  },
-};
 
-const navLinkVariants = {
+const navLinkVariants: Variants = {
   hidden: {
     opacity: 0,
     y: '-1vw',
@@ -75,7 +62,6 @@ function HideOnScroll(props: Props) {
 }
 
 export default function DrawerAppBar(props: Props) {
-  const IsNotMobile = useMediaQuery('(min-width:600px)');
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -113,7 +99,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }} variants={navVariants} component={motion.div} initial="hidden" animate="visible">
+    <Box sx={{ display: 'flex' }}>
       <HideOnScroll {...props}>
         <AppBar component="nav">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
@@ -169,7 +155,7 @@ export default function DrawerAppBar(props: Props) {
                   onClick={handleDrawerToggle}
                   sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
                 >
-                  <MenuIcon />
+                  <MenuRoundedIcon />
                 </IconButton>
               </Box>
             </Box>

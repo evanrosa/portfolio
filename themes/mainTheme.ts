@@ -1,11 +1,11 @@
-import { amber, deepOrange, grey, blue, common } from '@mui/material/colors';
-
 const palette = {
   light: {
     primary: {
       main: '#ebf2fa' /* Sky */,
       light: '#8892b0' /* Grey */,
       dark: '#0a192f' /* Dark Blue */,
+      yellow: '#FFD23F',
+      red: '#B3001B',
     },
   },
 };
@@ -100,7 +100,7 @@ export const getThemedComponents = (mode) => ({
           MuiLink: {
             styleOverrides: {
               root: {
-                color: palette.light.primary.dark,
+                color: palette.light.primary.red,
                 textDecoration: 'none',
               },
             },
@@ -143,7 +143,7 @@ export const getThemedComponents = (mode) => ({
           MuiLink: {
             styleOverrides: {
               root: {
-                color: palette.light.primary.light,
+                color: palette.light.primary.yellow,
                 textDecoration: 'none',
               },
             },
