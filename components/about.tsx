@@ -126,7 +126,7 @@ export default function About() {
                 <div>
                   <Image
                     src={LoserEthEyes}
-                    alt="Loser Club Token ID:5297"
+                    alt="Loser Club 5297"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -137,7 +137,7 @@ export default function About() {
                 <div>
                   <Image
                     src={LoserCatman}
-                    alt="Loser Club Token ID: 8614"
+                    alt="Loser Club 8614"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -148,7 +148,7 @@ export default function About() {
                 <div>
                   <Image
                     src={ClayFriend}
-                    alt="ClayFriends Token ID:742"
+                    alt="ClayFriends 742"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -159,7 +159,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Tiny1347}
-                    alt="Picture of the author"
+                    alt="Tiny Astro Token 1347"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -170,7 +170,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Tiny219}
-                    alt="Picture of the author"
+                    alt="tiny Astro 219"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -181,7 +181,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic8273}
-                    alt="Picture of the author"
+                    alt="Illogic 8273"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -192,7 +192,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic7298}
-                    alt="Picture of the author"
+                    alt="Illogic 7298"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -203,7 +203,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic6255}
-                    alt="Picture of the author"
+                    alt="Illogic 6255"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -214,7 +214,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic4946}
-                    alt="Picture of the author"
+                    alt="Illogic 4946"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -225,7 +225,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic4739}
-                    alt="Picture of the author"
+                    alt="Illogic 4739"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -236,7 +236,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic2768}
-                    alt="Picture of the author"
+                    alt="Illogic 2768"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -247,7 +247,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic1600}
-                    alt="Picture of the author"
+                    alt="Illogic 1600"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
@@ -258,7 +258,7 @@ export default function About() {
                 <div>
                   <Image
                     src={Illogic151}
-                    alt="Picture of the author"
+                    alt="Illogic 151"
                     width={200}
                     height={200}
                     sizes="(min-width: 75em) 33vw,
