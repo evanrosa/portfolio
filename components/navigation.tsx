@@ -111,7 +111,7 @@ export default function DrawerAppBar(props) {
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
-                <Link href={`#` + item} passHref key={item}>
+                <Link href={`/#` + item} passHref key={item}>
                   <Button
                     key={item}
                     sx={{ textTransform: 'capitalize' }}

@@ -21,7 +21,49 @@ import Illogic8273 from '../public/nfts/illogic8273.webp';
 import Tiny219 from '../public/nfts/tiny-astro219.webp';
 import Tiny1347 from '../public/nfts/tiny-astro1347.webp';
 
+import { ethers } from 'ethers';
+
+declare var window: any;
+
 export default function About() {
+
+    const walletEvroEth = '0xA662C6253AF152807660Fb7DB6776ca7a35a380C';
+    let accountAddress;
+
+    const connect = () => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          await provider.send('eth_requestAccounts', []);
+          const signer = provider.getSigner();
+          const accountAddress = await signer.getAddress();
+          resolve(accountAddress);
+        } catch (err) {
+          console.error(err);
+          reject(err);
+        }
+      });
+    };
+
+    const renderTokensForOwner = (ownerAddress) => {
+      fetch(`https://api.opensea.io/api/v1/assets?owner=${ownerAddress}&order_direction=desc&offset=0`, {
+        method: 'GET',
+        headers: { Accept: 'application/json' },
+      })
+        .then((res) => res.json())
+        .then(({ assets }) => {
+          assets.forEach((attributes) => {
+            console.log(attributes.name);
+            
+          });
+        });
+
+      accountAddress = connect();
+
+      renderTokensForOwner(accountAddress);
+    };
+
+
   return (
     <>
       <Container sx={{ paddingBottom: '100px' }}>
@@ -114,6 +156,7 @@ export default function About() {
               </Grid>
             </Grid>
             <Grid xs={12} md={4}>
+              
               <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
@@ -124,22 +167,10 @@ export default function About() {
                 showThumbs={false}
               >
                 <div>
-                  <Image
-                    src={LoserEthEyes}
-                    alt="Loser Club 5297"
-                    layout="responsive"
-                                    width={100}
-                                    height={100}
-                  />
+                  <Image src={LoserEthEyes} alt="Loser Club 5297" layout="responsive" width={100} height={100} />
                 </div>
                 <div>
-                  <Image
-                    src={LoserCatman}
-                    alt="Loser Club 8614"
-                   layout="responsive"
-                                    width={100}
-                                    height={100}
-                  />
+                  <Image src={LoserCatman} alt="Loser Club 8614" layout="responsive" width={100} height={100} />
                 </div>
                 <div>
                   <Image
@@ -269,4 +300,8 @@ export default function About() {
       </Container>
     </>
   );
+}
+
+export const getServerSideProps = async context => {
+   const url = null
 }

@@ -1,6 +1,6 @@
 {
   "name": "evro.eth.app",
-  "homepage": "./",
+  "homepage": ".",
   "private": true,
   "scripts": {
     "lint": "next lint",
@@ -19,12 +19,14 @@
     "framer-motion": "^6.5.1",
     "gray-matter": "^4.0.3",
     "next": "latest",
+    "nextjs-cors": "^2.1.1",
     "react": "^18.3.0-next-17e2a15be-20220808",
     "react-dom": "^18.3.0-next-17e2a15be-20220808",
     "react-markdown": "^8.0.3",
     "react-responsive-carousel": "^3.2.23",
     "react-syntax-highlighter": "^15.5.0",
-    "react-text-typist": "^1.1.6"
+    "react-text-typist": "^1.1.6",
+    "web3": "^1.7.5"
   },
   "devDependencies": {
     "@types/node": "^18.0.5",
@@ -33,6 +35,7 @@
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
     "eslint-config-prettier": "^8.5.0",
+    "ethers": "^5.7.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "prettier": "2.7.1",
