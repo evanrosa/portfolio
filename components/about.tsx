@@ -125,66 +125,142 @@ export default function About() {
               >
                 <div>
                   <Image
-                    src="/nfts/loser-club-eth-eyes.webp"
+                    src={LoserEthEyes}
                     alt="Loser Club 5297"
-                    width={200}
-                    height={200}
                     layout="responsive"
+                                    width={100}
+                                    height={100}
                   />
                 </div>
                 <div>
                   <Image
-                    src="/nfts/loser-club-catman.webp"
+                    src={LoserCatman}
                     alt="Loser Club 8614"
-                    width={200}
-                    height={200}
-                    layout="responsive"
+                   layout="responsive"
+                                    width={100}
+                                    height={100}
                   />
                 </div>
                 <div>
                   <Image
-                    src="/nfts/ClayFriend.webp"
+                    src={ClayFriend}
                     alt="ClayFriends 742"
                     width={200}
                     height={200}
-                    layout="responsive"
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
-                    src="/nfts/Tiny1347.webp"
-                    alt="Tiny Astro Token 1347"
+                    src={Illogic151}
+                    alt="Illogic 151"
                     width={200}
                     height={200}
-                    layout="responsive"
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
-                  <Image src="/nfts/Tiny219.webp" alt="tiny Astro 219" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic1600}
+                    alt="Illogic 1600"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic8273.webp" alt="Illogic 8273" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic2768}
+                    alt="Illogic 2768"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic7298.webp" alt="Illogic 7298" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic4739}
+                    alt="Illogic 4739"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic6255.webp" alt="Illogic 6255" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic4946}
+                    alt="Illogic 4946"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic4946.webp" alt="Illogic 4946" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic6255}
+                    alt="Illogic 6255"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic4739.webp" alt="Illogic 4739" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic7298}
+                    alt="Illogic 7298"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic2768.webp" alt="Illogic 2768" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Illogic8273}
+                    alt="Illogic 8273"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic1600.webp" alt="Illogic 1600" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Tiny219}
+                    alt="Tiny Astro 219"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
                 <div>
-                  <Image src="/nfts/Illogic151.webp" alt="Illogic 151" width={200} height={200} layout="responsive" />
+                  <Image
+                    src={Tiny1347}
+                    alt="Tiny Astro 1347"
+                    width={200}
+                    height={200}
+                    sizes="(min-width: 75em) 33vw,
+                    (min-width: 48em) 50vw,
+                    100vw"
+                  />
                 </div>
               </Carousel>
             </Grid>
