@@ -126,131 +126,144 @@ export default function About() {
                 <div>
                   <Image
                     src={LoserEthEyes}
-                    alt="Picture of the author"
-                    layout="fill"
+                    alt="Loser Club Token ID:5297"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={LoserCatman}
-                    alt="Picture of the author"
-                    layout="fill"
+                    alt="Loser Club Token ID: 8614"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={ClayFriend}
-                    alt="Picture of the author"
-                    layout="fill"
+                    alt="ClayFriends Token ID:742"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Tiny1347}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Tiny219}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic8273}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic7298}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic6255}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic4946}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic4739}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic2768}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic1600}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic151}
                     alt="Picture of the author"
-                    layout="fill"
+                    width={200}
+                    height={200}
                     sizes="(min-width: 75em) 33vw,
-              (min-width: 48em) 50vw,
-              100vw"
+                    (min-width: 48em) 50vw,
+                    100vw"
                   />
                 </div>
               </Carousel>
