@@ -1,15 +1,27 @@
 import Head from 'next/head';
 import React from 'react';
+import dynamic from 'next/dynamic';
 import IndexLayout from '../components/layouts/interface';
-import Job from '../components/jobs';
-import Work from '../components/work';
-import Intro from '../components/intro';
-import About from '../components/about';
-import Contact from '../components/contact';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
 import { motion } from 'framer-motion';
+
+const Intro = dynamic(() => import('../components/intro'), {
+  suspense: true,
+});
+const About = dynamic(() => import('../components/about'), {
+  ssr: false,
+});
+const Work = dynamic(() => import('../components/work'), {
+  ssr: false,
+});
+const Job = dynamic(() => import('../components/jobs'), {
+  ssr: false,
+});
+const Contact = dynamic(() => import('../components/contact'), {
+  ssr: false,
+});
 
 function Home({ projects }: ProjectsProps) {
   return (

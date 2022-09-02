@@ -13,7 +13,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
 
-
 export default function Work({ projects }: ProjectPost) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
 
@@ -50,25 +49,23 @@ export default function Work({ projects }: ProjectPost) {
                         transition: { duration: 0.5 },
                       }}
                       whileTap={{ scale: 0.9 }}
-                      
                     >
                       <Link href={{ pathname: `${projects.frontMatter.website}` }}>
                         <a target={'_blank'} rel="noreferrer" className="noUnderline">
                           {isMobile ? (
-                            <Card sx={{ maxWidth: 345 }} >
-
+                            <Card sx={{ maxWidth: 345 }}>
                               <CardMedia>
                                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                                   <Image
                                     src={projects.frontMatter.thumbnailUrl}
                                     layout="responsive"
-                                    width={100} height={100}
+                                    width={100}
+                                    height={100}
                                     alt="project image"
                                   />
                                 </div>
                               </CardMedia>
 
-                              
                               <CardContent>
                                 <Typography gutterBottom variant="h4" component="h3">
                                   {projects.frontMatter.title}

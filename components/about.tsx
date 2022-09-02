@@ -121,122 +121,136 @@ export default function About() {
                 showArrows={false}
                 showIndicators={false}
                 showStatus={false}
+                showThumbs={false}
               >
                 <div>
                   <Image
                     src={LoserEthEyes}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={LoserCatman}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={ClayFriend}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Tiny1347}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Tiny219}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic8273}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic7298}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic6255}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic4946}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic4739}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic2768}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic1600}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
                 <div>
                   <Image
                     src={Illogic151}
                     alt="Picture of the author"
-                    layout="responsive"
-                    width={500} 
-                    height={500}
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
+              (min-width: 48em) 50vw,
+              100vw"
                   />
                 </div>
               </Carousel>
