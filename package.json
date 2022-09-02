@@ -1,6 +1,6 @@
 {
   "name": "evro.eth.app",
-  "homepage": ".",
+  "homepage": "./",
   "private": true,
   "scripts": {
     "lint": "next lint",
