@@ -27,7 +27,7 @@ function Home({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
-        <title>evro.eth | Web2 Big Data Dev and Web3 NFT Degen</title>
+        <title>evro.eth | Web2 Big Data Developer and Web3 NFT Degen</title>
         <link rel="icon" href="/favicon-32x32.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>

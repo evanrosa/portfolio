@@ -125,7 +125,7 @@ export default function About() {
               >
                 <div>
                   <Image
-                    src={LoserEthEyes}
+                    src="/nfts/loser-club-eth-eyes.webp"
                     alt="Loser Club 5297"
                     width={200}
                     height={200}
@@ -136,7 +136,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={LoserCatman}
+                    src="/nfts/loser-club-catman.webp"
                     alt="Loser Club 8614"
                     width={200}
                     height={200}
@@ -147,7 +147,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={ClayFriend}
+                    src="/nfts/ClayFriend.webp"
                     alt="ClayFriends 742"
                     width={200}
                     height={200}
@@ -158,7 +158,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Tiny1347}
+                    src="/nfts/Tiny1347.webp"
                     alt="Tiny Astro Token 1347"
                     width={200}
                     height={200}
@@ -169,7 +169,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Tiny219}
+                    src="/nfts/Tiny219.webp"
                     alt="tiny Astro 219"
                     width={200}
                     height={200}
@@ -180,7 +180,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic8273}
+                    src="/nfts/Illogic8273.webp"
                     alt="Illogic 8273"
                     width={200}
                     height={200}
@@ -191,7 +191,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic7298}
+                    src="/nfts/Illogic7298.webp"
                     alt="Illogic 7298"
                     width={200}
                     height={200}
@@ -202,7 +202,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic6255}
+                    src="/nfts/Illogic6255.webp"
                     alt="Illogic 6255"
                     width={200}
                     height={200}
@@ -213,7 +213,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic4946}
+                    src="/nfts/Illogic4946.webp"
                     alt="Illogic 4946"
                     width={200}
                     height={200}
@@ -224,7 +224,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic4739}
+                    src="/nfts/Illogic4739.webp"
                     alt="Illogic 4739"
                     width={200}
                     height={200}
@@ -235,7 +235,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic2768}
+                    src="/nfts/Illogic2768.webp"
                     alt="Illogic 2768"
                     width={200}
                     height={200}
@@ -246,7 +246,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic1600}
+                    src="/nfts/Illogic1600.webp"
                     alt="Illogic 1600"
                     width={200}
                     height={200}
@@ -257,7 +257,7 @@ export default function About() {
                 </div>
                 <div>
                   <Image
-                    src={Illogic151}
+                    src="/nfts/Illogic151.webp"
                     alt="Illogic 151"
                     width={200}
                     height={200}
