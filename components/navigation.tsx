@@ -1,41 +1,46 @@
 import * as React from 'react';
-import {
-  AppBar,
-  Box,
-  Divider,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Toolbar,
-  Typography,
-  Button,
-  Slide,
-  useScrollTrigger,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { motion, Variants } from 'framer-motion';
 
-interface Props {
-  window?: () => Window;
-}
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-  children: React.ReactElement;
-}
+import AppBar from '@mui/material/AppBar';
+
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Slide from '@mui/material/Slide';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+/* PROPS */
+
+/* FRAMER MOTION VARIANTS */
+
+const navLinkVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: '-1vw',
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring', mass: 2.5, stiffness: 25 },
+  },
+};
 
 const drawerWidth = 240;
 const navItems = ['About', 'Experience', 'Work', 'Contact'];
 
-function HideOnScroll(props: Props) {
+function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -51,19 +56,16 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export default function DrawerAppBar(props: Props) {
-  const IsNotMobile = useMediaQuery('(min-width:600px)');
+export default function DrawerAppBar(props) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
-  const [isDesktop, setIsDesktop] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(false);
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   React.useEffect(() => {
-    setIsDesktop(IsNotMobile);
     setIsMobile(IsNotDesktop);
-  });
+  }, [IsNotDesktop]);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -77,7 +79,7 @@ export default function DrawerAppBar(props: Props) {
         </Typography>
       </Link>
       <Divider />
-      <List>
+      <List className="mobile-list">
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -99,18 +101,23 @@ export default function DrawerAppBar(props: Props) {
             <Link href="/">
               <Typography
                 variant="h6"
-                component="div"
+                variants={navLinkVariants}
+                component={motion.div}
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
               >
-                {' '}
-                &#60;evro.eth/&#62;{' '}
+                &#60;evro.eth/&#62;
               </Typography>
             </Link>
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
-                <Link href={`#` + item} passHref>
-                  <Button key={item} sx={{ textTransform: 'capitalize' }}>
+                <Link href={`#` + item} passHref key={item}>
+                  <Button
+                    key={item}
+                    sx={{ textTransform: 'capitalize' }}
+                    variants={navLinkVariants}
+                    component={motion.div}
+                  >
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
@@ -118,28 +125,34 @@ export default function DrawerAppBar(props: Props) {
                 </Link>
               ))}
 
-              <ThemeToggle />
+              <motion.div variants={navLinkVariants}>
+                <ThemeToggle />
+              </motion.div>
             </Box>
             {isMobile ? (
               <Link href="/">
-                <Typography variant="h6" component="div" sx={{ cursor: 'pointer' }}>
+                <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
                   &#60;evro.eth/&#62;{' '}
                 </Typography>
               </Link>
             ) : null}
             <div />
-            <Box>
-              {!isDesktop ? <ThemeToggle /> : null}
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
-              >
-                <MenuIcon />
-              </IconButton>
+            <Box sx={{ display: 'flex' }}>
+              <Box variants={navLinkVariants} component={motion.div}>
+                {isMobile ? <ThemeToggle /> : null}
+              </Box>
+              <Box variants={navLinkVariants} component={motion.div}>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
+                >
+                  <MenuRoundedIcon />
+                </IconButton>
+              </Box>
             </Box>
           </Toolbar>
         </AppBar>

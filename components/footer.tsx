@@ -1,10 +1,16 @@
 import Link from 'next/link';
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
+import { motion } from 'framer-motion';
 
 function Footer() {
   return (
-    <footer>
+    <motion.footer
+      viewport={{ once: false }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+    >
       <Grid container spacing={2} paddingTop={10}>
         <Grid xs={12} sx={{ textAlign: 'center' }}>
           <Link target={'_blank'} rel="noreferrer" href="https://github.com/evro-eth">
@@ -14,7 +20,7 @@ function Footer() {
           </Link>
         </Grid>
       </Grid>
-    </footer>
+    </motion.footer>
   );
 }
 
