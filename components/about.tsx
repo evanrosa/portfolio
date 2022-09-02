@@ -129,9 +129,7 @@ export default function About() {
                     alt="Loser Club 5297"
                     width={200}
                     height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
+                    layout="responsive"
                   />
                 </div>
                 <div>
@@ -140,9 +138,7 @@ export default function About() {
                     alt="Loser Club 8614"
                     width={200}
                     height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
+                    layout="responsive"
                   />
                 </div>
                 <div>
@@ -151,9 +147,7 @@ export default function About() {
                     alt="ClayFriends 742"
                     width={200}
                     height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
+                    layout="responsive"
                   />
                 </div>
                 <div>
@@ -162,109 +156,35 @@ export default function About() {
                     alt="Tiny Astro Token 1347"
                     width={200}
                     height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
+                    layout="responsive"
                   />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Tiny219.webp"
-                    alt="tiny Astro 219"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Tiny219.webp" alt="tiny Astro 219" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic8273.webp"
-                    alt="Illogic 8273"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic8273.webp" alt="Illogic 8273" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic7298.webp"
-                    alt="Illogic 7298"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic7298.webp" alt="Illogic 7298" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic6255.webp"
-                    alt="Illogic 6255"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic6255.webp" alt="Illogic 6255" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic4946.webp"
-                    alt="Illogic 4946"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic4946.webp" alt="Illogic 4946" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic4739.webp"
-                    alt="Illogic 4739"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic4739.webp" alt="Illogic 4739" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic2768.webp"
-                    alt="Illogic 2768"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic2768.webp" alt="Illogic 2768" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic1600.webp"
-                    alt="Illogic 1600"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic1600.webp" alt="Illogic 1600" width={200} height={200} layout="responsive" />
                 </div>
                 <div>
-                  <Image
-                    src="/nfts/Illogic151.webp"
-                    alt="Illogic 151"
-                    width={200}
-                    height={200}
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
+                  <Image src="/nfts/Illogic151.webp" alt="Illogic 151" width={200} height={200} layout="responsive" />
                 </div>
               </Carousel>
             </Grid>
