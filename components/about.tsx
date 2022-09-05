@@ -21,11 +21,9 @@ import Illogic8273 from '../public/nfts/illogic8273.webp';
 import Tiny219 from '../public/nfts/tiny-astro219.webp';
 import Tiny1347 from '../public/nfts/tiny-astro1347.webp';
 
-declare const window: any
+declare const window: any;
 
 export default function About() {
-
-
   return (
     <>
       <Container sx={{ paddingBottom: '100px' }}>
@@ -118,9 +116,7 @@ export default function About() {
               </Grid>
             </Grid>
             <Grid xs={12} md={4}>
-              <div>
-
-              </div>
+              <div></div>
               <Carousel
                 autoPlay={true}
                 infiniteLoop={true}
@@ -129,24 +125,12 @@ export default function About() {
                 showIndicators={false}
                 showStatus={false}
                 showThumbs={false}
-              > 
+              >
                 <div>
-                  <Image
-                    src={LoserEthEyes}
-                    alt="Loser Club 5297"
-                    layout="responsive"
-                                    width={200}
-                                    height={200}
-                  />
+                  <Image src={LoserEthEyes} alt="Loser Club 5297" layout="responsive" width={200} height={200} />
                 </div>
                 <div>
-                  <Image
-                    src={LoserCatman}
-                    alt="Loser Club 8614"
-                   layout="responsive"
-                                    width={200}
-                                    height={200}
-                  />
+                  <Image src={LoserCatman} alt="Loser Club 8614" layout="responsive" width={200} height={200} />
                 </div>
                 <div>
                   <Image

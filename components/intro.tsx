@@ -42,8 +42,8 @@ export default function Intro() {
             Building in Web2 while maintaining my sanity in Web3.
           </Typography>
           <Typography variant="body1" pb={3} component={motion.p} variants={fontVariants}>
-            Data engineer by trade working with APIs, creating and managing Web2 analytic architretures, & working on
-            cloud projects for{' '}
+            During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
+            architretures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
               <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                 Digital Turbine
