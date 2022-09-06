@@ -32,6 +32,11 @@ function Home({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0a192f" />
+        <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-status-bar" content="#0a192f" />
+
         <title>evro.eth | Web2 Big Data Developer and Web3 NFT Degen</title>
         <meta
           name="description"
