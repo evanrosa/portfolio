@@ -37,9 +37,11 @@ export default function Contact() {
             }}
             whileTap={{ scale: 0.9 }}
           >
+            <a href="mailto:crypto.evro@gmail.com">
             <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
               crypto.evro@gmail.com
             </Button>
+            </a>
           </motion.div>
         </section>
       </Container>
