@@ -138,6 +138,7 @@ export default function About() {
                     alt="ClayFriends 742"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -149,6 +150,7 @@ export default function About() {
                     alt="Illogic 151"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -160,6 +162,7 @@ export default function About() {
                     alt="Illogic 1600"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -171,6 +174,7 @@ export default function About() {
                     alt="Illogic 2768"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -182,6 +186,7 @@ export default function About() {
                     alt="Illogic 4739"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -193,6 +198,7 @@ export default function About() {
                     alt="Illogic 4946"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -204,6 +210,7 @@ export default function About() {
                     alt="Illogic 6255"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -215,6 +222,7 @@ export default function About() {
                     alt="Illogic 7298"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -226,6 +234,7 @@ export default function About() {
                     alt="Illogic 8273"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -237,6 +246,7 @@ export default function About() {
                     alt="Tiny Astro 219"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"
@@ -248,6 +258,7 @@ export default function About() {
                     alt="Tiny Astro 1347"
                     width={200}
                     height={200}
+                    layout="fill"
                     sizes="(min-width: 75em) 33vw,
                     (min-width: 48em) 50vw,
                     100vw"

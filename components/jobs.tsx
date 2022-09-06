@@ -85,7 +85,6 @@ export default function Job() {
             <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
               <Tabs
                 orientation="vertical"
-                variant="scrollable"
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
@@ -202,7 +201,7 @@ export default function Job() {
         ) : (
           <Box sx={{ width: '100%', minHeight: '625px' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs variant="scrollable" value={value} onChange={handleChange} aria-label="basic tabs example" centered>
+              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
                 <Tab label="Digital Turbine" {...a11yProps(0)} />
                 <Tab label="Booz Allen Hamilton" {...a11yProps(1)} />
                 <Tab label="The American Chemical Society" {...a11yProps(2)} />

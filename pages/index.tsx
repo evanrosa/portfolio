@@ -5,23 +5,13 @@ import IndexLayout from '../components/layouts/interface';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-const Intro = dynamic(() => import('../components/intro'), {
-  suspense: true,
-});
-const About = dynamic(() => import('../components/about'), {
-  ssr: false,
-});
-const Work = dynamic(() => import('../components/work'), {
-  ssr: false,
-});
-const Job = dynamic(() => import('../components/jobs'), {
-  ssr: false,
-});
-const Contact = dynamic(() => import('../components/contact'), {
-  ssr: false,
-});
+const Intro = dynamic(() => import('../components/intro'));
+const About = dynamic(() => import('../components/about'));
+const Work = dynamic(() => import('../components/work'));
+const Job = dynamic(() => import('../components/jobs'));
+const Contact = dynamic(() => import('../components/contact'));
 
 function Home({ projects }: ProjectsProps) {
   function profile() {
@@ -63,41 +53,41 @@ function Home({ projects }: ProjectsProps) {
         <main>
           <Intro />
 
-          <motion.div
+          <m.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
             <About />
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
             <Job />
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
             <Work projects={projects} />
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
             <Contact />
-          </motion.div>
+          </m.div>
         </main>
       </Container>
 

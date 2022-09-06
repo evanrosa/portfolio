@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { Container } from '@mui/system';
 import Typography from '@mui/material/Typography';
-import { motion, Variants } from 'framer-motion';
+import { m, Variants } from 'framer-motion';
 import DrawerAppBar from '../components/navigation';
 
 const interfaceVariants: Variants = {
@@ -26,7 +26,7 @@ function Error() {
       <header>
         <DrawerAppBar />
       </header>
-      <motion.div variants={interfaceVariants} initial="hidden" animate="visible">
+      <m.div variants={interfaceVariants} initial="hidden" animate="visible">
         <Container
           sx={{
             minHeight: '80vh',
@@ -37,7 +37,7 @@ function Error() {
             alignItems: 'flex-start',
           }}
         >
-          <motion.div
+          <m.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,9 +50,9 @@ function Error() {
               GGs! If your on this page then you're looking for something on this site that isn't there... yet
               (maybe?!).
             </Typography>
-          </motion.div>
+          </m.div>
         </Container>
-      </motion.div>
+      </m.div>
 
       {/* Inspired by - https://brittanychiang.com/ */}
     </>

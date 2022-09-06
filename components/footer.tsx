@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 function Footer() {
   return (
-    <motion.footer
+    <m.footer
       viewport={{ once: false }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ function Footer() {
           </Link>
         </Grid>
       </Grid>
-    </motion.footer>
+    </m.footer>
   );
 }
 

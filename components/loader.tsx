@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Box from '@mui/material/Box';
 
 const loaderVariants = {
@@ -33,7 +33,7 @@ const Loader = ({ finishLoading }) => {
           opacity: [0.9, 0.8, 0.7],
         },
       }}
-      component={motion.div}
+      component={m.div}
       variants={loaderVariants}
       animate="animationOne"
     ></Box>

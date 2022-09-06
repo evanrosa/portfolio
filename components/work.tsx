@@ -3,7 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -43,7 +43,7 @@ export default function Work({ projects }: ProjectPost) {
               projects.map((projects) => {
                 return (
                   <Grid xs={12} sm={6} md={4} lg={4} key={projects.slug}>
-                    <motion.div
+                    <m.div
                       whileHover={{
                         scale: 1.1,
                         transition: { duration: 0.5 },
@@ -98,7 +98,7 @@ export default function Work({ projects }: ProjectPost) {
                           )}
                         </a>
                       </Link>
-                    </motion.div>
+                    </m.div>
                   </Grid>
                 );
               })}

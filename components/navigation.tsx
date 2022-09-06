@@ -4,7 +4,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { motion, Variants } from 'framer-motion';
+import { m, Variants } from 'framer-motion';
 
 import AppBar from '@mui/material/AppBar';
 
@@ -23,7 +23,7 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 /* PROPS */
 
-/* FRAMER MOTION VARIANTS */
+/* FRAMER m VARIANTS */
 
 const navLinkVariants: Variants = {
   hidden: {
@@ -102,7 +102,7 @@ export default function DrawerAppBar(props) {
               <Typography
                 variant="h6"
                 variants={navLinkVariants}
-                component={motion.div}
+                component={m.div}
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
               >
                 &#60;evro.eth/&#62;
@@ -112,12 +112,7 @@ export default function DrawerAppBar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
-                  <Button
-                    key={item}
-                    sx={{ textTransform: 'capitalize' }}
-                    variants={navLinkVariants}
-                    component={motion.div}
-                  >
+                  <Button key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
@@ -125,9 +120,9 @@ export default function DrawerAppBar(props) {
                 </Link>
               ))}
 
-              <motion.div variants={navLinkVariants}>
-                <ThemeToggle />
-              </motion.div>
+              <m.div variants={navLinkVariants}>
+                <ThemeToggle aria-label="open drawer" />
+              </m.div>
             </Box>
             {isMobile ? (
               <Link href="/">
@@ -139,10 +134,10 @@ export default function DrawerAppBar(props) {
             ) : null}
             <div />
             <Box sx={{ display: 'flex' }}>
-              <Box variants={navLinkVariants} component={motion.div}>
-                {isMobile ? <ThemeToggle /> : null}
+              <Box variants={navLinkVariants} component={m.div}>
+                {isMobile ? <ThemeToggle aria-label="open drawer" /> : null}
               </Box>
-              <Box variants={navLinkVariants} component={motion.div}>
+              <Box variants={navLinkVariants} component={m.div}>
                 <IconButton
                   color="inherit"
                   aria-label="open drawer"

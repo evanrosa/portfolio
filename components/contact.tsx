@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Unstable_Grid2';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from '@mui/material/Link';
 
 export default function Contact() {
@@ -31,23 +31,19 @@ export default function Contact() {
             </Grid>
           </Grid>
 
-          <motion.div
+          <m.div
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.5 },
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link
-                href="mailto:crypto.evro@gmail.com"
-                target={'_blank'}
-                rel="noreferrer"
-              >
+            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer">
               <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                 crypto.evro@gmail.com
               </Button>
             </Link>
-          </motion.div>
+          </m.div>
         </section>
       </Container>
     </>

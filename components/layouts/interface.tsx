@@ -1,8 +1,9 @@
 import type { PropsWithChildren, ReactElement } from 'react';
 import DrawerAppBar from '../navigation';
 import Footer from '../footer';
-import { motion, Variants } from 'framer-motion';
+import { m, Variants } from 'framer-motion';
 
+import { LazyMotion, domAnimation } from "framer-motion"
 
 const interfaceVariants: Variants = {
   hidden: {
@@ -16,13 +17,17 @@ const interfaceVariants: Variants = {
 
 function IndexLayout({ children }: PropsWithChildren<{}>): ReactElement {
     return (
-        <motion.div variants={interfaceVariants} initial="hidden" animate="visible">
+      <LazyMotion features={domAnimation} strict>
+        <m.div variants={interfaceVariants} initial="hidden" animate="visible">
             <header>
                 <DrawerAppBar/>
             </header>
-            {children}
+            
+              {children}
+            
             <Footer />
-        </motion.div>
+        </m.div>
+        </LazyMotion>
     );
 }
 export default IndexLayout;

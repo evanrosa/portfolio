@@ -10,8 +10,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
+    "@em/react": "^11.10.0",
+    "@em/styled": "^11.10.0",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.0",
     "@next/bundle-analyzer": "^12.2.5",
