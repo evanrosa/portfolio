@@ -32,6 +32,8 @@ function Home({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
+
+
         <title>evro.eth | Web2 Big Data Developer and Web3 NFT Degen</title>
         <meta
           name="description"
