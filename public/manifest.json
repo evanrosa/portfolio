@@ -3,8 +3,8 @@
   "short_name": "evro.dev",
   "icons": [
     {
-      "src": "/public/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "/public/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     },
 
