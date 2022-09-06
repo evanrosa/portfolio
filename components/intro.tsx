@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module';
 
 export {};
 
@@ -14,7 +14,6 @@ declare global {
     dataLayer: any; // 👈️ turn off type checking
   }
 }
-
 
 const fontVariants: Variants = {
   hidden: {
@@ -28,12 +27,7 @@ const fontVariants: Variants = {
   },
 };
 
-
-
-
-
 export default function Intro() {
-  
   return (
     <>
       {/* INTRO */}
@@ -102,10 +96,16 @@ export default function Intro() {
                 target={'_blank'}
                 rel="noreferrer"
               >
-                <Button onClick={()=>{window.dataLayer.push({
-        event: 'click',
-        eventDetail: 'check_my_wallet'
-    })}} variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+                <Button
+                  onClick={() => {
+                    window.dataLayer.push({
+                      event: 'click',
+                      eventDetail: 'check_my_wallet',
+                    });
+                  }}
+                  variant="outlined"
+                  sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}
+                >
                   Check out my wallet
                 </Button>
               </Link>

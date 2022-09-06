@@ -49,11 +49,14 @@ function Home({ projects }: ProjectsProps) {
         />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://evro.dev" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={profile()}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={profile()} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
 
         <meta name="twitter:title" content="evro.eth | Web2 Big Data Developer and Web3 NFT Degen" />
-        <meta name="twitter:description" content="evro.eth is a Web2 Big Data Developer exploring Web3. He specializes in Web2 analytics and is learning to build for the Web3 ethereum ecosystem."/>
+        <meta
+          name="twitter:description"
+          content="evro.eth is a Web2 Big Data Developer exploring Web3. He specializes in Web2 analytics and is learning to build for the Web3 ethereum ecosystem."
+        />
         <meta name="twitter:url" content="https://evro.dev" />
       </Head>
       <Container fixed>
