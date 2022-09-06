@@ -1,6 +1,9 @@
-const withOffline = require("next-offline");
+const withPWA = require("next-pwa");
 
-// your next.js configs
-const nextConfig = {};
-
-module.exports = withOffline(nextConfig);
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
+});

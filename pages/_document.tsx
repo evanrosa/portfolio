@@ -5,6 +5,10 @@ class WebDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#0a192f" />
+          <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+          <meta name="apple-mobile-web-app-status-bar" content="#0a192f" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link

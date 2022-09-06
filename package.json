@@ -7,7 +7,6 @@
     "pretty": "prettier --config .prettierrc --write ./**/*.{js,ts,tsx}",
     "dev": "next dev",
     "build": "next build",
-    "server": "yarn build && NODE_ENV=production node server.js",
     "start": "next start"
   },
   "dependencies": {
@@ -19,6 +18,7 @@
     "framer-motion": "^6.5.1",
     "gray-matter": "^4.0.3",
     "next": "latest",
+    "next-pwa": "^5.6.0",
     "react": "^18.3.0-next-17e2a15be-20220808",
     "react-dom": "^18.3.0-next-17e2a15be-20220808",
     "react-gtm-module": "^2.0.11",
@@ -34,9 +34,7 @@
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
     "eslint-config-prettier": "^8.5.0",
-    "express": "^4.18.1",
     "husky": "^8.0.1",
-    "next-offline": "^5.0.5",
     "postcss": "^8.4.14",
     "prettier": "2.7.1",
     "pretty-quick": "^3.1.3",
