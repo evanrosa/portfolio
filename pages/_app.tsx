@@ -36,8 +36,10 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
   let theme = useMemo(() => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))), [mode]);
 
   theme = responsiveFontSizes(theme);
-  const gtmParams = { id: 'GTM-NL3W835' }
-
+  const gtmParams = {
+    id: 'GTM-NL3W835',
+    dataLayerName: 'evroDataLayer'
+  }
   return (
     <GTMProvider state={gtmParams}>
       <ColorModeContext.Provider value={colorMode}>
