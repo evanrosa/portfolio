@@ -27,7 +27,18 @@ const fontVariants: Variants = {
   },
 };
 
+const tagManagerArgs = {
+    dataLayer: {
+        event: 'click_external',
+        element: 'button',
+        details: 'check_my_wallet'
+    },
+    dataLayerName: 'EvroDataLayer'
+}
+
 export default function Intro() {
+  TagManager.dataLayer(tagManagerArgs)
+
   return (
     <>
       {/* INTRO */}
@@ -98,7 +109,7 @@ export default function Intro() {
               >
                 <Button
                   onClick={() => {
-                    window.dataLayer.push({
+                    Window.dataLayer.push({
                       event: 'click',
                       eventDetail: 'check_my_wallet',
                     });
