@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { m, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import TagManager from 'react-gtm-module';
-
 
 const fontVariants: Variants = {
   hidden: {
@@ -20,18 +18,7 @@ const fontVariants: Variants = {
   },
 };
 
-const tagManagerArgs = {
-    dataLayer: {
-        event: 'click_external',
-        element: 'button',
-        details: 'check_my_wallet'
-    },
-    dataLayerName: 'EvroDataLayer'
-}
-
 export default function Intro() {
-  TagManager.dataLayer(tagManagerArgs)
-
   return (
     <>
       {/* INTRO */}
@@ -46,15 +33,15 @@ export default function Intro() {
           alignItems: 'flex-start',
         }}
       >
-        <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={m.h1} variants={fontVariants}>
+        <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={motion.h1} variants={fontVariants}>
           evro.eth
         </Typography>
 
         <section id="evro">
-          <Typography variant="h3" component={m.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
+          <Typography variant="h3" component={motion.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
             Building in Web2 while maintaining my sanity in Web3.
           </Typography>
-          <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
+          <Typography variant="body1" pb={3} component={motion.p} variants={fontVariants}>
             During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
             architretures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
@@ -87,7 +74,7 @@ export default function Intro() {
           </Typography>
 
           <Box sx={{ maxWidth: '300px' }}>
-            <m.div
+            <motion.div
               variants={fontVariants}
               whileHover={{
                 scale: 1.1,
@@ -100,27 +87,11 @@ export default function Intro() {
                 target={'_blank'}
                 rel="noreferrer"
               >
-                <Button
-                  onClick={() => {
-                    if (typeof window !== 'undefined') {
-                      window.dataLayer.push({
-                      event: 'click',
-                      eventDetail: 'check_my_wallet',
-                    });
-                    } else {
-                      console.log('You are on the server')
-     
-                    }
-
-
-                  }}
-                  variant="outlined"
-                  sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}
-                >
+                <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                   Check out my wallet
                 </Button>
               </Link>
-            </m.div>
+            </motion.div>
           </Box>
         </section>
       </Container>
