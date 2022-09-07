@@ -8,6 +8,7 @@ import { ColorModeContext } from '../themes/color-context';
 import type { NextComponentType } from 'next';
 import type { AppProps } from 'next/app';
 import { FC, Fragment, useState, useEffect, useMemo } from 'react';
+import { GTMProvider } from '@elgorditosalsero/react-gtm-hook'
 
 type CustomNextComponent = NextComponentType & { Layout?: FC };
 type CustomAppProps = AppProps & { Component: CustomNextComponent };
@@ -35,15 +36,20 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
   let theme = useMemo(() => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))), [mode]);
 
   theme = responsiveFontSizes(theme);
+  const gtmParams = { id: 'GTM-NL3W835' }
+
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <GTMProvider state={gtmParams}>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </GTMProvider>
+
   );
 }
 
