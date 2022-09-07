@@ -109,7 +109,7 @@ export default function Intro() {
               >
                 <Button
                   onClick={() => {
-                    Window.dataLayer.push({
+                    window.dataLayer.push({
                       event: 'click',
                       eventDetail: 'check_my_wallet',
                     });
