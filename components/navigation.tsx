@@ -66,10 +66,9 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
-  let handleNavClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e })
+  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'desktop' })
 
-
-
+  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'desktop' })
   
 
 
@@ -92,7 +91,7 @@ export default function DrawerAppBar(props) {
       <List className="mobile-list">
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={handleNavMobileClick}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -122,7 +121,7 @@ export default function DrawerAppBar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
-                  <Button onClick={()=>handleNavClick(item)} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
+                  <Button onClick={()=>handleNavDesktopClick(item)} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
