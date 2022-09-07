@@ -7,13 +7,6 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import TagManager from 'react-gtm-module';
 
-export {};
-
-declare global {
-  interface Window {
-    dataLayer: any; // 👈️ turn off type checking
-  }
-}
 
 const fontVariants: Variants = {
   hidden: {
