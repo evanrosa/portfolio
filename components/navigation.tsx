@@ -66,7 +66,12 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
-  const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItems.map((item) => ({item}))  })
+  const linkRes = (navLink, id) => navLink.find(function(link) {
+        return link.id === id;
+    }) 
+
+  const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: linkRes })
+
 
 
   
