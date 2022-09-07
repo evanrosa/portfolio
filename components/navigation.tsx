@@ -21,7 +21,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-/* PROPS */
+import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+
 
 /* FRAMER m VARIANTS */
 
@@ -55,6 +56,14 @@ function HideOnScroll(props) {
     </Slide>
   );
 }
+
+const sendDataToGTM = useGTMDispatch()
+
+const navItemText = navItems.map(item => {
+    return item
+})
+
+const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItemText  })
 
 export default function DrawerAppBar(props) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
@@ -111,7 +120,7 @@ export default function DrawerAppBar(props) {
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
-                <Link href={`/#` + item} passHref key={item}>
+                <Link href={`/#` + item} passHref key={item} onClick={handleNavClick}>
                   <Button key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
