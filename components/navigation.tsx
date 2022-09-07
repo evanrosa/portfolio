@@ -66,6 +66,12 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
+  const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItems.map((item) => ({item}))  })
+
+
+  
+
+
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
   }, [IsNotDesktop]);
@@ -115,7 +121,7 @@ export default function DrawerAppBar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
-                  <Button onClick={sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: {item}  })} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
+                  <Button onClick={handleNavClick} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
