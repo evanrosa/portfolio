@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import TagManager from 'react-gtm-module'
 
 const fontVariants: Variants = {
   hidden: {
@@ -17,8 +18,17 @@ const fontVariants: Variants = {
     transition: { type: 'spring', duration: 1 },
   },
 };
-
+const tagManagerArgs = {
+    dataLayer: {
+        event: 'click_external',
+        element: 'button',
+        details: 'check_my_wallet'
+    },
+    dataLayerName: 'EvroDataLayer'
+}
 export default function Intro() {
+  TagManager.dataLayer(tagManagerArgs)
+
   return (
     <>
       {/* INTRO */}
