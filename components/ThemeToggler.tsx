@@ -13,13 +13,8 @@ export default function ThemeToggle() {
   const sendDataToGTM = useGTMDispatch()
   let themeToggleClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: 'theme_toggle', category: theme.palette.mode })
 
-  function themeToggleData(){
-    colorMode.toggleColorMode
-    themeToggleClick
-  }
-
   return (
-    <IconButton sx={{ ml: 1 }} onClick={themeToggleData} color="inherit">
+    <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
       {theme.palette.mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
     </IconButton>
   );
