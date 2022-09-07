@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import {  useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+import {  GTMProvider, useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 const fontVariants: Variants = {
   hidden: {
@@ -21,7 +21,10 @@ const fontVariants: Variants = {
 
 export default function Intro() {
   const sendDataToGTM = useGTMDispatch()
-
+  const gtmParams = {
+    id: 'GTM-NL3W835',
+    dataLayerName: 'evroDataLayer'
+  }
   const handleGTMClick = () => sendDataToGTM({ event: 'click', element: 'button' })
 
   return (
@@ -92,9 +95,13 @@ export default function Intro() {
                 target={'_blank'}
                 rel="noreferrer"
               >
-                <Button onClick={handleGTMClick} variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+                <GTMProvider state={gtmParams}>
+
+                                  <Button onClick={handleGTMClick} variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                   Check out my wallet
                 </Button>
+                </GTMProvider>
+
               </Link>
             </motion.div>
           </Box>
