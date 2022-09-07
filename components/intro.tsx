@@ -109,10 +109,17 @@ export default function Intro() {
               >
                 <Button
                   onClick={() => {
-                    window.dataLayer.push({
+                    if (typeof window !== 'undefined') {
+                      window.dataLayer.push({
                       event: 'click',
                       eventDetail: 'check_my_wallet',
                     });
+                    } else {
+                      console.log('You are on the server')
+     
+                    }
+
+
                   }}
                   variant="outlined"
                   sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}
