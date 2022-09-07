@@ -8,7 +8,6 @@ import { ColorModeContext } from '../themes/color-context';
 import type { NextComponentType } from 'next';
 import type { AppProps } from 'next/app';
 import { FC, Fragment, useState, useEffect, useMemo } from 'react';
-import TagManager from 'react-gtm-module';
 
 type CustomNextComponent = NextComponentType & { Layout?: FC };
 type CustomAppProps = AppProps & { Component: CustomNextComponent };
@@ -23,9 +22,6 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
     setMode(prefersDarkMode ? 'dark' : 'light');
   }, [prefersDarkMode]);
 
-  useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-NL3W835', dataLayerName: 'EvroDataLayer' });
-  }, []);
 
   const colorMode = useMemo(
     () => ({
