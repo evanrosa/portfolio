@@ -66,7 +66,7 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
-  const handleNavClick = (item) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: item  })
+  const handleNavClick = (navItem) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItem  })
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
