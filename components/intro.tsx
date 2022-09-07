@@ -10,7 +10,7 @@ import TagManager from 'react-gtm-module';
 export {};
 
 declare global {
-  interface window {
+  interface Window {
     dataLayer: any; // 👈️ turn off type checking
   }
 }
@@ -109,7 +109,7 @@ export default function Intro() {
               >
                 <Button
                   onClick={() => {
-                    window.dataLayer.push({
+                    Window.dataLayer.push({
                       event: 'click',
                       eventDetail: 'check_my_wallet',
                     });
