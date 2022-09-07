@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import {  GTMProvider, useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+import {  useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 const fontVariants: Variants = {
   hidden: {
@@ -21,11 +21,12 @@ const fontVariants: Variants = {
 
 export default function Intro() {
   const sendDataToGTM = useGTMDispatch()
-  const gtmParams = {
-    id: 'GTM-NL3W835',
-    dataLayerName: 'evroDataLayer'
-  }
-  const handleGTMClick = () => sendDataToGTM({ event: 'click', element: 'button' })
+
+  const handleBtnWalletClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'check_out_my_wallet', category: 'web3', sub_category: 'nft'  })
+  const handleLinkDTClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'digital_turbine', category: 'web2', sub_category: 'work' })
+  const handleLinkNFTLoserClubClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'loser_club', category: 'web3', sub_category: 'nft' })
+  const handleLinkNFTIllogicsClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'illogics', category: 'web3', sub_category: 'nft' })
+  const handleLinkNFTTinyAstroClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'tiny_astro', category: 'web3', sub_category: 'nft' })
 
   return (
     <>
@@ -53,28 +54,28 @@ export default function Intro() {
             During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
             architretures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
-              <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
+              <Link onClick={handleLinkDTClick} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                 Digital Turbine
               </Link>
             </span>
             . At night, or whenever I have free time, I'm learning how to build Web3 apps. I'm currently a hodler of
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link href="https://twitter.com/loserclubreborn" target={'_blank'} rel="noreferrer">
+              <Link onClick={handleLinkNFTLoserClubClick} href="https://twitter.com/loserclubreborn" target={'_blank'} rel="noreferrer">
                 Loser Club
               </Link>
             </span>
             ,{' '}
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link href="https://www.illogics.io/" target={'_blank'} rel="noreferrer">
+              <Link onClick={handleLinkNFTIllogicsClick} href="https://www.illogics.io/" target={'_blank'} rel="noreferrer">
                 Illogics
               </Link>
             </span>
             ,{' '}
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link href="https://tinyastro.io/" target={'_blank'} rel="noreferrer">
+              <Link onClick={handleLinkNFTTinyAstroClick} href="https://tinyastro.io/" target={'_blank'} rel="noreferrer">
                 Tiny Astro
               </Link>
             </span>{' '}
@@ -95,13 +96,9 @@ export default function Intro() {
                 target={'_blank'}
                 rel="noreferrer"
               >
-                <GTMProvider state={gtmParams}>
-
-                                  <Button onClick={handleGTMClick} variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+                <Button onClick={handleBtnWalletClick} variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                   Check out my wallet
                 </Button>
-                </GTMProvider>
-
               </Link>
             </motion.div>
           </Box>
