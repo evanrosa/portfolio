@@ -120,8 +120,8 @@ export default function DrawerAppBar(props) {
 
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
-                <Link href={`/#` + item} passHref key={item} onClick={handleNavClick}>
-                  <Button key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
+                <Link href={`/#` + item} passHref key={item}>
+                  <Button onClick={handleNavClick} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
