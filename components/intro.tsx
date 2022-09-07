@@ -10,7 +10,7 @@ import TagManager from 'react-gtm-module';
 export {};
 
 declare global {
-  interface Window {
+  interface window {
     dataLayer: any; // 👈️ turn off type checking
   }
 }
