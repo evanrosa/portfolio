@@ -57,20 +57,20 @@ function HideOnScroll(props) {
   );
 }
 
-const sendDataToGTM = useGTMDispatch()
-
-const navItemText = navItems.map(item => {
-    return item
-})
-
-const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItemText  })
-
 export default function DrawerAppBar(props) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
   const [isMobile, setIsMobile] = React.useState(false);
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const sendDataToGTM = useGTMDispatch()
+
+  const navItemText = navItems.map(item => {
+      return item
+  })
+
+  const handleNavClick = () => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: navItemText  })
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
