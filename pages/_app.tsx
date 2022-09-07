@@ -24,11 +24,7 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
   }, [prefersDarkMode]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      TagManager.initialize({ gtmId: 'GTM-NL3W835', dataLayerName: 'EvroDataLayer' });
-    } else {
-      null;
-    }
+    TagManager.initialize({ gtmId: 'GTM-NL3W835', dataLayerName: 'EvroDataLayer' });
   }, []);
 
   const colorMode = useMemo(
