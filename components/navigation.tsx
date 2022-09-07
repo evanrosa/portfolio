@@ -68,7 +68,7 @@ export default function DrawerAppBar(props) {
 
   let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'desktop' })
 
-  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'desktop' })
+  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'mobile' })
   
 
 
