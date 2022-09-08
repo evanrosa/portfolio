@@ -35,6 +35,8 @@ function Home({ projects }: ProjectsProps) {
     `,
     };
   }
+  console.log(scrollYProgress);
+  
 
   return (
     <>

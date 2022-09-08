@@ -54,8 +54,8 @@ export default function Work({ projects }: ProjectPost) {
                       }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Link href={{ pathname: `${projects.frontMatter.website}` }} onClick={()=>handleProjectClick(`${projects.frontMatter.gtmValue}` )}>
-                        <a target={'_blank'} rel="noreferrer" className="noUnderline">
+                      <Link href={{ pathname: `${projects.frontMatter.website}` }}>
+                        <a target={'_blank'} rel="noreferrer" className="noUnderline" onClick={()=>handleProjectClick(`${projects.frontMatter.gtmValue}` )}>
                           {isMobile ? (
                             <Card sx={{ maxWidth: 345 }}>
                               <CardMedia>
