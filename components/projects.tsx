@@ -12,6 +12,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
+import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 export default function Work({ projects }: ProjectPost) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
@@ -21,6 +22,9 @@ export default function Work({ projects }: ProjectPost) {
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
   }, [IsNotDesktop]);
+
+  const sendDataToGTM = useGTMDispatch()
+  const handleProjectClick = (e) => sendDataToGTM({ event: 'click_external', element: 'card', detail: e, category: 'web2', section: 'things_ive_built'})
 
   return (
     <>
@@ -51,7 +55,7 @@ export default function Work({ projects }: ProjectPost) {
                       whileTap={{ scale: 0.9 }}
                     >
                       <Link href={{ pathname: `${projects.frontMatter.website}` }}>
-                        <a target={'_blank'} rel="noreferrer" className="noUnderline">
+                        <a target={'_blank'} rel="noreferrer" className="noUnderline" onClick={()=>handleProjectClick(`${projects.frontMatter.gtmValue}` )}>
                           {isMobile ? (
                             <Card sx={{ maxWidth: 345 }}>
                               <CardMedia>

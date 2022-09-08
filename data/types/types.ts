@@ -1,4 +1,5 @@
 export type ProjectsFrontMatter = {
+  gtmValue: string
   thumbnailUrl: string
   title: string
   headline: string

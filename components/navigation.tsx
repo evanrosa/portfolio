@@ -21,7 +21,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-/* PROPS */
+import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+
 
 /* FRAMER m VARIANTS */
 
@@ -38,7 +39,7 @@ const navLinkVariants: Variants = {
 };
 
 const drawerWidth = 240;
-const navItems = ['About', 'Experience', 'Work', 'Contact'];
+const navItems = ['About', 'Work', 'Projects', 'Contact'];
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -63,6 +64,14 @@ export default function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const sendDataToGTM = useGTMDispatch()
+
+  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'desktop', section: 'navigation_head' })
+
+  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'mobile', section: 'navigation_head' })
+  
+
+
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
   }, [IsNotDesktop]);
@@ -81,7 +90,7 @@ export default function DrawerAppBar(props) {
       <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item} disablePadding onClick={()=>handleNavMobileClick(item)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -112,7 +121,7 @@ export default function DrawerAppBar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
-                  <Button key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
+                  <Button onClick={()=>handleNavDesktopClick(item)} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>
@@ -121,7 +130,7 @@ export default function DrawerAppBar(props) {
               ))}
 
               <m.div variants={navLinkVariants}>
-                <ThemeToggle aria-label="open drawer" />
+                <ThemeToggle aria-label="Toggle Theme Colors" />
               </m.div>
             </Box>
             {isMobile ? (
@@ -135,7 +144,7 @@ export default function DrawerAppBar(props) {
             <div />
             <Box sx={{ display: 'flex' }}>
               <Box variants={navLinkVariants} component={m.div}>
-                {isMobile ? <ThemeToggle aria-label="open drawer" /> : null}
+                {isMobile ? <ThemeToggle aria-label="Toggle Theme Colors" /> : null}
               </Box>
               <Box variants={navLinkVariants} component={m.div}>
                 <IconButton
