@@ -43,7 +43,7 @@ export default function Contact() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer" onClick={handleContactClick}>
+            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer" onClick={()=>handleContactClick}>
               <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                 crypto.evro@gmail.com
               </Button>
