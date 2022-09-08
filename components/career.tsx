@@ -37,7 +37,6 @@ export default function Job() {
     if (isDesktop) {
       return (
         <div
-          onClick={()=>handleTabClick(value)}
           role="tabpanel"
           hidden={value !== index}
           id={`vertical-tabpanel-${index}`}
@@ -50,7 +49,6 @@ export default function Job() {
     } else {
       return (
         <div
-          onClick={handleTabClick(index)}
           role="tabpanel"
           hidden={value !== index}
           id={`simple-tabpanel-${index}`}
@@ -96,9 +94,9 @@ export default function Job() {
                 aria-label="Vertical tabs example"
                 sx={{ borderRight: 1, borderColor: 'divider', minWidth: '175px', height: '165px' }}
               >
-                <Tab label="Digital Turbine" {...a11yProps(0)} />
-                <Tab label="Booz Allen Hamilton" {...a11yProps(1)} />
-                <Tab label="The American Chemical Society" {...a11yProps(2)} />
+                <Tab onClick={()=>handleTabClick('dt')} label="Digital Turbine" {...a11yProps(0)} />
+                <Tab onClick={()=>handleTabClick('bah')} label="Booz Allen Hamilton" {...a11yProps(1)} />
+                <Tab onClick={()=>handleTabClick('acs')} label="The American Chemical Society" {...a11yProps(2)} />
               </Tabs>
               <TabPanel value={value} index={0}>
                 <Typography variant="h4" component="h3">
