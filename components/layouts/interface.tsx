@@ -25,7 +25,6 @@ function IndexLayout({ children }: PropsWithChildren<{}>): ReactElement {
             
               {children}
             
-            <Footer />
         </m.div>
         </LazyMotion>
     );

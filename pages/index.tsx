@@ -66,6 +66,7 @@ function Home({ projects }: ProjectsProps) {
           
 
           <m.div
+            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +76,7 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
+            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -84,6 +86,7 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
+            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,12 +96,15 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
+            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
+          <div ref={ref}>
             <Contact />
+          </div>
           </m.div>
         </main>
       </Container>

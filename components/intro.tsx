@@ -94,8 +94,9 @@ export default function Intro() {
                 href="https://opensea.io/0xA662C6253AF152807660Fb7DB6776ca7a35a380C"
                 target={'_blank'}
                 rel="noreferrer"
+                onClick={handleBtnWalletClick} 
               >
-                <Button onClick={()=>handleBtnWalletClick}variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
+                <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                   Check out my wallet
                 </Button>
               </Link>
