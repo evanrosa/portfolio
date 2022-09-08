@@ -11,10 +11,16 @@ export default function ThemeToggle() {
   const colorMode = React.useContext(ColorModeContext);
 
   const sendDataToGTM = useGTMDispatch()
+
+  function toggle() {
+    themeToggleClick;
+    colorMode.toggleColorMode;
+  }
+
   let themeToggleClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: 'theme_toggle', category: theme.palette.mode })
 
   return (
-    <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+    <IconButton sx={{ ml: 1 }} onClick={toggle} color="inherit">
       {theme.palette.mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
     </IconButton>
   );

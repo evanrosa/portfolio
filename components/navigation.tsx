@@ -22,7 +22,6 @@ import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
-import { ColorModeContext } from '../themes/color-context';
 
 
 /* FRAMER m VARIANTS */
@@ -102,7 +101,6 @@ export default function DrawerAppBar(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-  const colorMode = React.useContext(ColorModeContext);
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -131,7 +129,7 @@ export default function DrawerAppBar(props) {
                 </Link>
               ))}
 
-              <m.div variants={navLinkVariants} onClick={()=>handleNavDesktopClick(colorMode.toggleColorMode)}>
+              <m.div variants={navLinkVariants}>
                 <ThemeToggle aria-label="Toggle Theme Colors" />
               </m.div>
             </Box>
@@ -145,7 +143,7 @@ export default function DrawerAppBar(props) {
             ) : null}
             <div />
             <Box sx={{ display: 'flex' }}>
-              <Box variants={navLinkVariants} component={m.div} onClick={()=>handleNavDesktopClick(colorMode.toggleColorMode)}>
+              <Box variants={navLinkVariants} component={m.div}>
                 {isMobile ? <ThemeToggle aria-label="Toggle Theme Colors" /> : null}
               </Box>
               <Box variants={navLinkVariants} component={m.div}>
