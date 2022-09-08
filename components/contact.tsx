@@ -6,8 +6,13 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Unstable_Grid2';
 import { m } from 'framer-motion';
 import Link from '@mui/material/Link';
+import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 export default function Contact() {
+
+  const sendDataToGTM = useGTMDispatch()
+  const handleContactClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'contact', category: 'web2', section: 'contact'})
+
   return (
     <>
       <Container sx={{ textAlign: 'center' }}>
@@ -38,7 +43,7 @@ export default function Contact() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer">
+            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer" onClick={handleContactClick}>
               <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                 crypto.evro@gmail.com
               </Button>
