@@ -66,9 +66,9 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
-  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, category: 'desktop', section: 'navigation_head' })
+  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'desktop', section: 'navigation_head' })
 
-  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, category: 'mobile', section: 'navigation_head' })
+  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'mobile', section: 'navigation_head' })
   
 
 
