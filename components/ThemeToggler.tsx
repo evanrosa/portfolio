@@ -23,7 +23,7 @@ export default function ThemeToggle() {
 
 
   return (
-    <IconButton sx={{ ml: 1 }} onClick={handleClick} color="inherit">
+    <IconButton sx={{ ml: 1 }} onClick={event =>{handleClick}} color="inherit">
       {theme.palette.mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}
     </IconButton>
   );
