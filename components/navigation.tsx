@@ -39,7 +39,7 @@ const navLinkVariants: Variants = {
 };
 
 const drawerWidth = 240;
-const navItems = ['About', 'Experience', 'Work', 'Contact'];
+const navItems = ['About', 'Work', 'Projects', 'Contact'];
 
 function HideOnScroll(props) {
   const { children, window } = props;

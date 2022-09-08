@@ -105,7 +105,7 @@ export default function Job() {
               <TabPanel value={value} index={0}>
                 <Typography variant="h4" component="h3">
                   Data Engineer at{' '}
-                  <Link onClick={handleLinkClick('dt', 'desktop')} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
+                  <Link onClick={()=>handleLinkClick('dt', 'desktop')} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                     Digital Turbine
                   </Link>
                 </Typography>
@@ -138,7 +138,7 @@ export default function Job() {
               <TabPanel value={value} index={1}>
                 <Typography variant="h4" component="h3">
                   Lead Web Analyst at{' '}
-                  <Link onClick={handleLinkClick('bah', 'desktop')} href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
+                  <Link onClick={()=>handleLinkClick('bah', 'desktop')} href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
                     Booz Allen Hamilton
                   </Link>
                 </Typography>
@@ -172,7 +172,7 @@ export default function Job() {
               <TabPanel value={value} index={2}>
                 <Typography variant="h4" component="h3">
                   Web Analyst at{' '}
-                  <Link onClick={handleLinkClick('acs', 'desktop')} href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
+                  <Link onClick={()=>handleLinkClick('acs', 'desktop')} href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
                     American Chemical Society
                   </Link>
                 </Typography>
@@ -218,7 +218,7 @@ export default function Job() {
             <TabPanel value={value} index={0}>
               <Typography variant="h4" component="h3">
                 Data Engineer at <br />
-                <Link onClick={handleLinkClick('dt', 'mobile')} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
+                <Link onClick={()=>handleLinkClick('dt', 'mobile')} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
                   Digital Turbine
                 </Link>
               </Typography>
@@ -251,7 +251,7 @@ export default function Job() {
             <TabPanel value={value} index={1}>
               <Typography variant="h4" component="h3">
                 Lead Web Analyst at <br />
-                <Link onClick={handleLinkClick('bah', 'mobile')} href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
+                <Link onClick={()=>handleLinkClick('bah', 'mobile')} href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
                   Booz Allen Hamilton
                 </Link>
               </Typography>
@@ -285,7 +285,7 @@ export default function Job() {
             <TabPanel value={value} index={2}>
               <Typography variant="h4" component="h3">
                 Web Analyst at <br />
-                <Link onClick={handleLinkClick('acs', 'mobile')} href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
+                <Link onClick={()=>handleLinkClick('acs', 'mobile')} href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
                   American Chemical Society
                 </Link>
               </Typography>
