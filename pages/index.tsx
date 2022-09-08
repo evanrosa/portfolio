@@ -9,8 +9,8 @@ import { m } from 'framer-motion';
 
 const Intro = dynamic(() => import('../components/intro'));
 const About = dynamic(() => import('../components/about'));
-const Work = dynamic(() => import('../components/work'));
-const Job = dynamic(() => import('../components/jobs'));
+const Work = dynamic(() => import('../components/projects'));
+const Job = dynamic(() => import('../components/career'));
 const Contact = dynamic(() => import('../components/contact'));
 
 function Home({ projects }: ProjectsProps) {

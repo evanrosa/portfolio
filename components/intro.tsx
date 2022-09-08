@@ -22,11 +22,11 @@ const fontVariants: Variants = {
 export default function Intro() {
   const sendDataToGTM = useGTMDispatch()
 
-  const handleBtnWalletClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'check_out_my_wallet', category: 'web3', sub_category: 'nft'  })
-  const handleLinkDTClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'digital_turbine', category: 'web2', sub_category: 'work' })
-  const handleLinkNFTLoserClubClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'loser_club', category: 'web3', sub_category: 'nft' })
-  const handleLinkNFTIllogicsClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'illogics', category: 'web3', sub_category: 'nft' })
-  const handleLinkNFTTinyAstroClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'tiny_astro', category: 'web3', sub_category: 'nft' })
+  const handleBtnWalletClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'check_out_my_wallet', category: 'web3', sub_category: 'nft', section: 'intro'  })
+  const handleLinkDTClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'digital_turbine', category: 'web2', sub_category: 'work', section: 'intro' })
+  const handleLinkNFTLoserClubClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'loser_club', category: 'web3', sub_category: 'nft', section: 'intro' })
+  const handleLinkNFTIllogicsClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'illogics', category: 'web3', sub_category: 'nft', section: 'intro' })
+  const handleLinkNFTTinyAstroClick = () => sendDataToGTM({ event: 'click_external', element: 'link', detail: 'tiny_astro', category: 'web3', sub_category: 'nft', section: 'intro' })
 
   return (
     <>

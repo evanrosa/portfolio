@@ -7,6 +7,7 @@ import Tabs from '@mui/material/Tabs';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Divider from '@mui/material/Divider';
+import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -27,12 +28,16 @@ export default function Job() {
     setValue(newValue);
   };
 
+  const sendDataToGTM = useGTMDispatch()
+  const handleTabClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, category: 'tab', section: 'where_ive_worked' })
+
   function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
     if (isDesktop) {
       return (
         <div
+          onClick={handleTabClick(index)}
           role="tabpanel"
           hidden={value !== index}
           id={`vertical-tabpanel-${index}`}
@@ -45,6 +50,7 @@ export default function Job() {
     } else {
       return (
         <div
+          onClick={handleTabClick(index)}
           role="tabpanel"
           hidden={value !== index}
           id={`simple-tabpanel-${index}`}

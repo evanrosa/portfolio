@@ -66,9 +66,9 @@ export default function DrawerAppBar(props) {
 
   const sendDataToGTM = useGTMDispatch()
 
-  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'desktop' })
+  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, category: 'desktop', section: 'navigation_head' })
 
-  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'navigation_head', detail: e, category: 'mobile' })
+  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, category: 'mobile', section: 'navigation_head' })
   
 
 
@@ -82,7 +82,7 @@ export default function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="/" onClick={()=>handleNavMobileClick('evro.eth')}>
+      <Link href="/">
         <Typography variant="h6" sx={{ my: 2, cursor: 'pointer' }}>
           &#60;evro.eth/&#62;
         </Typography>
@@ -107,7 +107,7 @@ export default function DrawerAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar component="nav">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Link href="/" onClick={()=>handleNavDesktopClick('evro.eth')}>
+            <Link href="/">
               <Typography
                 variant="h6"
                 variants={navLinkVariants}
@@ -134,7 +134,7 @@ export default function DrawerAppBar(props) {
               </m.div>
             </Box>
             {isMobile ? (
-              <Link href="/" onClick={()=>handleNavMobileClick('evro.eth')}>
+              <Link href="/">
                 <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
                   &#60;evro.eth/&#62;{' '}
