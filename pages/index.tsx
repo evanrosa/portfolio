@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
-import {useRef} from 'react';
 import dynamic from 'next/dynamic';
 import IndexLayout from '../components/layouts/interface';
 import { Container } from '@mui/system';
 import { getAllPostsWithFrontMatter } from '../lib/utils';
 import { ProjectsProps } from '../data/types/types';
-import { m, useScroll } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const Intro = dynamic(() => import('../components/intro'));
 const About = dynamic(() => import('../components/about'));
@@ -15,12 +14,6 @@ const Job = dynamic(() => import('../components/career'));
 const Contact = dynamic(() => import('../components/contact'));
 
 function Home({ projects }: ProjectsProps) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-  target: ref,
-  offset: ["start end", "end end"]
-})
-
   function profile() {
     return {
       __html: `{
@@ -35,8 +28,6 @@ function Home({ projects }: ProjectsProps) {
     `,
     };
   }
-  console.log(scrollYProgress);
-  
 
   return (
     <>
@@ -60,13 +51,9 @@ function Home({ projects }: ProjectsProps) {
       </Head>
       <Container fixed>
         <main>
-          <div ref={ref}>
-            <Intro />
-          </div>
-          
+          <Intro />
 
           <m.div
-            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +63,6 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
-            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +72,6 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
-            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -96,15 +81,12 @@ function Home({ projects }: ProjectsProps) {
           </m.div>
 
           <m.div
-            ref={ref}
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
-          <div ref={ref}>
             <Contact />
-          </div>
           </m.div>
         </main>
       </Container>
