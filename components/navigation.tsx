@@ -90,7 +90,7 @@ export default function DrawerAppBar(props) {
       <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding onClick={handleNavMobileClick}>
+          <ListItem key={item} disablePadding onClick={()=>handleNavMobileClick(item)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
