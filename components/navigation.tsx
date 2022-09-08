@@ -22,6 +22,7 @@ import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+import { ColorModeContext } from '../themes/color-context';
 
 
 /* FRAMER m VARIANTS */
@@ -82,7 +83,7 @@ export default function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="/">
+      <Link href="/" onClick={()=>handleNavMobileClick('evro.eth')}>
         <Typography variant="h6" sx={{ my: 2, cursor: 'pointer' }}>
           &#60;evro.eth/&#62;
         </Typography>
@@ -101,13 +102,14 @@ export default function DrawerAppBar(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  const colorMode = React.useContext(ColorModeContext);
 
   return (
     <Box sx={{ display: 'flex' }}>
       <HideOnScroll {...props}>
         <AppBar component="nav">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Link href="/">
+            <Link href="/" onClick={()=>handleNavDesktopClick('evro.eth')}>
               <Typography
                 variant="h6"
                 variants={navLinkVariants}
@@ -129,12 +131,12 @@ export default function DrawerAppBar(props) {
                 </Link>
               ))}
 
-              <m.div variants={navLinkVariants}>
-                <ThemeToggle aria-label="open drawer" />
+              <m.div variants={navLinkVariants} onClick={()=>handleNavDesktopClick(colorMode.toggleColorMode)}>
+                <ThemeToggle aria-label="Toggle Theme Colors" />
               </m.div>
             </Box>
             {isMobile ? (
-              <Link href="/">
+              <Link href="/" onClick={()=>handleNavMobileClick('evro.eth')}>
                 <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
                   &#60;evro.eth/&#62;{' '}
@@ -143,8 +145,8 @@ export default function DrawerAppBar(props) {
             ) : null}
             <div />
             <Box sx={{ display: 'flex' }}>
-              <Box variants={navLinkVariants} component={m.div}>
-                {isMobile ? <ThemeToggle aria-label="open drawer" /> : null}
+              <Box variants={navLinkVariants} component={m.div} onClick={()=>handleNavDesktopClick(colorMode.toggleColorMode)}>
+                {isMobile ? <ThemeToggle aria-label="Toggle Theme Colors" /> : null}
               </Box>
               <Box variants={navLinkVariants} component={m.div}>
                 <IconButton
