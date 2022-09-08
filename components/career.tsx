@@ -37,7 +37,7 @@ export default function Job() {
     if (isDesktop) {
       return (
         <div
-          onClick={handleTabClick(index)}
+          onClick={()=>handleTabClick(value)}
           role="tabpanel"
           hidden={value !== index}
           id={`vertical-tabpanel-${index}`}
