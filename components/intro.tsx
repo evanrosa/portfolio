@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { m, Variants } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -42,15 +42,15 @@ export default function Intro() {
           alignItems: 'flex-start',
         }}
       >
-        <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={motion.h1} variants={fontVariants}>
+        <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={m.h1} variants={fontVariants}>
           evro.eth
         </Typography>
 
         <section id="evro">
-          <Typography variant="h3" component={motion.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
+          <Typography variant="h3" component={m.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
             Building in Web2 while maintaining my sanity in Web3.
           </Typography>
-          <Typography variant="body1" pb={3} component={motion.p} variants={fontVariants}>
+          <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
             During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
             architretures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
@@ -83,7 +83,7 @@ export default function Intro() {
           </Typography>
 
           <Box sx={{ maxWidth: '300px' }}>
-            <motion.div
+            <m.div
               variants={fontVariants}
               whileHover={{
                 scale: 1.1,
@@ -100,7 +100,7 @@ export default function Intro() {
                   Check out my wallet
                 </Button>
               </Link>
-            </motion.div>
+            </m.div>
           </Box>
         </section>
       </Container>
