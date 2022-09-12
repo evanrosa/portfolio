@@ -23,7 +23,6 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
-
 /* FRAMER m VARIANTS */
 
 const navLinkVariants: Variants = {
@@ -64,13 +63,25 @@ export default function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const sendDataToGTM = useGTMDispatch()
+  const sendDataToGTM = useGTMDispatch();
 
-  let handleNavDesktopClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'desktop', section: 'navigation_head' })
+  let handleNavDesktopClick = (e) =>
+    sendDataToGTM({
+      event: 'click_internal',
+      element: 'link',
+      detail: e,
+      device: 'desktop',
+      section: 'navigation_head',
+    });
 
-  let handleNavMobileClick = (e) => sendDataToGTM({ event: 'click_internal', element: 'link', detail: e, device: 'mobile', section: 'navigation_head' })
-  
-
+  let handleNavMobileClick = (e) =>
+    sendDataToGTM({
+      event: 'click_internal',
+      element: 'link',
+      detail: e,
+      device: 'mobile',
+      section: 'navigation_head',
+    });
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
@@ -90,7 +101,7 @@ export default function DrawerAppBar(props) {
       <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding onClick={()=>handleNavMobileClick(item)}>
+          <ListItem key={item} disablePadding onClick={() => handleNavMobileClick(item)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -121,7 +132,13 @@ export default function DrawerAppBar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
-                  <Button onClick={()=>handleNavDesktopClick(item)} key={item} sx={{ textTransform: 'capitalize' }} variants={navLinkVariants} component={m.div}>
+                  <Button
+                    onClick={() => handleNavDesktopClick(item)}
+                    key={item}
+                    sx={{ textTransform: 'capitalize' }}
+                    variants={navLinkVariants}
+                    component={m.div}
+                  >
                     <Typography className="count" variant="body2">
                       {item}
                     </Typography>

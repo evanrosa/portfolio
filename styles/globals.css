@@ -32,3 +32,7 @@ body {
     list-style-type: none;
 }
 
+.loader-text{
+    font-family: 'Source Code Pro';
+    font-size: calc(32px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}

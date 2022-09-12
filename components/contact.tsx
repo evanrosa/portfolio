@@ -10,9 +10,15 @@ import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 import Footer from './footer';
 
 export default function Contact() {
-
-  const sendDataToGTM = useGTMDispatch()
-  const handleContactClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'contact', category: 'web2', section: 'contact'})
+  const sendDataToGTM = useGTMDispatch();
+  const handleContactClick = () =>
+    sendDataToGTM({
+      event: 'click_external',
+      element: 'button',
+      detail: 'contact',
+      category: 'web2',
+      section: 'contact',
+    });
 
   return (
     <>
@@ -53,7 +59,7 @@ export default function Contact() {
         </section>
       </Container>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

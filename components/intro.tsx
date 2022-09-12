@@ -20,12 +20,27 @@ const fontVariants: Variants = {
 };
 
 export default function Intro() {
-  const sendDataToGTM = useGTMDispatch()
+  const sendDataToGTM = useGTMDispatch();
 
-  const handleBtnWalletClick = () => sendDataToGTM({ event: 'click_external', element: 'button', detail: 'check_out_my_wallet', category: 'web3', sub_category: 'nft', section: 'intro'  })
+  const handleBtnWalletClick = () =>
+    sendDataToGTM({
+      event: 'click_external',
+      element: 'button',
+      detail: 'check_out_my_wallet',
+      category: 'web3',
+      sub_category: 'nft',
+      section: 'intro',
+    });
 
-  const handleLinkClick = (e, webEnv) => sendDataToGTM({ event: 'click_external', element: 'link', detail: e, category: webEnv, sub_category: 'work', section: 'intro' })
-
+  const handleLinkClick = (e, webEnv) =>
+    sendDataToGTM({
+      event: 'click_external',
+      element: 'link',
+      detail: e,
+      category: webEnv,
+      sub_category: 'work',
+      section: 'intro',
+    });
 
   return (
     <>
@@ -53,28 +68,48 @@ export default function Intro() {
             During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
             architretures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
-              <Link onClick={()=>handleLinkClick('dt', 'web2')} href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
+              <Link
+                onClick={() => handleLinkClick('dt', 'web2')}
+                href="https://www.digitalturbine.com/"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Digital Turbine
               </Link>
             </span>
             . At night, or whenever I have free time, I'm learning how to build Web3 apps. I'm currently a hodler of
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link onClick={()=>handleLinkClick('loser_club', 'web3')} href="https://twitter.com/loserclubreborn" target={'_blank'} rel="noreferrer">
+              <Link
+                onClick={() => handleLinkClick('loser_club', 'web3')}
+                href="https://twitter.com/loserclubreborn"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Loser Club
               </Link>
             </span>
             ,{' '}
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link onClick={()=>handleLinkClick('illogics', 'web3')} href="https://www.illogics.io/" target={'_blank'} rel="noreferrer">
+              <Link
+                onClick={() => handleLinkClick('illogics', 'web3')}
+                href="https://www.illogics.io/"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Illogics
               </Link>
             </span>
             ,{' '}
             <span style={{ fontWeight: 600 }}>
               {' '}
-              <Link onClick={()=>handleLinkClick('tiny_astro', 'web3')} href="https://tinyastro.io/" target={'_blank'} rel="noreferrer">
+              <Link
+                onClick={() => handleLinkClick('tiny_astro', 'web3')}
+                href="https://tinyastro.io/"
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Tiny Astro
               </Link>
             </span>{' '}
@@ -94,7 +129,7 @@ export default function Intro() {
                 href="https://opensea.io/0xA662C6253AF152807660Fb7DB6776ca7a35a380C"
                 target={'_blank'}
                 rel="noreferrer"
-                onClick={handleBtnWalletClick} 
+                onClick={handleBtnWalletClick}
               >
                 <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
                   Check out my wallet
