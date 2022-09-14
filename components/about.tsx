@@ -5,8 +5,11 @@ import Divider from '@mui/material/Divider';
 import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+/* import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel'; */
+
+import Carousel from 'framer-motion-carousel';
+
 import LoserEthEyes from '../public/nfts/loser-club-eth-eyes.webp';
 import LoserCatman from '../public/nfts/loser-club-catman.webp';
 import ClayFriend from '../public/nfts/clayfriend.webp';
@@ -20,10 +23,36 @@ import Illogic7298 from '../public/nfts/illogic7298.webp';
 import Illogic8273 from '../public/nfts/illogic8273.webp';
 import Tiny219 from '../public/nfts/tiny-astro219.webp';
 import Tiny1347 from '../public/nfts/tiny-astro1347.webp';
+import { Alchemy, Network } from 'alchemy-sdk';
 
 declare const window: any;
 
-export default function About() {
+let nftImageList = [{}];
+
+const config = {
+  apiKey: process.env.ALCHEMY_KEY,
+  network: Network.ETH_MAINNET,
+};
+const alchemy = new Alchemy(config);
+
+
+(async () => {
+  const nfts = await alchemy.nft.getNftsForOwner('evro.eth');
+  const ownedNfts = nfts['ownedNfts'];
+  let imgURL = ownedNfts.map(data => data.media.map(data => data.gateway));
+  let keys = ownedNfts.map(data => data.rawMetadata.name);
+
+  for (let i = 0; i < keys.length && i < imgURL.length; i++) {
+    const key = keys[i];
+    const value = imgURL[i]
+    const cleanedValue = value.toString()
+    nftImageList.push({key: key, src: cleanedValue})
+  }
+    console.log(nftImageList);
+})();
+
+
+export default function About() {  
   return (
     <>
       <Container sx={{ paddingBottom: '100px' }}>
@@ -117,154 +146,21 @@ export default function About() {
             </Grid>
             <Grid xs={12} md={4}>
               <div></div>
-              <Carousel
-                autoPlay={true}
-                infiniteLoop={true}
-                interval={3800}
-                showArrows={false}
-                showIndicators={false}
-                showStatus={false}
-                showThumbs={false}
-              >
-                <div>
-                  <Image src={LoserEthEyes} alt="Loser Club 5297" layout="responsive" width={200} height={200} />
-                </div>
-                <div>
-                  <Image src={LoserCatman} alt="Loser Club 8614" layout="responsive" width={200} height={200} />
-                </div>
-                <div>
-                  <Image
-                    src={ClayFriend}
-                    alt="ClayFriends 742"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic151}
-                    alt="Illogic 151"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic1600}
-                    alt="Illogic 1600"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic2768}
-                    alt="Illogic 2768"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic4739}
-                    alt="Illogic 4739"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic4946}
-                    alt="Illogic 4946"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic6255}
-                    alt="Illogic 6255"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic7298}
-                    alt="Illogic 7298"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic8273}
-                    alt="Illogic 8273"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Tiny219}
-                    alt="Tiny Astro 219"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Tiny1347}
-                    alt="Tiny Astro 1347"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-              </Carousel>
+                <Carousel autoPlay={true} interval={10} loop={true}>
+                 {/*  {nftImageList.map((nftImage) => (
+                    <Image
+                      key={nftImage.key}
+                      src={`${nftImage.imageNFT}`}
+                      alt="ClayFriends 742"
+                      width={200}
+                      height={200}
+                      layout="fill"
+                      sizes="(min-width: 75em) 33vw,
+                      (min-width: 48em) 50vw,
+                      100vw"
+                    />
+                  ))}  */}
+                </Carousel>
             </Grid>
           </Grid>
         </section>
