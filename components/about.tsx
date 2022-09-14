@@ -5,29 +5,11 @@ import Divider from '@mui/material/Divider';
 import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2';
 
-/* import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel'; */
-
-import Carousel from 'framer-motion-carousel';
-
-import LoserEthEyes from '../public/nfts/loser-club-eth-eyes.webp';
-import LoserCatman from '../public/nfts/loser-club-catman.webp';
-import ClayFriend from '../public/nfts/clayfriend.webp';
-import Illogic151 from '../public/nfts/illogic151.webp';
-import Illogic1600 from '../public/nfts/illogic1600.webp';
-import Illogic2768 from '../public/nfts/illogic2768.webp';
-import Illogic4739 from '../public/nfts/illogic4739.webp';
-import Illogic4946 from '../public/nfts/illogic4946.webp';
-import Illogic6255 from '../public/nfts/illogic6255.webp';
-import Illogic7298 from '../public/nfts/illogic7298.webp';
-import Illogic8273 from '../public/nfts/illogic8273.webp';
-import Tiny219 from '../public/nfts/tiny-astro219.webp';
-import Tiny1347 from '../public/nfts/tiny-astro1347.webp';
 import { Alchemy, Network } from 'alchemy-sdk';
 
 declare const window: any;
 
-let nftImageList = [{}];
+let nftImageList;
 
 const config = {
   apiKey: process.env.ALCHEMY_KEY,
@@ -35,24 +17,49 @@ const config = {
 };
 const alchemy = new Alchemy(config);
 
-
 (async () => {
   const nfts = await alchemy.nft.getNftsForOwner('evro.eth');
   const ownedNfts = nfts['ownedNfts'];
-  let imgURL = ownedNfts.map(data => data.media.map(data => data.gateway));
-  let keys = ownedNfts.map(data => data.rawMetadata.name);
 
-  for (let i = 0; i < keys.length && i < imgURL.length; i++) {
-    const key = keys[i];
-    const value = imgURL[i]
-    const cleanedValue = value.toString()
-    nftImageList.push({key: key, src: cleanedValue})
+  nftImageList = ownedNfts.map((key) => ({
+    key: key.rawMetadata.name,
+    src: key.media.map((data) => data.gateway).toString(),
+  }));
+
+  console.log(nftImageList);
+
+  /*    imgURL = ownedNfts.map((data) => data.media.map((data) => data.gateway));
+
+   keys = ownedNfts.map((data) => data.rawMetadata.name); */
+
+  /*   for (let i = 0; i < keys.length; i++) {    
+    key = keys[i];
   }
-    console.log(nftImageList);
+
+
+  nftImageList = new Array(keys.length).fill({key: 'keys'}) */
+
+  /*   console.log([{key: keys, src: imgURL}]);
+  nftImageList = [{key: keys, src: imgURL}] */
+
+  /*   keys.forEach((itemKey, indexKey) => {
+    nftImageList.push({ key: itemKey });
+  });
+
+  imgURL.forEach((item, index) => {
+    nftImageList.push({ src: item });
+  }); */
+
+  /*   for (let i = 0; i < keys.length && i < imgURL.length; i++) {
+    key = keys[i];
+    value = imgURL[i].toString();
+    
+    nftImageList.push({ key: key, src: value });
+    
+  } */
 })();
 
-
-export default function About() {  
+export default function About() {
   return (
     <>
       <Container sx={{ paddingBottom: '100px' }}>
@@ -146,21 +153,21 @@ export default function About() {
             </Grid>
             <Grid xs={12} md={4}>
               <div></div>
-                <Carousel autoPlay={true} interval={10} loop={true}>
-                 {/*  {nftImageList.map((nftImage) => (
-                    <Image
-                      key={nftImage.key}
-                      src={`${nftImage.imageNFT}`}
-                      alt="ClayFriends 742"
-                      width={200}
-                      height={200}
-                      layout="fill"
-                      sizes="(min-width: 75em) 33vw,
+
+              {nftImageList && nftImageList.map(({ key, src }) => {
+                return (
+                  <Image
+                    key={key}
+                    src={`${src}`}
+                    alt="ClayFriends 742"
+                 
+                    layout="fill"
+                    sizes="(min-width: 75em) 33vw,
                       (min-width: 48em) 50vw,
                       100vw"
-                    />
-                  ))}  */}
-                </Carousel>
+                  />
+                );
+              })}
             </Grid>
           </Grid>
         </section>
