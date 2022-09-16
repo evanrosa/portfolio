@@ -20,69 +20,26 @@ const alchemy = new Alchemy(config);
 
 (async () => {
   const nfts = await alchemy.nft.getNftsForOwner('evro.eth');
+  console.log(nfts); /* NEed to filter at top level, clean out undefined and other nfts you don't want shown */
+  
   ownedNFTs = nfts['ownedNfts'].map(data => data.rawMetadata);
-  const nftImage = nfts['ownedNfts'].map(data => data.rawMetadata.image);
-
-
-
-  let url = new RegExp('ipfs:\/\/(.*)');
-
-  cleanOwnedNFTs = ownedNFTs.filter(object => {
-    let img = object.image
-    
-    return url.test(img);
-  });
-
-  console.log(cleanOwnedNFTs);
-  console.log(ownedNFTs);
   
   
-
-
-
-  
-/*   const matches = nftImage.filter(function(pattern) {
-    return new RegExp(pattern).test(url);
-  })
-  console.log(matches);
- */
-
-  
-  
-
-/*   for (let i = 0; i < ownedNFTs.length; i++) {
+  for (let i = 0; i < ownedNFTs.length; i++) {
     const element = ownedNFTs[i];
-    if (url.test(element.image)){
-        delete element.image
+    if ((element.image || '').includes('ipfs://')){
+        ownedNFTs[i].image = 'https://ipfs.io/ipfs/' + element.image.replace("ipfs://","")
       }
       else{
-        console.log('no match');
+        null
       }   
-  } */
-
-/*   cleanOwnedNFTs = ownedNFTs.findIndex(object => {
-    return object.image === url;
-  });
-  ownedNFTs.splice(cleanOwnedNFTs, 1); */
-
-/*   cleanOwnedNFTs = ownedNFTs.filter(object => {
-    return object.image === url;
-  }); */
-
-
-
-/*   ownedNFTs = ownedNFTs.map((key) => ({
-    key: Math.random().toString(16).slice(2),
-    name: key.rawMetadata.name,
-    src: key.media.map((data) => data.gateway).toString(),
-  }));
-
-  console.log(ownedNFTs); */
+  }
 
 
 })();
 
 export default function About() {
+  console.log(ownedNFTs);
   return (
     <>
       <Container sx={{ paddingBottom: '100px' }}>
@@ -177,7 +134,7 @@ export default function About() {
             <Grid xs={12} md={4}>
               <div></div>
 
-              {/* {ownedNFTs && ownedNFTs.map(({ image, name }) => {
+              {ownedNFTs && ownedNFTs.map(({ image, name }) => {
                 return (
                   <Image
                     key={name}
@@ -191,7 +148,7 @@ export default function About() {
                       100vw"
                   />
                 );
-              })} */}
+              })}
             </Grid>
           </Grid>
         </section>

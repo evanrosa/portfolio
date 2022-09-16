@@ -15,7 +15,7 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
     images: {
-      domains: ['res.cloudinary.com', 'ipfs.io', 'api.illogics.io', 'api.clayfriends.io'],
+      domains: ['res.cloudinary.com', 'ipfs.io', 'api.illogics.io', 'api.clayfriends.io', 'metadata.ens.domains','ihyys2500.s3.us-west-1.amazonaws.com','api.loserclub.io', 'storage.gridcraft.net', 'wagmiarmy.io', 'prairie-user-content.s3.amazonaws.com','rl.mypinata.cloud', 'media.dippies.io'],
       remotePatterns: [
       {
         protocol: 'https',
