@@ -20,22 +20,29 @@ const alchemy = new Alchemy(config);
 
 (async () => {
   const nfts = await alchemy.nft.getNftsForOwner('evro.eth');
-  console.log(nfts); /* NEed to filter at top level, clean out undefined and other nfts you don't want shown */
-  
-  ownedNFTs = nfts['ownedNfts'].map(data => data.rawMetadata);
-  
-  
+  /* Need to filter at top level, clean out undefined and other nfts you don't want shown */
+
+  ownedNFTs = nfts['ownedNfts'].map((data) => data.rawMetadata);
+  ownedNFTs.splice(20,4)
+
+/*   ownedNFTs.filter(x => x !== undefined);
+ */
+
   for (let i = 0; i < ownedNFTs.length; i++) {
     const element = ownedNFTs[i];
-    if ((element.image || '').includes('ipfs://')){
-        ownedNFTs[i].image = 'https://ipfs.io/ipfs/' + element.image.replace("ipfs://","")
-      }
-      else{
-        null
-      }   
+    if ((element.image || '').includes('ipfs://')) {
+      ownedNFTs[i].image = 'https://ipfs.io/ipfs/' + element.image.replace('ipfs://', '');
+
+
+    } 
+    /* else if(element.image === undefined){
+      console.log('found it');
+      element.image.pop('undefined')
+    } */
+    else {
+      null;
+    }
   }
-
-
 })();
 
 export default function About() {
@@ -134,21 +141,22 @@ export default function About() {
             <Grid xs={12} md={4}>
               <div></div>
 
-              {ownedNFTs && ownedNFTs.map(({ image, name }) => {
-                return (
-                  <Image
-                    key={name}
-                    src={`${image}`}
-                    alt={`${name}`}
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
+              {ownedNFTs &&
+                ownedNFTs.map(({ image, name }) => {
+                  return (
+                    <Image
+                      key={name}
+                      src={`${image}`}
+                      alt={`${name}`}
+                      width={200}
+                      height={200}
+                      layout="fill"
+                      sizes="(min-width: 75em) 33vw,
                       (min-width: 48em) 50vw,
                       100vw"
-                  />
-                );
-              })}
+                    />
+                  );
+                })}
             </Grid>
           </Grid>
         </section>
