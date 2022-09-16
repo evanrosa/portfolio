@@ -9,7 +9,8 @@ import { Alchemy, Network } from 'alchemy-sdk';
 
 declare const window: any;
 
-let nftImageList;
+let ownedNFTs;
+let cleanOwnedNFTs;
 
 const config = {
   apiKey: process.env.ALCHEMY_KEY,
@@ -19,44 +20,66 @@ const alchemy = new Alchemy(config);
 
 (async () => {
   const nfts = await alchemy.nft.getNftsForOwner('evro.eth');
-  const ownedNfts = nfts['ownedNfts'];
+  ownedNFTs = nfts['ownedNfts'].map(data => data.rawMetadata);
+  const nftImage = nfts['ownedNfts'].map(data => data.rawMetadata.image);
 
-  nftImageList = ownedNfts.map((key) => ({
-    key: key.rawMetadata.name,
+
+
+  let url = new RegExp('ipfs:\/\/(.*)');
+
+  cleanOwnedNFTs = ownedNFTs.filter(object => {
+    let img = object.image
+    
+    return url.test(img);
+  });
+
+  console.log(cleanOwnedNFTs);
+  console.log(ownedNFTs);
+  
+  
+
+
+
+  
+/*   const matches = nftImage.filter(function(pattern) {
+    return new RegExp(pattern).test(url);
+  })
+  console.log(matches);
+ */
+
+  
+  
+
+/*   for (let i = 0; i < ownedNFTs.length; i++) {
+    const element = ownedNFTs[i];
+    if (url.test(element.image)){
+        delete element.image
+      }
+      else{
+        console.log('no match');
+      }   
+  } */
+
+/*   cleanOwnedNFTs = ownedNFTs.findIndex(object => {
+    return object.image === url;
+  });
+  ownedNFTs.splice(cleanOwnedNFTs, 1); */
+
+/*   cleanOwnedNFTs = ownedNFTs.filter(object => {
+    return object.image === url;
+  }); */
+
+
+
+/*   ownedNFTs = ownedNFTs.map((key) => ({
+    key: Math.random().toString(16).slice(2),
+    name: key.rawMetadata.name,
     src: key.media.map((data) => data.gateway).toString(),
   }));
 
-  console.log(nftImageList);
-
-  /*    imgURL = ownedNfts.map((data) => data.media.map((data) => data.gateway));
-
-   keys = ownedNfts.map((data) => data.rawMetadata.name); */
-
-  /*   for (let i = 0; i < keys.length; i++) {    
-    key = keys[i];
-  }
+  console.log(ownedNFTs); */
 
 
-  nftImageList = new Array(keys.length).fill({key: 'keys'}) */
-
-  /*   console.log([{key: keys, src: imgURL}]);
-  nftImageList = [{key: keys, src: imgURL}] */
-
-  /*   keys.forEach((itemKey, indexKey) => {
-    nftImageList.push({ key: itemKey });
-  });
-
-  imgURL.forEach((item, index) => {
-    nftImageList.push({ src: item });
-  }); */
-
-  /*   for (let i = 0; i < keys.length && i < imgURL.length; i++) {
-    key = keys[i];
-    value = imgURL[i].toString();
-    
-    nftImageList.push({ key: key, src: value });
-    
-  } */
 })();
 
 export default function About() {
@@ -154,20 +177,21 @@ export default function About() {
             <Grid xs={12} md={4}>
               <div></div>
 
-              {nftImageList && nftImageList.map(({ key, src }) => {
+              {/* {ownedNFTs && ownedNFTs.map(({ image, name }) => {
                 return (
                   <Image
-                    key={key}
-                    src={`${src}`}
-                    alt="ClayFriends 742"
-                 
+                    key={name}
+                    src={`${image}`}
+                    alt={`${name}`}
+                    width={200}
+                    height={200}
                     layout="fill"
                     sizes="(min-width: 75em) 33vw,
                       (min-width: 48em) 50vw,
                       100vw"
                   />
                 );
-              })}
+              })} */}
             </Grid>
           </Grid>
         </section>
