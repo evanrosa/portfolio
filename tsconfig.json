@@ -16,6 +16,6 @@
     "jsx": "preserve",
     "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx, pages/*.tsx "],
   "exclude": ["node_modules"]
 }

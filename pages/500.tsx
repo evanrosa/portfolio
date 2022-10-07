@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import { Container } from '@mui/system';
 import Typography from '@mui/material/Typography';
-import { m, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import DrawerAppBar from '../components/navigation';
 
 const interfaceVariants: Variants = {
@@ -26,7 +26,7 @@ function Error() {
       <header>
         <DrawerAppBar />
       </header>
-      <m.div variants={interfaceVariants} initial="hidden" animate="visible">
+      <motion.div variants={interfaceVariants} initial="hidden" animate="visible">
         <Container
           sx={{
             minHeight: '80vh',
@@ -37,7 +37,7 @@ function Error() {
             alignItems: 'flex-start',
           }}
         >
-          <m.div
+          <motion.div
             viewport={{ once: false }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,9 +49,9 @@ function Error() {
             <Typography variant="body1">
               NGMI! If your on this page then there's a big problem going on with the site and I need to fix it. GGs...
             </Typography>
-          </m.div>
+          </motion.div>
         </Container>
-      </m.div>
+      </motion.div>
 
       {/* Inspired by - https://brittanychiang.com/ */}
     </>

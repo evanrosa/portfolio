@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
     dataLayerName: 'evroDataLayer',
   };
   return (
-/*     <>
+    /*     <>
       {loading === false ? (
         <GTMProvider state={gtmParams}>
           <ColorModeContext.Provider value={colorMode}>
@@ -69,16 +69,16 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
         </ColorModeContext.Provider>
       )}
     </> */
-     <GTMProvider state={gtmParams}>
-          <ColorModeContext.Provider value={colorMode}>
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            </ThemeProvider>
-          </ColorModeContext.Provider>
-        </GTMProvider>
+    <GTMProvider state={gtmParams}>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </GTMProvider>
   );
 }
 

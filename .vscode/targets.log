@@ -10,11 +10,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sun Sep  4 11:29:51 2022
-
-# Variables
+# Make data base, printed on Sun Sep 25 10:50:04 2022
 
  
+# Variables
+
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -42,6 +42,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
+ 
 VSCODE_CWD = /
 # environment
 PATH = /Users/evro/google-cloud-sdk/bin:/Users/evro/.nvm/versions/node/v14.16.0/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
@@ -50,13 +51,14 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 NVM_BIN = /Users/evro/.nvm/versions/node/v14.16.0/bin
 # environment
-LaunchInstanceID = CAC32D21-BB4E-404A-B511-6DE40E436427
+LaunchInstanceID = 30735E6E-AD29-47D9-8A32-0D18248FEFAA
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.3tlU7mN3qH/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.7ffm9cxny8/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -74,7 +76,7 @@ HOME = /Users/evro
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/evro/Library/Application Support/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+VSCODE_CODE_CACHE_PATH = /Users/evro/Library/Application Support/Code/CachedData/74b1f979648cc44d385a2286793c226e611f59e7
 # environment
 LOGNAME = evro
 # environment
@@ -92,6 +94,7 @@ XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
+ 
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
@@ -107,6 +110,7 @@ LESS = -R
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+ 
 # default
 .VARIABLES := 
 # environment
@@ -114,8 +118,7 @@ TMPDIR = /var/folders/cp/y_wm33cd463fshnp8b9k5q640000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/evro/Library/Application Support/Code/1.70.2-main.sock
- 
+VSCODE_IPC_HOOK = /Users/evro/Library/Application Support/Code/1.71.2-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -127,7 +130,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/evro/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.16526939.16526945
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.20919326.20919332
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -149,7 +152,7 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-SECURITYSESSIONID = 186b2
+SECURITYSESSIONID = 186ad
 # automatic
 ^F = $(notdir $^)
 # default
@@ -161,7 +164,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 558
+VSCODE_PID = 2468
 # variable set hash-table stats:
 # Load=73/1024=7%, Rehash=0, Collisions=1/97=1%
 
@@ -171,9 +174,9 @@ VSCODE_PID = 558
 
 # Directories
 
-# . (device 16777232, inode 16612493): 34 files, no impossibilities.
+# . (device 16777234, inode 16612493): 35 files, no impossibilities.
 
-# 34 files, no impossibilities in 1 directories.
+# 35 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -222,7 +225,6 @@ all:
 #  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
- 
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -311,6 +313,6 @@ stop-production:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Sep  4 11:29:51 2022
+# Finished Make data base on Sun Sep 25 10:50:04 2022
 
  
