@@ -139,22 +139,17 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Tasked with managing Google Analytics 360 & Google Tag Manager integrations for all partners which
-                      include optimzations to data flows for BQ ingestion.
+                      Currently managing GA 360 & GTM integrations for multiple partners while impriving data accuracy by optimizing and cleaning data before ingestion into BQ ETL pipelines.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Currently utilizing GTM and GA4 APIs to build out analytic environments programmatically at scale;
-                      this would allow for the creation of multiple analytic and tagging environments with only a config
-                      file.
+                      Leading GA4 migrations for all partners and streamlining data processing with the data layer resulting in massive improvements in data accuracy. 
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Currently leading efforts on GA4 migrations which will include setting up and designing data
-                      workflows in GTM that are in line with GA4 requirements. Moreover, I'm tasked with optimizing GA
-                      data collection into Big Query by auditing data as it comes in during intraday/daily.
+                      Developing internal software using GCP APIs that would reduce implementation for data architecture build-outs.
                     </Typography>
                   </li>
                 </ul>
@@ -177,23 +172,22 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Conduct metrics data analysis and implement analytics reports on a ad-hoc, monthly and quarterly
-                      basis while also providing recommendations for website improvements.
+                      Led web analytics for multiple federal government websites, resulting in increased website traffic by 13%.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Ensure 100% accuracy of analytics tagging across various websites
+                      Conducted site/SEO audits, A/B testing, and implemented goal funneling strategies that led to 10% improvement in conversion rates.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Setup and implement automated reports with metrics from different data sources
+                      Initiated a data warehousing repository to identify trends, providing valuable insights that informed decision making.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Implement steps to migrate website properties from Google Analytics Legacy to GA3.
+                      Proactively collaborated with the client to ensure the best use of analytics data for their needs.
                     </Typography>
                   </li>
                 </ul>
@@ -216,24 +210,17 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Support the Assistant Director, Platform Advertising and Analytics, with scheduled and ad hoc
-                      report generation, including the monthly Sales and Marketing Web Usage Report, Annual Web Usage
-                      Report and necessary data for editorial board meetings.
+                      Assisted the Director of Platform Advertising and Analytics in the creation and maintenance of monthly/ annual web usage reports as well as reports for editorial board meetings.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Create and maintain advertising reports for the ACS Web Editions platform and CEN as well as
-                      advertising reports for ACS managed web ads on external websites. Perform ad-hoc advertising
-                      reporting queries as needed. Support the Market Development Manager, Online Advertising with
-                      forecasting and enhanced ad server reporting as needed.
+                      Developed and maintained accurate reports for the ACS Web Platform, ensuring data reliability and consistency. 
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Test and validate web analytics and reports with each new deployment, product release and/or
-                      enhancement in each of the reporting systems, including Literatum, Web Analytics, Google Analytics
-                      and Dart for Publishers (DFP).
+                      Conducted thorough testing and validation of metrics for new site deployments and enhancements, ensuring data accuracy, resulting in cost savings.
                     </Typography>
                   </li>
                 </ul>
@@ -269,27 +256,22 @@ export default function Job() {
                 <time dateTime="2020-03">March 2020</time> - Present
               </Typography>
               <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Tasked with managing Google Analytics 360 & Google Tag Manager integrations for all partners which
-                    include optimzations to data flows for BQ ingestion.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Currently utilizing GTM and GA4 APIs to build out analytic environments programmatically at scale;
-                    this would allow for the creation of multiple analytic and tagging environments with only a config
-                    file.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Currently leading efforts on GA4 migrations which will include setting up and designing data
-                    workflows in GTM that are in line with GA4 requirements. Moreover, I'm tasked with optimizing GA
-                    data collection into Big Query by auditing data as it comes in during intraday/daily.
-                  </Typography>
-                </li>
-              </ul>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Currently managing GA 360 & GTM integrations for multiple partners while impriving data accuracy by optimizing and cleaning data before ingestion into BQ ETL pipelines.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Leading GA4 migrations for all partners and streamlining data processing with the data layer resulting in massive improvements in data accuracy. 
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Developing internal software using GCP APIs that would reduce implementation for data architecture build-outs.
+                    </Typography>
+                  </li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
               <Typography variant="h4" component="h3">
@@ -306,29 +288,28 @@ export default function Job() {
               <Typography variant="subtitle1" component="div">
                 <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
               </Typography>
-              <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Conduct metrics data analysis and implement analytics reports on a ad-hoc, monthly and quarterly
-                    basis while also providing recommendations for website improvements.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Ensure 100% accuracy of analytics tagging across various websites
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Setup and implement automated reports with metrics from different data sources
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Implement steps to migrate website properties from Google Analytics Legacy to GA3.
-                  </Typography>
-                </li>
-              </ul>
+             <ul>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Led web analytics for multiple federal government websites, resulting in increased website traffic by 13%.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Conducted site/SEO audits, A/B testing, and implemented goal funneling strategies that led to 10% improvement in conversion rates.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Initiated a data warehousing repository to identify trends, providing valuable insights that informed decision making.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Proactively collaborated with the client to ensure the best use of analytics data for their needs.
+                    </Typography>
+                  </li>
+                </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
               <Typography variant="h4" component="h3">
@@ -345,30 +326,23 @@ export default function Job() {
               <Typography variant="subtitle1" component="div">
                 <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
               </Typography>
-              <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Support the Assistant Director, Platform Advertising and Analytics, with scheduled and ad hoc report
-                    generation, including the monthly Sales and Marketing Web Usage Report, Annual Web Usage Report and
-                    necessary data for editorial board meetings.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Create and maintain advertising reports for the ACS Web Editions platform and CEN as well as
-                    advertising reports for ACS managed web ads on external websites. Perform ad-hoc advertising
-                    reporting queries as needed. Support the Market Development Manager, Online Advertising with
-                    forecasting and enhanced ad server reporting as needed.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Test and validate web analytics and reports with each new deployment, product release and/or
-                    enhancement in each of the reporting systems, including Literatum, Web Analytics, Google Analytics
-                    and Dart for Publishers (DFP).
-                  </Typography>
-                </li>
-              </ul>
+             <ul>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Assisted the Director of Platform Advertising and Analytics in the creation and maintenance of monthly/ annual web usage reports as well as reports for editorial board meetings.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Developed and maintained accurate reports for the ACS Web Platform, ensuring data reliability and consistency. 
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant="subtitle2" component="p">
+                      Conducted thorough testing and validation of metrics for new site deployments and enhancements, ensuring data accuracy, resulting in cost savings.
+                    </Typography>
+                  </li>
+                </ul>
             </TabPanel>
           </Box>
         )}

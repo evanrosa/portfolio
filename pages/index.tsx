@@ -20,10 +20,9 @@ function Home({ projects }: ProjectsProps) {
           "@context": "http://schema.org/",
           "@type": "Person",
           "name": "evro.eth",
-          "jobTitle": "Web2 Big Data Developer and Web3 NFT Degen",
+          "jobTitle": "Web2 Lead Data Engineer and Web3 Enthusiast",
           "url": "http://evro.dev",
           "email": "mailto:crypto.evro@gmail.com",
-          "nationality": "Puerto Rican"
       }
     `,
     };
@@ -35,17 +34,17 @@ function Home({ projects }: ProjectsProps) {
         <title>evro.eth | Web2 Big Data Developer and Web3 NFT Degen</title>
         <meta
           name="description"
-          content="evro.eth is a Web2 Big Data Developer exploring Web3. He specializes in Web2 analytics and is learning to build for the Web3 ethereum ecosystem."
+          content="evro.eth is a Lead Data Engineer exploring Web3."
         />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.evro.dev" />
         <script type="application/ld+json" dangerouslySetInnerHTML={profile()} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-        <meta name="twitter:title" content="evro.eth | Web2 Big Data Developer and Web3 NFT Degen" />
+        <meta name="twitter:title" content="evro.eth | Lead Data Engineer and Web3 Enthusiast" />
         <meta
           name="twitter:description"
-          content="evro.eth is a Web2 Big Data Developer exploring Web3. He specializes in Web2 analytics and is learning to build for the Web3 ethereum ecosystem."
+          content="evro.eth is a Lead Data Engineer exploring Web3."
         />
         <meta name="twitter:url" content="https://evro.dev" />
       </Head>

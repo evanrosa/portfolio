@@ -62,11 +62,11 @@ export default function Intro() {
 
         <section id="evro">
           <Typography variant="h3" component={m.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
-            Building in Web2 while maintaining my sanity in Web3.
+            Data Engineer by day while maintaining my sanity in Web3 at night.
           </Typography>
           <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
-            During work hours I'm a data engineer by trade working with APIs, creating and managing Web2 analytic
-            architretures, & working on cloud projects for{' '}
+            During work hours I'm a data engineer by trade working with APIs, creating and managing data
+            architectures, & working on cloud projects for{' '}
             <span style={{ fontWeight: 600 }}>
               <Link
                 onClick={() => handleLinkClick('dt', 'web2')}
@@ -77,7 +77,7 @@ export default function Intro() {
                 Digital Turbine
               </Link>
             </span>
-            . At night, or whenever I have free time, I'm learning how to build Web3 apps. I'm currently a hodler of
+            . At night, or whenever I have free time, I'm learning how to build Web3 dApps. I'm currently a hodler of
             <span style={{ fontWeight: 600 }}>
               {' '}
               <Link

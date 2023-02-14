@@ -35,8 +35,7 @@ export default function Contact() {
           <Grid container spacing={2} justifyContent={'center'} paddingBottom={6}>
             <Grid display="flex" justifyContent="center" alignItems="center" paddingTop={4}>
               <Typography maxWidth={'750px'} variant="body1" textAlign={'center'}>
-                Even though I'm currently not looking for any new permanent opportunities, as I kinda still like my day
-                job, I'm open to after-hour projects especailly if it involves Web3 or NFTs. If you have any questions
+                I'm always open to new opportunities. If you'd like to get in touch or if you have any questions
                 regarding my professional experience or would like to work/discuss anything Web3/NFT related feel free
                 to reach out!
               </Typography>
