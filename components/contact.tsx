@@ -34,7 +34,10 @@ export default function Contact() {
           <Grid container spacing={2} justifyContent={'center'} paddingBottom={6}>
             <Grid display="flex" justifyContent="center" alignItems="center" paddingTop={4}>
               <Typography maxWidth={'750px'} variant="body1" textAlign={'center'}>
-                I'm always open to exploring new opportunities. If you'd like to discuss my professional experience as a Lead Data Engineer or Full Stack Developer, or if you're interested in collaborating on a project involving data architectures, cloud projects, or full stack web applications, please don't hesitate to reach out!
+                I'm always open to exploring new opportunities. If you'd like to discuss my professional experience as a
+                Lead Data Engineer or Full Stack Developer, or if you're interested in collaborating on a project
+                involving data architectures, cloud projects, or full stack web applications, please don't hesitate to
+                reach out!
               </Typography>
             </Grid>
           </Grid>

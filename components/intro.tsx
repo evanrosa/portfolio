@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
+import { Grid } from '@mui/material';
 
 const fontVariants: Variants = {
   hidden: {
@@ -65,7 +66,8 @@ export default function Intro() {
             Lead Data Engineer and Full Stack Developer
           </Typography>
           <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
-            A dedicated Lead Data Engineer at <span style={{ fontWeight: 600 }}>
+            A dedicated Lead Data Engineer at{' '}
+            <span style={{ fontWeight: 600 }}>
               <Link
                 onClick={() => handleLinkClick('dt', 'web2')}
                 href="https://www.digitalturbine.com/"
@@ -74,40 +76,77 @@ export default function Intro() {
               >
                 Digital Turbine
               </Link>
-            </span>, specializing in managing data architectures and cloud projects.{' '}
-            
-            In my free time, I delve into Full Stack Web Development, handling end-to-end creation of web applications. My passion is creating maintainable, well-structured code while staying up to date on the latest technologies.
+            </span>
+            , specializing in managing data architectures and cloud projects. In my free time, I delve into Full Stack
+            Web Development, handling end-to-end creation of web applications. My passion is creating maintainable,
+            well-structured code while staying up to date on the latest technologies.
           </Typography>
 
-          <Box sx={{ maxWidth: '300px' }}>
-            <m.div
-              variants={fontVariants}
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.5 },
-              }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Link
-                href="https://www.linkedin.com/in/evan-rosa/"
-                target={'_blank'}
-                rel="noreferrer"
-                onClick={handleBtnWalletClick}
-              >
-                <Button
-                  variant="outlined"
-                  sx={{
-                    paddingLeft: 4,
-                    paddingRight: 4,
-                    paddingTop: 2,
-                    paddingBottom: 1,
+          <Grid container>
+            <Grid item xs={2}>
+              <Box sx={{ maxWidth: '300px' }}>
+                <m.div
+                  variants={fontVariants}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.5 },
                   }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  LinkedIn
-                </Button>
-              </Link>
-            </m.div>
-          </Box>
+                  <Link
+                    href="https://www.linkedin.com/in/evan-rosa/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                    onClick={handleBtnWalletClick}
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        paddingLeft: 4,
+                        paddingRight: 4,
+                        paddingTop: 2,
+                        paddingBottom: 1,
+                      }}
+                    >
+                      LinkedIn
+                    </Button>
+                  </Link>
+                </m.div>
+              </Box>
+            </Grid>
+
+            <Grid item xs={2}>
+              <Box sx={{ maxWidth: '300px' }}>
+                <m.div
+                  variants={fontVariants}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.5 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Link
+                    href="https://docs.google.com/document/d/e/2PACX-1vRl7n3gJRtDsbIu7dMbKuaTX2DDQOKiNdQHXA-UoR2uEkBIj1S6mLkZJQQshfqYBEQdvt3aGyUH64E1/pub"
+                    target={'_blank'}
+                    rel="noreferrer"
+                    onClick={handleBtnWalletClick}
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        paddingLeft: 4,
+                        paddingRight: 4,
+                        paddingTop: 2,
+                        paddingBottom: 1,
+                      }}
+                    >
+                      Resume
+                    </Button>
+                  </Link>
+                </m.div>
+              </Box>
+            </Grid>
+          </Grid>
         </section>
       </Container>
     </>

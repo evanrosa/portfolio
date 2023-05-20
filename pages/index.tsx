@@ -79,8 +79,7 @@ function Home({ projects }: ProjectsProps) {
             <Work projects={projects} />
           </m.div>
 
-      
-            <Contact />
+          <Contact />
         </main>
       </Container>
     </>
