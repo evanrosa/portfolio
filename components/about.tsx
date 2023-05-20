@@ -45,7 +45,7 @@ export default function About() {
                 work with:
               </Typography>
 
-              <Grid container spacing={2} alignItems="center">
+              <Grid container spacing={2}>
                 <Grid xs={6}>
                   <ul>
                     <li>
