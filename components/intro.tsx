@@ -126,7 +126,7 @@ export default function Intro() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="https://docs.google.com/document/d/e/2PACX-1vRl7n3gJRtDsbIu7dMbKuaTX2DDQOKiNdQHXA-UoR2uEkBIj1S6mLkZJQQshfqYBEQdvt3aGyUH64E1/pub"
+                    href="https://drive.google.com/file/d/1Wgdp8iyuMVsK1Yuvz-_sTKQI0gWJmmQz/view?usp=share_link"
                     target={'_blank'}
                     rel="noreferrer"
                     onClick={handleBtnWalletClick}
