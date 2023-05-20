@@ -2,24 +2,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2';
-
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
-import LoserEthEyes from '../public/nfts/loser-club-eth-eyes.webp';
-import LoserCatman from '../public/nfts/loser-club-catman.webp';
-import ClayFriend from '../public/nfts/clayfriend.webp';
-import Illogic151 from '../public/nfts/illogic151.webp';
-import Illogic1600 from '../public/nfts/illogic1600.webp';
-import Illogic2768 from '../public/nfts/illogic2768.webp';
-import Illogic4739 from '../public/nfts/illogic4739.webp';
-import Illogic4946 from '../public/nfts/illogic4946.webp';
-import Illogic6255 from '../public/nfts/illogic6255.webp';
-import Illogic7298 from '../public/nfts/illogic7298.webp';
-import Illogic8273 from '../public/nfts/illogic8273.webp';
-import Tiny219 from '../public/nfts/tiny-astro219.webp';
-import Tiny1347 from '../public/nfts/tiny-astro1347.webp';
 
 declare const window: any;
 
@@ -30,7 +13,7 @@ export default function About() {
         {/* ABOUT */}
         <section id="About">
           <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
-            <Grid xs={12} md={8}>
+            <Grid xs={12} md={12}>
               <Divider textAlign="left">
                 <Typography variant="h4" component="h2" className="countContent">
                   About Me
@@ -38,20 +21,28 @@ export default function About() {
               </Divider>
 
               <Typography variant="body1" paddingTop={4}>
-                So, I started my journey in Web2 as the analytics guy bascially running reports and things of that sort.
-                I grew tired of that and started learning the code behind the numbers; it opened a new world of creation
-                and understanding behavior that I grew fond of.
+                My professional journey began in the realm of analytics, where I was immersed in running reports and
+                deciphering data. As I delved into the code that powered these numbers, I found myself captivated by a
+                new world of creativity and behavioral understanding.
               </Typography>
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                Fast forward through time and I've had the privledge of working at non-profits, government contracts,
-                and established organizations. My main focus today is my day job which I'm currently a data engineer
-                building and optimizing data workflows which include data gathering, cleaning, sorting etc. My other
-                main focus is within the Web3 ethereum ecosystem where I particpate in NFT communities and build Web3
-                apps.
+                As time progressed, I've had the privilege of contributing to a diverse range of environments, from
+                non-profits and government contracts to established organizations. Today, I serve as a Lead Data
+                Engineer, where I am responsible for building and optimizing data workflows. This includes data
+                gathering, cleaning, and sorting, with the ultimate goal of transforming raw data into actionable
+                insights.
               </Typography>
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                I'm currently learning GCP and solidity for ethereum smart contract building but here are some other
-                technologies I work with:
+                In my free time, I channel my passion for coding and problem-solving into full-stack development. I
+                handle end-to-end development of applications as personal projects, utilizing a variety of technologies
+                such as Python, TypeScript, SQL, and more. These projects allow me to explore the latest technologies
+                and continue honing my skills in creating maintainable, well-structured code.
+              </Typography>
+
+              <Typography variant="body1" sx={{ padding: '10px 0px' }}>
+                Currently, I am expanding my expertise by learning the Google Cloud Platform (GCP), which further equips
+                me to handle large-scale data flows and cloud computing solutions. Here are some of the technologies I
+                work with:
               </Typography>
 
               <Grid container spacing={2}>
@@ -59,27 +50,37 @@ export default function About() {
                   <ul>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        JavaScript
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="subtitle1" component="p">
-                        React/Nextjs
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="subtitle1" component="p">
-                        Typescript
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="subtitle1" component="p">
                         Python
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
+                        JavaScript
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        TypeScript
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
                         SQL
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        NoSQL
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        Postgres
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        MySQL
                       </Typography>
                     </li>
                   </ul>
@@ -98,173 +99,37 @@ export default function About() {
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        Google BigQuery
+                        JIRA
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        Google Analytics
+                        ReactJS and NextJS
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        Google Tag Manager
+                        Prisma
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        REST APIs
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        Google Cloud Platform
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        Docker
                       </Typography>
                     </li>
                   </ul>
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid xs={12} md={4}>
-              <div></div>
-              <Carousel
-                autoPlay={true}
-                infiniteLoop={true}
-                interval={3800}
-                showArrows={false}
-                showIndicators={false}
-                showStatus={false}
-                showThumbs={false}
-              >
-                <div>
-                  <Image src={LoserEthEyes} alt="Loser Club 5297" layout="responsive" width={200} height={200} />
-                </div>
-                <div>
-                  <Image src={LoserCatman} alt="Loser Club 8614" layout="responsive" width={200} height={200} />
-                </div>
-                <div>
-                  <Image
-                    src={ClayFriend}
-                    alt="ClayFriends 742"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic151}
-                    alt="Illogic 151"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic1600}
-                    alt="Illogic 1600"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic2768}
-                    alt="Illogic 2768"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic4739}
-                    alt="Illogic 4739"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic4946}
-                    alt="Illogic 4946"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic6255}
-                    alt="Illogic 6255"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic7298}
-                    alt="Illogic 7298"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Illogic8273}
-                    alt="Illogic 8273"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Tiny219}
-                    alt="Tiny Astro 219"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={Tiny1347}
-                    alt="Tiny Astro 1347"
-                    width={200}
-                    height={200}
-                    layout="fill"
-                    sizes="(min-width: 75em) 33vw,
-                    (min-width: 48em) 50vw,
-                    100vw"
-                  />
-                </div>
-              </Carousel>
             </Grid>
           </Grid>
         </section>

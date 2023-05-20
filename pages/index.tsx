@@ -20,9 +20,9 @@ function Home({ projects }: ProjectsProps) {
           "@context": "http://schema.org/",
           "@type": "Person",
           "name": "evro.eth",
-          "jobTitle": "Web2 Lead Data Engineer and Web3 Enthusiast",
+          "jobTitle": "Lead Data Engineer by day, Full Stack by night",
           "url": "http://evro.dev",
-          "email": "mailto:crypto.evro@gmail.com",
+          "email": "mailto:evandanrosa@gmail.com",
       }
     `,
     };
@@ -31,20 +31,20 @@ function Home({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
-        <title>evro.eth | Web2 Big Data Developer and Web3 NFT Degen</title>
+        <title>Evan Rosa | Lead Data Engineer by day Full Stack Engineer by night</title>
         <meta
           name="description"
-          content="evro.eth is a Lead Data Engineer exploring Web3."
+          content="Evan Rosa is a Lead Data Engineer by day and a Full Stack Engineer by night with a passion of building end to end web apps and exploring new technologies."
         />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.evro.dev" />
         <script type="application/ld+json" dangerouslySetInnerHTML={profile()} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-        <meta name="twitter:title" content="evro.eth | Lead Data Engineer and Web3 Enthusiast" />
+        <meta name="twitter:title" content="Evan Rosa |  Lead Data Engineer by day Full Stack Engineer by night" />
         <meta
           name="twitter:description"
-          content="evro.eth is a Lead Data Engineer exploring Web3."
+          content="Evan Rosa is a Lead Data Engineer by day and a Full Stack Engineer by night with a passion of building end to end web apps and exploring new technologies."
         />
         <meta name="twitter:url" content="https://evro.dev" />
       </Head>
@@ -79,18 +79,10 @@ function Home({ projects }: ProjectsProps) {
             <Work projects={projects} />
           </m.div>
 
-          <m.div
-            viewport={{ once: false }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
-          >
+      
             <Contact />
-          </m.div>
         </main>
       </Container>
-
-      {/* Inspired by - https://brittanychiang.com/ */}
     </>
   );
 }

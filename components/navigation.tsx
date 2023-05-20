@@ -95,7 +95,7 @@ export default function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Link href="/">
         <Typography variant="h6" sx={{ my: 2, cursor: 'pointer' }}>
-          &#60;evro.eth/&#62;
+          &#60;evan.rosa/&#62;
         </Typography>
       </Link>
       <Divider />
@@ -123,13 +123,23 @@ export default function DrawerAppBar(props) {
                 variant="h6"
                 variants={navLinkVariants}
                 component={m.div}
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: 'none', sm: 'block' },
+                  cursor: 'pointer',
+                }}
               >
-                &#60;evro.eth/&#62;
+                &#60;evan.rosa/&#62;
               </Typography>
             </Link>
 
-            <Box sx={{ display: { xs: 'none', sm: 'flex', md: 'flex' }, alignItems: 'center', textAlign: 'center' }}>
+            <Box
+              sx={{
+                display: { xs: 'none', sm: 'flex', md: 'flex' },
+                alignItems: 'center',
+                textAlign: 'center',
+              }}
+            >
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
                   <Button
@@ -154,7 +164,7 @@ export default function DrawerAppBar(props) {
               <Link href="/">
                 <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
-                  &#60;evro.eth/&#62;{' '}
+                  &#60;evan.rosa/&#62;{' '}
                 </Typography>
               </Link>
             ) : null}
@@ -169,7 +179,11 @@ export default function DrawerAppBar(props) {
                   aria-label="open drawer"
                   edge="start"
                   onClick={handleDrawerToggle}
-                  sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
+                  sx={{
+                    mr: 2,
+                    ml: 1,
+                    display: { sm: 'none' },
+                  }}
                 >
                   <MenuRoundedIcon />
                 </IconButton>
@@ -191,7 +205,10 @@ export default function DrawerAppBar(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}

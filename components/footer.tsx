@@ -8,7 +8,7 @@ function Footer() {
       <Grid xs={12} sx={{ textAlign: 'center' }}>
         <Link target={'_blank'} rel="noreferrer" href="https://github.com/evro-eth">
           <Typography variant="subtitle1" component="p" gutterBottom>
-            Built by evro.eth
+            Built by Evan Rosa
           </Typography>
         </Link>
       </Grid>

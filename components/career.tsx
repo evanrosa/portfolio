@@ -105,13 +105,24 @@ export default function Job() {
 
         {isDesktop ? (
           <Box sx={{ height: '450px' }} paddingTop={4}>
-            <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                bgcolor: 'background.paper',
+                display: 'flex',
+              }}
+            >
               <Tabs
                 orientation="vertical"
                 value={value}
                 onChange={handleChange}
                 aria-label="Vertical tabs example"
-                sx={{ borderRight: 1, borderColor: 'divider', minWidth: '175px', height: '165px' }}
+                sx={{
+                  borderRight: 1,
+                  borderColor: 'divider',
+                  minWidth: '175px',
+                  height: '165px',
+                }}
               >
                 <Tab onClick={() => handleTabClick('dt', 'desktop')} label="Digital Turbine" {...a11yProps(0)} />
                 <Tab onClick={() => handleTabClick('bah', 'desktop')} label="Booz Allen Hamilton" {...a11yProps(1)} />
@@ -139,17 +150,17 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Currently managing GA 360 & GTM integrations for multiple partners while impriving data accuracy by optimizing and cleaning data before ingestion into BQ ETL pipelines.
+                      Managed data architectures and led GA4 analytic migrations, optimizing BigQuery ETL pipelines for enhanced data accuracy and actionable insights.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Leading GA4 migrations for all partners and streamlining data processing with the data layer resulting in massive improvements in data accuracy. 
+                      Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with a focus on creating and maintaining BigQuery tables and GA schemas.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Developing internal software using GCP APIs that would reduce implementation for data architecture build-outs.
+                      Utilized Google APIs, written in Python, to construct scalable data architectures that expedited setup processes and facilitated data-driven decision-making. Ensured the robustness and reliability of these solutions through comprehensive testing using pytest.
                     </Typography>
                   </li>
                 </ul>
@@ -170,26 +181,16 @@ export default function Job() {
                   <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
                 </Typography>
                 <ul>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Led web analytics for multiple federal government websites, resulting in increased website traffic by 13%.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Conducted site/SEO audits, A/B testing, and implemented goal funneling strategies that led to 10% improvement in conversion rates.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Initiated a data warehousing repository to identify trends, providing valuable insights that informed decision making.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Proactively collaborated with the client to ensure the best use of analytics data for their needs.
-                    </Typography>
-                  </li>
+                 <li>
+                  <Typography variant="subtitle2" component="p">
+                    Managed analytics for multiple HHS government websites as part of the Digital Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal funneling strategies. Ensured 100% accuracy of analytics tagging and set up automated reports.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant="subtitle2" component="p">
+                    Initiated data warehousing to inform decision-making, regularly analyzed metrics data, and generated reports. Advised clients on metrics analysis best practices and implemented BI tool data dashboards.
+                  </Typography>
+                </li>
                 </ul>
               </TabPanel>
               <TabPanel value={value} index={2}>
@@ -210,17 +211,12 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Assisted the Director of Platform Advertising and Analytics in the creation and maintenance of monthly/ annual web usage reports as well as reports for editorial board meetings.
+                      Assisted the Assistant Director by generating regular and ad hoc reports for various departments, and maintained advertising reports for multiple platforms, aiding in forecasting and enhancing ad server reporting.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Developed and maintained accurate reports for the ACS Web Platform, ensuring data reliability and consistency. 
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Conducted thorough testing and validation of metrics for new site deployments and enhancements, ensuring data accuracy, resulting in cost savings.
+                      Validated web analytics with each new deployment or product enhancement, and developed new standard monthly internal reports, improving reporting systems based on stakeholder feedback.
                     </Typography>
                   </li>
                 </ul>
@@ -256,22 +252,22 @@ export default function Job() {
                 <time dateTime="2020-03">March 2020</time> - Present
               </Typography>
               <ul>
-                  <li>
+               <li>
                     <Typography variant="subtitle2" component="p">
-                      Currently managing GA 360 & GTM integrations for multiple partners while impriving data accuracy by optimizing and cleaning data before ingestion into BQ ETL pipelines.
+                      Managed data architectures and led GA4 analytic migrations, optimizing BigQuery ETL pipelines for enhanced data accuracy and actionable insights.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Leading GA4 migrations for all partners and streamlining data processing with the data layer resulting in massive improvements in data accuracy. 
+                      Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with a focus on creating and maintaining BigQuery tables and GA schemas.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Developing internal software using GCP APIs that would reduce implementation for data architecture build-outs.
+                      Utilized Google APIs, written in Python, to construct scalable data architectures that expedited setup processes and facilitated data-driven decision-making. Ensured the robustness and reliability of these solutions through comprehensive testing using pytest.
                     </Typography>
                   </li>
-                </ul>
+              </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>
               <Typography variant="h4" component="h3">
@@ -288,28 +284,18 @@ export default function Job() {
               <Typography variant="subtitle1" component="div">
                 <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
               </Typography>
-             <ul>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Led web analytics for multiple federal government websites, resulting in increased website traffic by 13%.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Conducted site/SEO audits, A/B testing, and implemented goal funneling strategies that led to 10% improvement in conversion rates.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Initiated a data warehousing repository to identify trends, providing valuable insights that informed decision making.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Proactively collaborated with the client to ensure the best use of analytics data for their needs.
-                    </Typography>
-                  </li>
-                </ul>
+              <ul>
+                <li>
+                  <Typography variant="subtitle2" component="p">
+                    Managed analytics for multiple HHS government websites as part of the Digital Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal funneling strategies. Ensured 100% accuracy of analytics tagging and set up automated reports.
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant="subtitle2" component="p">
+                    Initiated data warehousing to inform decision-making, regularly analyzed metrics data, and generated reports. Advised clients on metrics analysis best practices and implemented BI tool data dashboards.
+                  </Typography>
+                </li>
+              </ul>
             </TabPanel>
             <TabPanel value={value} index={2}>
               <Typography variant="h4" component="h3">
@@ -326,23 +312,18 @@ export default function Job() {
               <Typography variant="subtitle1" component="div">
                 <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
               </Typography>
-             <ul>
+              <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Assisted the Director of Platform Advertising and Analytics in the creation and maintenance of monthly/ annual web usage reports as well as reports for editorial board meetings.
+                      Assisted the Assistant Director by generating regular and ad hoc reports for various departments, and maintained advertising reports for multiple platforms, aiding in forecasting and enhancing ad server reporting.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Developed and maintained accurate reports for the ACS Web Platform, ensuring data reliability and consistency. 
+                      Validated web analytics with each new deployment or product enhancement, and developed new standard monthly internal reports, improving reporting systems based on stakeholder feedback.
                     </Typography>
                   </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Conducted thorough testing and validation of metrics for new site deployments and enhancements, ensuring data accuracy, resulting in cost savings.
-                    </Typography>
-                  </li>
-                </ul>
+              </ul>
             </TabPanel>
           </Box>
         )}

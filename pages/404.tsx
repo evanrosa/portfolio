@@ -11,7 +11,11 @@ const interfaceVariants: Variants = {
   },
   visible: {
     opacity: 1,
-    transition: { type: 'spring', when: 'beforeChildren', staggerChildren: 0.2 },
+    transition: {
+      type: 'spring',
+      when: 'beforeChildren',
+      staggerChildren: 0.2,
+    },
   },
 };
 

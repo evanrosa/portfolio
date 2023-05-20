@@ -49,7 +49,7 @@ export default function Intro() {
       <Container
         sx={{
           minHeight: '100vh',
-          padding: '100px 0px',
+          padding: '50px 0px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -57,17 +57,15 @@ export default function Intro() {
         }}
       >
         <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={m.h1} variants={fontVariants}>
-          evro.eth
+          Evan Rosa
         </Typography>
 
         <section id="evro">
           <Typography variant="h3" component={m.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
-            Data Engineer by day while maintaining my sanity in Web3 at night.
+            Lead Data Engineer and Full Stack Developer
           </Typography>
           <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
-            During work hours I'm a data engineer by trade working with APIs, creating and managing data
-            architectures, & working on cloud projects for{' '}
-            <span style={{ fontWeight: 600 }}>
+            A dedicated Lead Data Engineer at <span style={{ fontWeight: 600 }}>
               <Link
                 onClick={() => handleLinkClick('dt', 'web2')}
                 href="https://www.digitalturbine.com/"
@@ -76,44 +74,9 @@ export default function Intro() {
               >
                 Digital Turbine
               </Link>
-            </span>
-            . At night, or whenever I have free time, I'm learning how to build Web3 dApps. I'm currently a hodler of
-            <span style={{ fontWeight: 600 }}>
-              {' '}
-              <Link
-                onClick={() => handleLinkClick('loser_club', 'web3')}
-                href="https://twitter.com/loserclubreborn"
-                target={'_blank'}
-                rel="noreferrer"
-              >
-                Loser Club
-              </Link>
-            </span>
-            ,{' '}
-            <span style={{ fontWeight: 600 }}>
-              {' '}
-              <Link
-                onClick={() => handleLinkClick('illogics', 'web3')}
-                href="https://www.illogics.io/"
-                target={'_blank'}
-                rel="noreferrer"
-              >
-                Illogics
-              </Link>
-            </span>
-            ,{' '}
-            <span style={{ fontWeight: 600 }}>
-              {' '}
-              <Link
-                onClick={() => handleLinkClick('tiny_astro', 'web3')}
-                href="https://tinyastro.io/"
-                target={'_blank'}
-                rel="noreferrer"
-              >
-                Tiny Astro
-              </Link>
-            </span>{' '}
-            among others.
+            </span>, specializing in managing data architectures and cloud projects.{' '}
+            
+            In my free time, I delve into Full Stack Web Development, handling end-to-end creation of web applications. My passion is creating maintainable, well-structured code while staying up to date on the latest technologies.
           </Typography>
 
           <Box sx={{ maxWidth: '300px' }}>
@@ -126,13 +89,21 @@ export default function Intro() {
               whileTap={{ scale: 0.9 }}
             >
               <Link
-                href="https://opensea.io/0xA662C6253AF152807660Fb7DB6776ca7a35a380C"
+                href="https://www.linkedin.com/in/evan-rosa/"
                 target={'_blank'}
                 rel="noreferrer"
                 onClick={handleBtnWalletClick}
               >
-                <Button variant="outlined" sx={{ paddingLeft: 4, paddingRight: 4, paddingTop: 2, paddingBottom: 1 }}>
-                  Check out my wallet
+                <Button
+                  variant="outlined"
+                  sx={{
+                    paddingLeft: 4,
+                    paddingRight: 4,
+                    paddingTop: 2,
+                    paddingBottom: 1,
+                  }}
+                >
+                  LinkedIn
                 </Button>
               </Link>
             </m.div>

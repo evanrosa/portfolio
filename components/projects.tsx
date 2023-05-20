@@ -46,7 +46,10 @@ export default function Work({ projects }: ProjectPost) {
             container
             spacing={4}
             direction="row"
-            sx={{ paddingBottom: 30, textAlign: { xs: '-webkit-center' } }}
+            sx={{
+              paddingBottom: 30,
+              textAlign: { xs: '-webkit-center' },
+            }}
             paddingTop={4}
           >
             {!projects && <div>No projects!</div>}
@@ -61,7 +64,11 @@ export default function Work({ projects }: ProjectPost) {
                       }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Link href={{ pathname: `${projects.frontMatter.website}` }}>
+                      <Link
+                        href={{
+                          pathname: `${projects.frontMatter.website}`,
+                        }}
+                      >
                         <a
                           target={'_blank'}
                           rel="noreferrer"
@@ -69,9 +76,19 @@ export default function Work({ projects }: ProjectPost) {
                           onClick={() => handleProjectClick(`${projects.frontMatter.gtmValue}`)}
                         >
                           {isMobile ? (
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card
+                              sx={{
+                                maxWidth: 345,
+                              }}
+                            >
                               <CardMedia>
-                                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                                <div
+                                  style={{
+                                    position: 'relative',
+                                    width: '100%',
+                                    height: '100%',
+                                  }}
+                                >
                                   <Image
                                     src={projects.frontMatter.thumbnailUrl}
                                     layout="responsive"
@@ -94,7 +111,12 @@ export default function Work({ projects }: ProjectPost) {
                               <CardActions></CardActions>
                             </Card>
                           ) : (
-                            <Card sx={{ maxWidth: 345, minHeight: 375 }}>
+                            <Card
+                              sx={{
+                                maxWidth: 345,
+                                minHeight: 375,
+                              }}
+                            >
                               <CardMedia
                                 component="img"
                                 image={projects.frontMatter.thumbnailUrl}
