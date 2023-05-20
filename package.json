@@ -9,6 +9,9 @@
     "build": "next build",
     "start": "next start"
   },
+  "engines": {
+    "node": "18.16.0"
+  },
   "dependencies": {
     "@elgorditosalsero/react-gtm-hook": "^2.5.0",
     "@emotion/react": "^11.10.0",
