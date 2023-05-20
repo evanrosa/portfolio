@@ -38,7 +38,7 @@ export default function Work({ projects }: ProjectPost) {
       <Container>
         <Divider textAlign="left">
           <Typography variant="h4" component="h2" className="countContent">
-            Things I've Built In Web2
+            Things I've Built
           </Typography>
         </Divider>
         <section id="Work">
