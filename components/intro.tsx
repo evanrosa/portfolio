@@ -83,7 +83,7 @@ export default function Intro() {
           </Typography>
 
           <Grid container>
-            <Grid item xs={2}>
+            <Grid item xs={4} md={2}>
               <Box sx={{ maxWidth: '300px' }}>
                 <m.div
                   variants={fontVariants}
@@ -115,7 +115,7 @@ export default function Intro() {
               </Box>
             </Grid>
 
-            <Grid item xs={2}>
+            <Grid item xs={4} md={2}>
               <Box sx={{ maxWidth: '300px' }}>
                 <m.div
                   variants={fontVariants}
