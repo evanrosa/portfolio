@@ -93,7 +93,7 @@ export default function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="/">
+      <Link href="http://www.evro.dev">
         <Typography variant="h6" sx={{ my: 2, cursor: 'pointer' }}>
           &#60;evan.rosa/&#62;
         </Typography>
@@ -118,7 +118,7 @@ export default function DrawerAppBar(props) {
       <HideOnScroll {...props}>
         <AppBar component="nav">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Link href="/">
+            <Link href="http://www.evro.dev">
               <Typography
                 variant="h6"
                 variants={navLinkVariants}
