@@ -96,7 +96,7 @@ export default function Job() {
 
   return (
     <Container sx={{ padding: '100px 0 ' }}>
-      <section id="Experience">
+      <section id="Work">
         <Divider textAlign="left">
           <Typography variant="h4" component="h2" className="countContent">
             Where I've Worked

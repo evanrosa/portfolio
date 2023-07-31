@@ -10,7 +10,7 @@ import { m } from 'framer-motion';
 const Intro = dynamic(() => import('../components/intro'));
 const About = dynamic(() => import('../components/about'));
 const Work = dynamic(() => import('../components/projects'));
-const Job = dynamic(() => import('../components/career'));
+const Job = dynamic(() => import('../components/work'));
 const Contact = dynamic(() => import('../components/contact'));
 
 function Home({ projects }: ProjectsProps) {
