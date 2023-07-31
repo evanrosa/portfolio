@@ -41,7 +41,7 @@ export default function Work({ projects }: ProjectPost) {
             Things I've Built
           </Typography>
         </Divider>
-        <section id="Work">
+        <section id="Projects">
           <Grid
             container
             spacing={4}
