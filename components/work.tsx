@@ -124,8 +124,16 @@ export default function Job() {
                   height: '165px',
                 }}
               >
-                <Tab onClick={() => handleTabClick('dt', 'desktop')} label="Digital Turbine" {...a11yProps(0)} />
-                <Tab onClick={() => handleTabClick('bah', 'desktop')} label="Booz Allen Hamilton" {...a11yProps(1)} />
+                <Tab
+                  onClick={() => handleTabClick('dt', 'desktop')}
+                  label="Digital Turbine"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  onClick={() => handleTabClick('bah', 'desktop')}
+                  label="Booz Allen Hamilton"
+                  {...a11yProps(1)}
+                />
                 <Tab
                   onClick={() => handleTabClick('acs', 'desktop')}
                   label="The American Chemical Society"
@@ -150,21 +158,25 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Managed data architectures and led GA4 analytic migrations, optimizing BigQuery ETL pipelines for
-                      enhanced data accuracy and actionable insights.
+                      Managed data architectures and led GA4 analytic
+                      migrations, optimizing BigQuery ETL pipelines for enhanced
+                      data accuracy and actionable insights.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with a focus on
-                      creating and maintaining BigQuery tables and GA schemas.
+                      Demonstrated proficiency in Google Analytics (GA4 & UA),
+                      GCP, and BigQuery, with a focus on creating and
+                      maintaining BigQuery tables and GA schemas.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Utilized Google APIs, written in Python, to construct scalable data architectures that expedited
-                      setup processes and facilitated data-driven decision-making. Ensured the robustness and
-                      reliability of these solutions through comprehensive testing using pytest.
+                      Utilized Google APIs, written in Python, to construct
+                      scalable data architectures that expedited setup processes
+                      and facilitated data-driven decision-making. Ensured the
+                      robustness and reliability of these solutions through
+                      comprehensive testing using pytest.
                     </Typography>
                   </li>
                 </ul>
@@ -182,21 +194,25 @@ export default function Job() {
                   </Link>
                 </Typography>
                 <Typography variant="subtitle1" component="div">
-                  <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
+                  <time dateTime="2015-05">May 2015</time> -{' '}
+                  <time dateTime="2020-03">March 2020</time>
                 </Typography>
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Managed analytics for multiple HHS government websites as part of the Digital Analytics Program
-                      (DAP), conducting site/SEO audits, A/B testing, and goal funneling strategies. Ensured 100%
-                      accuracy of analytics tagging and set up automated reports.
+                      Managed analytics for multiple HHS government websites as
+                      part of the Digital Analytics Program (DAP), conducting
+                      site/SEO audits, A/B testing, and goal funneling
+                      strategies. Ensured 100% accuracy of analytics tagging and
+                      set up automated reports.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Initiated data warehousing to inform decision-making, regularly analyzed metrics data, and
-                      generated reports. Advised clients on metrics analysis best practices and implemented BI tool data
-                      dashboards.
+                      Initiated data warehousing to inform decision-making,
+                      regularly analyzed metrics data, and generated reports.
+                      Advised clients on metrics analysis best practices and
+                      implemented BI tool data dashboards.
                     </Typography>
                   </li>
                 </ul>
@@ -214,20 +230,24 @@ export default function Job() {
                   </Link>
                 </Typography>
                 <Typography variant="subtitle1" component="div">
-                  <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
+                  <time dateTime="2010-12">December 2010</time> -{' '}
+                  <time dateTime="2015-05">May 2015</time>
                 </Typography>
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Assisted the Assistant Director by generating regular and ad hoc reports for various departments,
-                      and maintained advertising reports for multiple platforms, aiding in forecasting and enhancing ad
-                      server reporting.
+                      Assisted the Assistant Director by generating regular and
+                      ad hoc reports for various departments, and maintained
+                      advertising reports for multiple platforms, aiding in
+                      forecasting and enhancing ad server reporting.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Validated web analytics with each new deployment or product enhancement, and developed new
-                      standard monthly internal reports, improving reporting systems based on stakeholder feedback.
+                      Validated web analytics with each new deployment or
+                      product enhancement, and developed new standard monthly
+                      internal reports, improving reporting systems based on
+                      stakeholder feedback.
                     </Typography>
                   </li>
                 </ul>
@@ -237,9 +257,22 @@ export default function Job() {
         ) : (
           <Box sx={{ width: '100%', minHeight: '625px' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
-                <Tab onClick={() => handleTabClick('dt', 'mobile')} label="Digital Turbine" {...a11yProps(0)} />
-                <Tab onClick={() => handleTabClick('bah', 'mobile')} label="Booz Allen Hamilton" {...a11yProps(1)} />
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+                centered
+              >
+                <Tab
+                  onClick={() => handleTabClick('dt', 'mobile')}
+                  label="Digital Turbine"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  onClick={() => handleTabClick('bah', 'mobile')}
+                  label="Booz Allen Hamilton"
+                  {...a11yProps(1)}
+                />
                 <Tab
                   onClick={() => handleTabClick('acs', 'mobile')}
                   label="The American Chemical Society"
@@ -265,21 +298,25 @@ export default function Job() {
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Managed data architectures and led GA4 analytic migrations, optimizing BigQuery ETL pipelines for
-                    enhanced data accuracy and actionable insights.
+                    Managed data architectures and led GA4 analytic migrations,
+                    optimizing BigQuery ETL pipelines for enhanced data accuracy
+                    and actionable insights.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with a focus on creating
-                    and maintaining BigQuery tables and GA schemas.
+                    Demonstrated proficiency in Google Analytics (GA4 & UA),
+                    GCP, and BigQuery, with a focus on creating and maintaining
+                    BigQuery tables and GA schemas.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Utilized Google APIs, written in Python, to construct scalable data architectures that expedited
-                    setup processes and facilitated data-driven decision-making. Ensured the robustness and reliability
-                    of these solutions through comprehensive testing using pytest.
+                    Utilized Google APIs, written in Python, to construct
+                    scalable data architectures that expedited setup processes
+                    and facilitated data-driven decision-making. Ensured the
+                    robustness and reliability of these solutions through
+                    comprehensive testing using pytest.
                   </Typography>
                 </li>
               </ul>
@@ -297,20 +334,25 @@ export default function Job() {
                 </Link>
               </Typography>
               <Typography variant="subtitle1" component="div">
-                <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
+                <time dateTime="2015-05">May 2015</time> -{' '}
+                <time dateTime="2020-03">March 2020</time>
               </Typography>
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Managed analytics for multiple HHS government websites as part of the Digital Analytics Program
-                    (DAP), conducting site/SEO audits, A/B testing, and goal funneling strategies. Ensured 100% accuracy
-                    of analytics tagging and set up automated reports.
+                    Managed analytics for multiple HHS government websites as
+                    part of the Digital Analytics Program (DAP), conducting
+                    site/SEO audits, A/B testing, and goal funneling strategies.
+                    Ensured 100% accuracy of analytics tagging and set up
+                    automated reports.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Initiated data warehousing to inform decision-making, regularly analyzed metrics data, and generated
-                    reports. Advised clients on metrics analysis best practices and implemented BI tool data dashboards.
+                    Initiated data warehousing to inform decision-making,
+                    regularly analyzed metrics data, and generated reports.
+                    Advised clients on metrics analysis best practices and
+                    implemented BI tool data dashboards.
                   </Typography>
                 </li>
               </ul>
@@ -328,20 +370,24 @@ export default function Job() {
                 </Link>
               </Typography>
               <Typography variant="subtitle1" component="div">
-                <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
+                <time dateTime="2010-12">December 2010</time> -{' '}
+                <time dateTime="2015-05">May 2015</time>
               </Typography>
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Assisted the Assistant Director by generating regular and ad hoc reports for various departments,
-                    and maintained advertising reports for multiple platforms, aiding in forecasting and enhancing ad
-                    server reporting.
+                    Assisted the Assistant Director by generating regular and ad
+                    hoc reports for various departments, and maintained
+                    advertising reports for multiple platforms, aiding in
+                    forecasting and enhancing ad server reporting.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Validated web analytics with each new deployment or product enhancement, and developed new standard
-                    monthly internal reports, improving reporting systems based on stakeholder feedback.
+                    Validated web analytics with each new deployment or product
+                    enhancement, and developed new standard monthly internal
+                    reports, improving reporting systems based on stakeholder
+                    feedback.
                   </Typography>
                 </li>
               </ul>

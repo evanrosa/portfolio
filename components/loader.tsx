@@ -88,7 +88,12 @@ const Loader = () => {
           paddingBottom: '5vw',
         }}
       >
-        <motion.div style={loadingContainer} variants={loadingContainerVariants} initial="start" animate="end">
+        <motion.div
+          style={loadingContainer}
+          variants={loadingContainerVariants}
+          initial="start"
+          animate="end"
+        >
           <motion.span
             style={loadingCircle}
             variants={loadingCircleVariants}

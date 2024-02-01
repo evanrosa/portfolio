@@ -1,5 +1,10 @@
 import '../styles/globals.css';
-import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes } from '@mui/material';
+import {
+  ThemeProvider,
+  CssBaseline,
+  createTheme,
+  responsiveFontSizes,
+} from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { getDesignTokens, getThemedComponents } from '../themes/mainTheme';
@@ -16,7 +21,9 @@ type CustomNextComponent = NextComponentType & { Layout?: FC };
 type CustomAppProps = AppProps & { Component: CustomNextComponent };
 
 function MyApp({ Component, pageProps }: CustomAppProps) {
-  const Layout: CustomNextComponent | typeof Fragment = Component.Layout ? Component.Layout : Fragment;
+  const Layout: CustomNextComponent | typeof Fragment = Component.Layout
+    ? Component.Layout
+    : Fragment;
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   const [mode, setMode] = useState<string | undefined>();
@@ -39,7 +46,11 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
     []
   );
 
-  let theme = useMemo(() => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))), [mode]);
+  let theme = useMemo(
+    () =>
+      createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))),
+    [mode]
+  );
 
   theme = responsiveFontSizes(theme);
 

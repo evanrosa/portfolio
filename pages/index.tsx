@@ -31,17 +31,25 @@ function Home({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
-        <title>Evan Rosa | Lead Data Engineer by day Full Stack Engineer by night</title>
+        <title>
+          Evan Rosa | Lead Data Engineer by day Full Stack Engineer by night
+        </title>
         <meta
           name="description"
           content="Evan Rosa is a Lead Data Engineer by day and a Full Stack Engineer by night with a passion of building end to end web apps and exploring new technologies."
         />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.evro.dev" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={profile()} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={profile()}
+        />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-        <meta name="twitter:title" content="Evan Rosa |  Lead Data Engineer by day Full Stack Engineer by night" />
+        <meta
+          name="twitter:title"
+          content="Evan Rosa |  Lead Data Engineer by day Full Stack Engineer by night"
+        />
         <meta
           name="twitter:description"
           content="Evan Rosa is a Lead Data Engineer by day and a Full Stack Engineer by night with a passion of building end to end web apps and exploring new technologies."

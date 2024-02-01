@@ -12,37 +12,53 @@ export default function About() {
       <Container sx={{ paddingBottom: '100px' }}>
         {/* ABOUT */}
         <section id="About">
-          <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
+          <Grid
+            container
+            spacing={6}
+            direction={{ xs: 'column-reverse', md: 'row' }}
+          >
             <Grid xs={12} md={12}>
               <Divider textAlign="left">
-                <Typography variant="h4" component="h2" className="countContent">
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className="countContent"
+                >
                   About Me
                 </Typography>
               </Divider>
 
               <Typography variant="body1" paddingTop={4}>
-                My professional journey began in the realm of analytics, where I was immersed in running reports and
-                deciphering data. As I delved into the code that powered these numbers, I found myself captivated by a
-                new world of creativity and behavioral understanding.
+                My professional journey began in the realm of analytics, where I
+                was immersed in running reports and deciphering data. As I
+                delved into the code that powered these numbers, I found myself
+                captivated by a new world of creativity and behavioral
+                understanding.
               </Typography>
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                As time progressed, I've had the privilege of contributing to a diverse range of environments, from
-                non-profits and government contracts to established organizations. Today, I serve as a Lead Data
-                Engineer, where I am responsible for building and optimizing data workflows. This includes data
-                gathering, cleaning, and sorting, with the ultimate goal of transforming raw data into actionable
-                insights.
+                As time progressed, I've had the privilege of contributing to a
+                diverse range of environments, from non-profits and government
+                contracts to established organizations. Today, I serve as a Lead
+                Data Engineer, where I am responsible for building and
+                optimizing data workflows. This includes data gathering,
+                cleaning, and sorting, with the ultimate goal of transforming
+                raw data into actionable insights.
               </Typography>
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                In my free time, I channel my passion for coding and problem-solving into full-stack development. I
-                handle end-to-end development of applications as personal projects, utilizing a variety of technologies
-                such as Python, TypeScript, SQL, and more. These projects allow me to explore the latest technologies
-                and continue honing my skills in creating maintainable, well-structured code.
+                In my free time, I channel my passion for coding and
+                problem-solving into full-stack development. I handle end-to-end
+                development of applications as personal projects, utilizing a
+                variety of technologies such as Python, TypeScript, SQL, and
+                more. These projects allow me to explore the latest technologies
+                and continue honing my skills in creating maintainable,
+                well-structured code.
               </Typography>
 
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                Currently, I am expanding my expertise by learning the Google Cloud Platform (GCP), which further equips
-                me to handle large-scale data flows and cloud computing solutions. Here are some of the technologies I
-                work with:
+                Currently, I am expanding my expertise by learning the Google
+                Cloud Platform (GCP), which further equips me to handle
+                large-scale data flows and cloud computing solutions. Here are
+                some of the technologies I work with:
               </Typography>
 
               <Grid container spacing={2}>

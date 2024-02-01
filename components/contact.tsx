@@ -24,20 +24,37 @@ export default function Contact() {
     <>
       <Container sx={{ textAlign: 'center' }}>
         <section id="Contact">
-          <Typography variant="subtitle1">So, after reading all that...</Typography>
+          <Typography variant="subtitle1">
+            So, after reading all that...
+          </Typography>
           <Divider textAlign="center">
             <Typography variant="h4" component="h2" className="countContent">
               Let's Get In Touch
             </Typography>
           </Divider>
 
-          <Grid container spacing={2} justifyContent={'center'} paddingBottom={6}>
-            <Grid display="flex" justifyContent="center" alignItems="center" paddingTop={4}>
-              <Typography maxWidth={'750px'} variant="body1" textAlign={'center'}>
-                I'm always open to exploring new opportunities. If you'd like to discuss my professional experience as a
-                Lead Data Engineer or Full Stack Developer, or if you're interested in collaborating on a project
-                involving data architectures, cloud projects, or full stack web applications, please don't hesitate to
-                reach out!
+          <Grid
+            container
+            spacing={2}
+            justifyContent={'center'}
+            paddingBottom={6}
+          >
+            <Grid
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              paddingTop={4}
+            >
+              <Typography
+                maxWidth={'750px'}
+                variant="body1"
+                textAlign={'center'}
+              >
+                I'm always open to exploring new opportunities. If you'd like to
+                discuss my professional experience as a Lead Data Engineer or
+                Full Stack Developer, or if you're interested in collaborating
+                on a project involving data architectures, cloud projects, or
+                full stack web applications, please don't hesitate to reach out!
               </Typography>
             </Grid>
           </Grid>
@@ -49,7 +66,12 @@ export default function Contact() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href="mailto:crypto.evro@gmail.com" target={'_blank'} rel="noreferrer" onClick={handleContactClick}>
+            <Link
+              href="mailto:crypto.evro@gmail.com"
+              target={'_blank'}
+              rel="noreferrer"
+              onClick={handleContactClick}
+            >
               <Button
                 variant="outlined"
                 sx={{

@@ -57,15 +57,32 @@ export default function Intro() {
           alignItems: 'flex-start',
         }}
       >
-        <Typography variant="h1" pb={1} style={{ fontWeight: 600 }} component={m.h1} variants={fontVariants}>
+        <Typography
+          variant="h1"
+          pb={1}
+          style={{ fontWeight: 600 }}
+          component={m.h1}
+          variants={fontVariants}
+        >
           Evan Rosa
         </Typography>
 
         <section id="evro">
-          <Typography variant="h3" component={m.h2} variants={fontVariants} pb={4} style={{ fontWeight: 900 }}>
+          <Typography
+            variant="h3"
+            component={m.h2}
+            variants={fontVariants}
+            pb={4}
+            style={{ fontWeight: 900 }}
+          >
             Lead Data Engineer and Full Stack Developer
           </Typography>
-          <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
+          <Typography
+            variant="body1"
+            pb={3}
+            component={m.p}
+            variants={fontVariants}
+          >
             A dedicated Lead Data Engineer at{' '}
             <span style={{ fontWeight: 600 }}>
               <Link
@@ -77,9 +94,11 @@ export default function Intro() {
                 Digital Turbine
               </Link>
             </span>
-            , specializing in managing data architectures and cloud projects. In my free time, I delve into Full Stack
-            Web Development, handling end-to-end creation of web applications. My passion is creating maintainable,
-            well-structured code while staying up to date on the latest technologies.
+            , specializing in managing data architectures and cloud projects. In
+            my free time, I delve into Full Stack Web Development, handling
+            end-to-end creation of web applications. My passion is creating
+            maintainable, well-structured code while staying up to date on the
+            latest technologies.
           </Typography>
 
           <Grid container>
@@ -126,8 +145,8 @@ export default function Intro() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="https://drive.google.com/file/d/1rsjh36CA5_hYEUCQr_b5K_xzErsTIwPf/view?usp=sharing"
-                    target={'_blank'}
+                    href="https://drive.google.com/file/d/1lnWho5hoxrM9L5RIplzh_uA5ibui8mG0/view?usp=sharing"
+                    target={'_blank'} 
                     rel="noreferrer"
                     onClick={handleBtnWalletClick}
                   >

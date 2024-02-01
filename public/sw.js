@@ -16,7 +16,10 @@ if (!self.define) {
       })
   );
   self.define = (s, a) => {
-    const n = e || ('document' in self ? document.currentScript.src : '') || location.href;
+    const n =
+      e ||
+      ('document' in self ? document.currentScript.src : '') ||
+      location.href;
     if (c[n]) return;
     let t = {};
     const r = (e) => i(e, n),
@@ -349,7 +352,12 @@ define(['./workbox-6a1bf588'], function (e) {
         cacheName: 'start-url',
         plugins: [
           {
-            cacheWillUpdate: async ({ request: e, response: c, event: i, state: s }) =>
+            cacheWillUpdate: async ({
+              request: e,
+              response: c,
+              event: i,
+              state: s,
+            }) =>
               c && 'opaqueredirect' === c.type
                 ? new Response(c.body, {
                     status: 200,
