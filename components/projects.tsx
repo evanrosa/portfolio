@@ -63,6 +63,7 @@ export default function Work({ projects }: ProjectPost) {
                         transition: { duration: 0.5 },
                       }}
                       whileTap={{ scale: 0.9 }}
+                      className='container'
                     >
                       <Link
                         href={{

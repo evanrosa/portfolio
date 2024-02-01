@@ -67,7 +67,7 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
           >
             <Link
-              href="mailto:crypto.evro@gmail.com"
+              href="mailto:evandanrosa@gmail.com"
               target={'_blank'}
               rel="noreferrer"
               onClick={handleContactClick}

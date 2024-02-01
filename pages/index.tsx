@@ -19,7 +19,7 @@ function Home({ projects }: ProjectsProps) {
       __html: `{
           "@context": "http://schema.org/",
           "@type": "Person",
-          "name": "evro.eth",
+          "name": "Evan Rosa",
           "jobTitle": "Lead Data Engineer by day, Full Stack by night",
           "url": "http://evro.dev",
           "email": "mailto:evandanrosa@gmail.com",
