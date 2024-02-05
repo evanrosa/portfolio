@@ -146,7 +146,7 @@ export default function Intro() {
                 >
                   <Link
                     href="https://drive.google.com/file/d/1lnWho5hoxrM9L5RIplzh_uA5ibui8mG0/view?usp=sharing"
-                    target={'_blank'} 
+                    target={'_blank'}
                     rel="noreferrer"
                     onClick={handleBtnWalletClick}
                   >

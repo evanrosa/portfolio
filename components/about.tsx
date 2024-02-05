@@ -48,17 +48,14 @@ export default function About() {
                 In my free time, I channel my passion for coding and
                 problem-solving into full-stack development. I handle end-to-end
                 development of applications as personal projects, utilizing a
-                variety of technologies such as Python, TypeScript, SQL, and
+                variety of technologies such as Python, TypeScript, React/NextJS, Redis, relational databases, and
                 more. These projects allow me to explore the latest technologies
                 and continue honing my skills in creating maintainable,
                 well-structured code.
               </Typography>
 
               <Typography variant="body1" sx={{ padding: '10px 0px' }}>
-                Currently, I am expanding my expertise by learning the Google
-                Cloud Platform (GCP), which further equips me to handle
-                large-scale data flows and cloud computing solutions. Here are
-                some of the technologies I work with:
+                Currently during my free time, I am working towards the completion of a side project of mine that uses NextJS and other technologies. Here are some of the other technologies I work with:
               </Typography>
 
               <Grid container spacing={2}>
@@ -86,17 +83,17 @@ export default function About() {
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        NoSQL
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography variant="subtitle1" component="p">
                         Postgres
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        MySQL
+                        Redis
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="subtitle1" component="p">
+                        Docker
                       </Typography>
                     </li>
                   </ul>
@@ -120,7 +117,7 @@ export default function About() {
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        ReactJS and NextJS
+                        ReactJS/NextJS (App Router)
                       </Typography>
                     </li>
                     <li>
@@ -135,12 +132,12 @@ export default function About() {
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        Google Cloud Platform
+                        Big Query
                       </Typography>
                     </li>
                     <li>
                       <Typography variant="subtitle1" component="p">
-                        Docker
+                        Apache AirFlow
                       </Typography>
                     </li>
                   </ul>
