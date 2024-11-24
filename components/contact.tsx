@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import { m } from 'framer-motion';
 import Link from '@mui/material/Link';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';

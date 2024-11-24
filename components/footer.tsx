@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 function Footer() {
   return (

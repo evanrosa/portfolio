@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { m, Variants } from 'framer-motion';
+import { useTheme } from '@mui/material/styles';
 
 import AppBar from '@mui/material/AppBar';
 
@@ -59,6 +60,7 @@ function HideOnScroll(props) {
 export default function DrawerAppBar(props) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
   const [isMobile, setIsMobile] = React.useState(false);
+  const theme = useTheme();
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -94,10 +96,26 @@ export default function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Link href="http://www.evro.dev">
-        <Typography variant="h6" sx={{ my: 2, cursor: 'pointer' }}>
+        <Typography
+          variant="h6"
+          component="div" // Use "div" instead of Framer Motion if not animating
+          sx={{
+            color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
+            textDecoration: 'none', // Removes underline
+            cursor: 'pointer',
+            textAlign: 'center',
+            fontWeight: 'bold',
+            '&:hover': {
+              color: theme.palette.mode === 'dark' ? theme.palette.secondary.light : theme.palette.secondary.main, // Hover color
+            },
+          }}
+        >
           &#60;evan.rosa/&#62;
         </Typography>
       </Link>
+
+
+
       <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
@@ -117,27 +135,41 @@ export default function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <HideOnScroll {...props}>
         <AppBar component="nav">
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Link href="http://www.evro.dev">
+          <Toolbar
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between', // Space between the logo and navigation
+              alignItems: 'center', // Center vertically
+              gap: 2, // Adds spacing between elements in flex items
+              width: '100%', // Ensures the toolbar spans full width
+            }}
+          >
+            <Link href="/">
               <Typography
                 variant="h6"
-                variants={navLinkVariants}
-                component={m.div}
+                component="div" // Use "div" instead of Framer Motion if not animating
                 sx={{
-                  flexGrow: 1,
-                  display: { xs: 'none', sm: 'block' },
+                  color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
+                  textDecoration: 'none', // Removes underline
                   cursor: 'pointer',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  '&:hover': {
+                    color: theme.palette.mode === 'dark' ? theme.palette.secondary.light : theme.palette.secondary.main, // Hover color
+                  },
                 }}
               >
                 &#60;evan.rosa/&#62;
               </Typography>
             </Link>
 
+
             <Box
               sx={{
                 display: { xs: 'none', sm: 'flex', md: 'flex' },
                 alignItems: 'center',
                 textAlign: 'center',
+                justifyContent: 'center',
               }}
             >
               {navItems.map((item) => (
@@ -160,36 +192,23 @@ export default function DrawerAppBar(props) {
                 <ThemeToggle aria-label="Toggle Theme Colors" />
               </m.div>
             </Box>
+
             {isMobile ? (
-              <Link href="/">
-                <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
-                  {' '}
-                  &#60;evan.rosa/&#62;{' '}
-                </Typography>
-              </Link>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{
+                  display: { sm: 'none' },
+                  ml: 'auto', // Ensures alignment on the far right
+                }}
+              >
+                <MenuRoundedIcon />
+              </IconButton>
             ) : null}
-            <div />
-            <Box sx={{ display: 'flex' }}>
-              <Box variants={navLinkVariants} component={m.div}>
-                {isMobile ? <ThemeToggle aria-label="Toggle Theme Colors" /> : null}
-              </Box>
-              <Box variants={navLinkVariants} component={m.div}>
-                <IconButton
-                  color="inherit"
-                  aria-label="open drawer"
-                  edge="start"
-                  onClick={handleDrawerToggle}
-                  sx={{
-                    mr: 2,
-                    ml: 1,
-                    display: { sm: 'none' },
-                  }}
-                >
-                  <MenuRoundedIcon />
-                </IconButton>
-              </Box>
-            </Box>
           </Toolbar>
+
         </AppBar>
       </HideOnScroll>
 

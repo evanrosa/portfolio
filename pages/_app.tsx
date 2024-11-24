@@ -11,6 +11,7 @@ import { FC, Fragment, useState, useEffect, useMemo } from 'react';
 import { GTMProvider } from '@elgorditosalsero/react-gtm-hook';
 
 import Loader from '../components/loader';
+import React from 'react';
 
 type CustomNextComponent = NextComponentType & { Layout?: FC };
 type CustomAppProps = AppProps & { Component: CustomNextComponent };

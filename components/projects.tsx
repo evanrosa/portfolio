@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -69,77 +69,76 @@ export default function Work({ projects }: ProjectPost) {
                         href={{
                           pathname: `${projects.frontMatter.website}`,
                         }}
+                        target={'_blank'}
+                        rel="noreferrer"
+                        className="noUnderline"
+                        onClick={() => handleProjectClick(`${projects.frontMatter.gtmValue}`)}
                       >
-                        <a
-                          target={'_blank'}
-                          rel="noreferrer"
-                          className="noUnderline"
-                          onClick={() => handleProjectClick(`${projects.frontMatter.gtmValue}`)}
-                        >
-                          {isMobile ? (
-                            <Card
-                              sx={{
-                                maxWidth: 345,
-                              }}
-                            >
-                              <CardMedia>
-                                <div
-                                  style={{
-                                    position: 'relative',
-                                    width: '100%',
-                                    height: '100%',
-                                  }}
-                                >
-                                  <Image
-                                    src={projects.frontMatter.thumbnailUrl}
-                                    layout="responsive"
-                                    width={100}
-                                    height={100}
-                                    alt="project image"
-                                  />
-                                </div>
-                              </CardMedia>
 
-                              <CardContent>
-                                <Typography gutterBottom variant="h4" component="h3">
-                                  {projects.frontMatter.title}
-                                </Typography>
-                                <Typography variant="body1" component="h4">
-                                  {projects.frontMatter.headline}
-                                </Typography>
-                                <Typography variant="body1">
-                                  {projects.frontMatter.description}
-                                </Typography>
-                              </CardContent>
-                              <CardActions></CardActions>
-                            </Card>
-                          ) : (
-                            <Card
-                              sx={{
-                                maxWidth: 345,
-                                minHeight: 375,
-                              }}
-                            >
-                              <CardMedia
-                                component="img"
-                                image={projects.frontMatter.thumbnailUrl}
-                                height="200"
-                              ></CardMedia>
-                              <CardContent>
-                                <Typography gutterBottom variant="h4" component="h3">
-                                  {projects.frontMatter.title}
-                                </Typography>
-                                <Typography variant="body1" component="h4">
-                                  {projects.frontMatter.headline}
-                                </Typography>
-                                <Typography variant="body2">
-                                  {projects.frontMatter.description}
-                                </Typography>
-                              </CardContent>
-                              <CardActions></CardActions>
-                            </Card>
-                          )}
-                        </a>
+                        {isMobile ? (
+                          <Card
+                            sx={{
+                              maxWidth: 345,
+                            }}
+                          >
+                            <CardMedia>
+                              <div
+                                style={{
+                                  position: 'relative',
+                                  width: '100%',
+                                  height: '100%',
+                                }}
+                              >
+                                <Image
+                                  src={projects.frontMatter.thumbnailUrl}
+                                  layout="responsive"
+                                  width={100}
+                                  height={100}
+                                  alt="project image"
+                                />
+                              </div>
+                            </CardMedia>
+
+                            <CardContent>
+                              <Typography gutterBottom variant="h4" component="h3">
+                                {projects.frontMatter.title}
+                              </Typography>
+                              <Typography variant="body1" component="h4">
+                                {projects.frontMatter.headline}
+                              </Typography>
+                              <Typography variant="body1">
+                                {projects.frontMatter.description}
+                              </Typography>
+                            </CardContent>
+                            <CardActions></CardActions>
+                          </Card>
+                        ) : (
+                          <Card
+                            sx={{
+                              maxWidth: 345,
+                              minHeight: 375,
+                            }}
+                          >
+                            <CardMedia
+                              component="img"
+                              image={projects.frontMatter.thumbnailUrl}
+                              height="200"
+                            ></CardMedia>
+                            <CardContent>
+                              <Typography gutterBottom variant="h4" component="h3">
+                                {projects.frontMatter.title}
+                              </Typography>
+                              <Typography variant="body1" component="h4">
+                                {projects.frontMatter.headline}
+                              </Typography>
+                              <Typography variant="body2">
+                                {projects.frontMatter.description}
+                              </Typography>
+                            </CardContent>
+                            <CardActions></CardActions>
+                          </Card>
+                        )}
+
                       </Link>
                     </m.div>
                   </Grid>
