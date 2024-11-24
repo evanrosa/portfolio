@@ -30,11 +30,7 @@ function Error() {
       <header>
         <DrawerAppBar />
       </header>
-      <motion.div
-        variants={interfaceVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div variants={interfaceVariants} initial="hidden" animate="visible">
         <Container
           sx={{
             minHeight: '80vh',
@@ -55,8 +51,8 @@ function Error() {
             <Typography variant="h2">NGMI, my guy!</Typography>
 
             <Typography variant="body1">
-              GGs! If your on this page then you're looking for something on
-              this site that isn't there... yet (maybe?!).
+              GGs! If your on this page then you're looking for something on this site that isn't
+              there... yet (maybe?!).
             </Typography>
           </motion.div>
         </Container>

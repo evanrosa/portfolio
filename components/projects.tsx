@@ -74,11 +74,7 @@ export default function Work({ projects }: ProjectPost) {
                           target={'_blank'}
                           rel="noreferrer"
                           className="noUnderline"
-                          onClick={() =>
-                            handleProjectClick(
-                              `${projects.frontMatter.gtmValue}`
-                            )
-                          }
+                          onClick={() => handleProjectClick(`${projects.frontMatter.gtmValue}`)}
                         >
                           {isMobile ? (
                             <Card
@@ -105,11 +101,7 @@ export default function Work({ projects }: ProjectPost) {
                               </CardMedia>
 
                               <CardContent>
-                                <Typography
-                                  gutterBottom
-                                  variant="h4"
-                                  component="h3"
-                                >
+                                <Typography gutterBottom variant="h4" component="h3">
                                   {projects.frontMatter.title}
                                 </Typography>
                                 <Typography variant="body1" component="h4">
@@ -134,11 +126,7 @@ export default function Work({ projects }: ProjectPost) {
                                 height="200"
                               ></CardMedia>
                               <CardContent>
-                                <Typography
-                                  gutterBottom
-                                  variant="h4"
-                                  component="h3"
-                                >
+                                <Typography gutterBottom variant="h4" component="h3">
                                   {projects.frontMatter.title}
                                 </Typography>
                                 <Typography variant="body1" component="h4">

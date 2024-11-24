@@ -9,10 +9,7 @@ export async function getFiles(dataType: string) {
 }
 
 export async function getPostBySlug(dataType: string, slug: string) {
-  const source = fs.readFileSync(
-    path.join(root, 'data', dataType, `${slug}.md`),
-    'utf8'
-  );
+  const source = fs.readFileSync(path.join(root, 'data', dataType, `${slug}.md`), 'utf8');
 
   const { data, content } = matter(source);
 
@@ -27,10 +24,7 @@ export async function getAllPostsWithFrontMatter(dataType: string) {
 
   // @ts-ignore
   return files.reduce((allProjects, projectSlug) => {
-    const source = fs.readFileSync(
-      path.join(root, 'data', dataType, projectSlug),
-      'utf8'
-    );
+    const source = fs.readFileSync(path.join(root, 'data', dataType, projectSlug), 'utf8');
     const { data } = matter(source);
 
     return [

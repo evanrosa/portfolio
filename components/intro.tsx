@@ -50,7 +50,7 @@ export default function Intro() {
       <Container
         sx={{
           minHeight: '100vh',
-          padding: '50px 0px',
+          padding: '0px 0px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -72,33 +72,12 @@ export default function Intro() {
             variant="h3"
             component={m.h2}
             variants={fontVariants}
-            pb={4}
             style={{ fontWeight: 900 }}
           >
-            Lead Data Engineer and Full Stack Developer
+            Experienced Data Engineer Specializing in Scalable Data Solutions
           </Typography>
-          <Typography
-            variant="body1"
-            pb={3}
-            component={m.p}
-            variants={fontVariants}
-          >
-            A dedicated Lead Data Engineer at{' '}
-            <span style={{ fontWeight: 600 }}>
-              <Link
-                onClick={() => handleLinkClick('dt', 'web2')}
-                href="https://www.digitalturbine.com/"
-                target={'_blank'}
-                rel="noreferrer"
-              >
-                Digital Turbine
-              </Link>
-            </span>
-            , specializing in managing data architectures and cloud projects. In
-            my free time, I delve into Full Stack Web Development, handling
-            end-to-end creation of web applications. My passion is creating
-            maintainable, well-structured code while staying up to date on the
-            latest technologies.
+          <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
+            Empowering businesses with innovative data pipelines, cloud architectures, and real-time streaming solutions. Leveraging expertise in Python, SQL, and GCP to deliver impactful, data-driven insights.
           </Typography>
 
           <Grid container>
@@ -145,7 +124,7 @@ export default function Intro() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="https://drive.google.com/file/d/1lnWho5hoxrM9L5RIplzh_uA5ibui8mG0/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1n9ga9fpCzPKbVcLzDDhuiZ9_PuFlARut/view?usp=sharing"
                     target={'_blank'}
                     rel="noreferrer"
                     onClick={handleBtnWalletClick}

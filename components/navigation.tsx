@@ -101,11 +101,7 @@ export default function DrawerAppBar(props) {
       <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
-          <ListItem
-            key={item}
-            disablePadding
-            onClick={() => handleNavMobileClick(item)}
-          >
+          <ListItem key={item} disablePadding onClick={() => handleNavMobileClick(item)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -115,8 +111,7 @@ export default function DrawerAppBar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -167,11 +162,7 @@ export default function DrawerAppBar(props) {
             </Box>
             {isMobile ? (
               <Link href="/">
-                <Typography
-                  variant="h6"
-                  sx={{ cursor: 'pointer' }}
-                  component="div"
-                >
+                <Typography variant="h6" sx={{ cursor: 'pointer' }} component="div">
                   {' '}
                   &#60;evan.rosa/&#62;{' '}
                 </Typography>
@@ -180,9 +171,7 @@ export default function DrawerAppBar(props) {
             <div />
             <Box sx={{ display: 'flex' }}>
               <Box variants={navLinkVariants} component={m.div}>
-                {isMobile ? (
-                  <ThemeToggle aria-label="Toggle Theme Colors" />
-                ) : null}
+                {isMobile ? <ThemeToggle aria-label="Toggle Theme Colors" /> : null}
               </Box>
               <Box variants={navLinkVariants} component={m.div}>
                 <IconButton

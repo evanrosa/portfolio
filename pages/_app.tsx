@@ -1,10 +1,5 @@
 import '../styles/globals.css';
-import {
-  ThemeProvider,
-  CssBaseline,
-  createTheme,
-  responsiveFontSizes,
-} from '@mui/material';
+import { ThemeProvider, CssBaseline, createTheme, responsiveFontSizes } from '@mui/material';
 import { deepmerge } from '@mui/utils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { getDesignTokens, getThemedComponents } from '../themes/mainTheme';
@@ -47,8 +42,7 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
   );
 
   let theme = useMemo(
-    () =>
-      createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))),
+    () => createTheme(deepmerge(getDesignTokens(mode), getThemedComponents(mode))),
     [mode]
   );
 
