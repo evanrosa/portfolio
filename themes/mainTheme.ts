@@ -51,36 +51,16 @@ export const getDesignTokens = (mode) => ({
   typography: {
     fontFamily: ['Anek Telugu', 'Roboto', 'Arial', 'sans-serif'].join(','),
     h1: {
-      fontFamily: [
-        'Source Code Pro',
-        'Anek Telugu',
-        'Arial',
-        'sans-serif',
-      ].join(','),
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
     },
     h6: {
-      fontFamily: [
-        'Source Code Pro',
-        'Anek Telugu',
-        'Arial',
-        'sans-serif',
-      ].join(','),
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
     },
     body2: {
-      fontFamily: [
-        'Source Code Pro',
-        'Anek Telugu',
-        'Arial',
-        'sans-serif',
-      ].join(','),
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
     },
     subtitle1: {
-      fontFamily: [
-        'Source Code Pro',
-        'Anek Telugu',
-        'Arial',
-        'sans-serif',
-      ].join(','),
+      fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
       fontSize: 14,
     },
     body1: {
@@ -172,12 +152,7 @@ export const getThemedComponents = (mode) => ({
             styleOverrides: {
               root: {
                 color: palette.light.primary.light,
-                fontFamily: [
-                  'Source Code Pro',
-                  'Anek Telugu',
-                  'Arial',
-                  'sans-serif',
-                ].join(','),
+                fontFamily: ['Source Code Pro', 'Anek Telugu', 'Arial', 'sans-serif'].join(','),
                 textTransform: 'none',
               },
             },

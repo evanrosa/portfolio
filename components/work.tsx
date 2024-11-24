@@ -158,25 +158,22 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Managed data architectures and led GA4 analytic
-                      migrations, optimizing BigQuery ETL pipelines for enhanced
-                      data accuracy and actionable insights.
+                      Managed data architectures and led GA4 analytic migrations, optimizing
+                      BigQuery ETL pipelines for enhanced data accuracy and actionable insights.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Demonstrated proficiency in Google Analytics (GA4 & UA),
-                      GCP, and BigQuery, with a focus on creating and
-                      maintaining BigQuery tables and GA schemas.
+                      Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery,
+                      with a focus on creating and maintaining BigQuery tables and GA schemas.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Utilized Google APIs, written in Python, to construct
-                      scalable data architectures that expedited setup processes
-                      and facilitated data-driven decision-making. Ensured the
-                      robustness and reliability of these solutions through
-                      comprehensive testing using pytest.
+                      Utilized Google APIs, written in Python, to construct scalable data
+                      architectures that expedited setup processes and facilitated data-driven
+                      decision-making. Ensured the robustness and reliability of these solutions
+                      through comprehensive testing using pytest.
                     </Typography>
                   </li>
                 </ul>
@@ -200,19 +197,17 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Managed analytics for multiple HHS government websites as
-                      part of the Digital Analytics Program (DAP), conducting
-                      site/SEO audits, A/B testing, and goal funneling
-                      strategies. Ensured 100% accuracy of analytics tagging and
-                      set up automated reports.
+                      Managed analytics for multiple HHS government websites as part of the Digital
+                      Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal
+                      funneling strategies. Ensured 100% accuracy of analytics tagging and set up
+                      automated reports.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Initiated data warehousing to inform decision-making,
-                      regularly analyzed metrics data, and generated reports.
-                      Advised clients on metrics analysis best practices and
-                      implemented BI tool data dashboards.
+                      Initiated data warehousing to inform decision-making, regularly analyzed
+                      metrics data, and generated reports. Advised clients on metrics analysis best
+                      practices and implemented BI tool data dashboards.
                     </Typography>
                   </li>
                 </ul>
@@ -236,18 +231,16 @@ export default function Job() {
                 <ul>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Assisted the Assistant Director by generating regular and
-                      ad hoc reports for various departments, and maintained
-                      advertising reports for multiple platforms, aiding in
-                      forecasting and enhancing ad server reporting.
+                      Assisted the Assistant Director by generating regular and ad hoc reports for
+                      various departments, and maintained advertising reports for multiple
+                      platforms, aiding in forecasting and enhancing ad server reporting.
                     </Typography>
                   </li>
                   <li>
                     <Typography variant="subtitle2" component="p">
-                      Validated web analytics with each new deployment or
-                      product enhancement, and developed new standard monthly
-                      internal reports, improving reporting systems based on
-                      stakeholder feedback.
+                      Validated web analytics with each new deployment or product enhancement, and
+                      developed new standard monthly internal reports, improving reporting systems
+                      based on stakeholder feedback.
                     </Typography>
                   </li>
                 </ul>
@@ -257,12 +250,7 @@ export default function Job() {
         ) : (
           <Box sx={{ width: '100%', minHeight: '625px' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                aria-label="basic tabs example"
-                centered
-              >
+              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
                 <Tab
                   onClick={() => handleTabClick('dt', 'mobile')}
                   label="Digital Turbine"
@@ -298,25 +286,22 @@ export default function Job() {
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Managed data architectures and led GA4 analytic migrations,
-                    optimizing BigQuery ETL pipelines for enhanced data accuracy
-                    and actionable insights.
+                    Managed data architectures and led GA4 analytic migrations, optimizing BigQuery
+                    ETL pipelines for enhanced data accuracy and actionable insights.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Demonstrated proficiency in Google Analytics (GA4 & UA),
-                    GCP, and BigQuery, with a focus on creating and maintaining
-                    BigQuery tables and GA schemas.
+                    Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with
+                    a focus on creating and maintaining BigQuery tables and GA schemas.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Utilized Google APIs, written in Python, to construct
-                    scalable data architectures that expedited setup processes
-                    and facilitated data-driven decision-making. Ensured the
-                    robustness and reliability of these solutions through
-                    comprehensive testing using pytest.
+                    Utilized Google APIs, written in Python, to construct scalable data
+                    architectures that expedited setup processes and facilitated data-driven
+                    decision-making. Ensured the robustness and reliability of these solutions
+                    through comprehensive testing using pytest.
                   </Typography>
                 </li>
               </ul>
@@ -340,19 +325,17 @@ export default function Job() {
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Managed analytics for multiple HHS government websites as
-                    part of the Digital Analytics Program (DAP), conducting
-                    site/SEO audits, A/B testing, and goal funneling strategies.
-                    Ensured 100% accuracy of analytics tagging and set up
+                    Managed analytics for multiple HHS government websites as part of the Digital
+                    Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal
+                    funneling strategies. Ensured 100% accuracy of analytics tagging and set up
                     automated reports.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Initiated data warehousing to inform decision-making,
-                    regularly analyzed metrics data, and generated reports.
-                    Advised clients on metrics analysis best practices and
-                    implemented BI tool data dashboards.
+                    Initiated data warehousing to inform decision-making, regularly analyzed metrics
+                    data, and generated reports. Advised clients on metrics analysis best practices
+                    and implemented BI tool data dashboards.
                   </Typography>
                 </li>
               </ul>
@@ -376,18 +359,16 @@ export default function Job() {
               <ul>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Assisted the Assistant Director by generating regular and ad
-                    hoc reports for various departments, and maintained
-                    advertising reports for multiple platforms, aiding in
-                    forecasting and enhancing ad server reporting.
+                    Assisted the Assistant Director by generating regular and ad hoc reports for
+                    various departments, and maintained advertising reports for multiple platforms,
+                    aiding in forecasting and enhancing ad server reporting.
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="subtitle2" component="p">
-                    Validated web analytics with each new deployment or product
-                    enhancement, and developed new standard monthly internal
-                    reports, improving reporting systems based on stakeholder
-                    feedback.
+                    Validated web analytics with each new deployment or product enhancement, and
+                    developed new standard monthly internal reports, improving reporting systems
+                    based on stakeholder feedback.
                   </Typography>
                 </li>
               </ul>
