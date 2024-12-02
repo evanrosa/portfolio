@@ -2,7 +2,7 @@
 title: Real-Time Streaming Experiments
 headline: Exploring Scalable Workflows with Kafka, Flink, and Spark
 description: Experimented with real-time data streaming using Kafka, Flink, and Spark to create efficient data flows and scalable architectures.
-website: https://github.com/evanrosa/soccer-data
+website: https://github.com/evanrosa/streaming-and-batch-project
 thumbnailUrl: '/projects/soccer.webp'
 gtmValue: 'real_time_streaming'
 ---

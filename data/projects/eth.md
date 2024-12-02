@@ -1,5 +1,5 @@
 ---
-title: Ethereum Wallet Data Analysis
+title: Ethereum Wallet and NFT Data Analysis
 headline: Blockchain Data Insights with Thirdweb
 description: Analyzed Ethereum wallet data using Thirdweb APIs, gaining insights into blockchain architecture and decentralized data flows.
 website: https://github.com/evanrosa/Deez-Eggz-Solidity-NFT-Test
