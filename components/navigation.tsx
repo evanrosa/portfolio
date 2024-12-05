@@ -95,19 +95,17 @@ export default function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="http://www.evro.dev">
+      <Link href="http://www.evro.dev" className="no-underline">
         <Typography
           variant="h6"
           component="div" // Use "div" instead of Framer Motion if not animating
           sx={{
-            color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
             textDecoration: 'none', // Removes underline
             cursor: 'pointer',
             textAlign: 'center',
             fontWeight: 'bold',
-            '&:hover': {
-              color: theme.palette.mode === 'dark' ? theme.palette.secondary.light : theme.palette.secondary.main, // Hover color
-            },
+            color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.dark,
+            textDecorationLine: 'none'
           }}
         >
           &#60;evan.rosa/&#62;
@@ -144,19 +142,17 @@ export default function DrawerAppBar(props) {
               width: '100%', // Ensures the toolbar spans full width
             }}
           >
-            <Link href="/">
+            <Link href="/" className="text-dor no-underline">
               <Typography
                 variant="h6"
                 component="div" // Use "div" instead of Framer Motion if not animating
                 sx={{
-                  color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.main,
                   textDecoration: 'none', // Removes underline
                   cursor: 'pointer',
                   textAlign: 'center',
                   fontWeight: 'bold',
-                  '&:hover': {
-                    color: theme.palette.mode === 'dark' ? theme.palette.secondary.light : theme.palette.secondary.main, // Hover color
-                  },
+                  color: theme.palette.mode === 'dark' ? theme.palette.primary.light : theme.palette.primary.dark,
+                  textDecorationLine: 'none'
                 }}
               >
                 &#60;evan.rosa/&#62;
