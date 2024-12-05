@@ -2,8 +2,8 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+
+import Grid from '@mui/material/Grid2';
 import { m } from 'framer-motion';
 import Link from '@mui/material/Link';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
@@ -25,11 +25,10 @@ export default function Contact() {
       <Container sx={{ textAlign: 'center' }}>
         <section id="Contact">
           <Typography variant="subtitle1">So, after reading all that...</Typography>
-          <Divider textAlign="center">
-            <Typography variant="h4" component="h2" className="countContent">
-              Let's Get In Touch
-            </Typography>
-          </Divider>
+          <Typography variant="h4" component="h2" className="countContent">
+            Let's Get In Touch
+          </Typography>
+
 
           <Grid container spacing={2} justifyContent={'center'} paddingBottom={6}>
             <Grid display="flex" justifyContent="center" alignItems="center" paddingTop={4}>

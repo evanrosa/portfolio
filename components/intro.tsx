@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid2';
+
 
 const fontVariants: Variants = {
   hidden: {
@@ -22,16 +23,6 @@ const fontVariants: Variants = {
 
 export default function Intro() {
   const sendDataToGTM = useGTMDispatch();
-
-  const handleBtnWalletClick = () =>
-    sendDataToGTM({
-      event: 'click_external',
-      element: 'button',
-      detail: 'check_out_my_wallet',
-      category: 'web3',
-      sub_category: 'nft',
-      section: 'intro',
-    });
 
   const handleLinkClick = (e, webEnv) =>
     sendDataToGTM({
@@ -49,7 +40,7 @@ export default function Intro() {
 
       <Container
         sx={{
-          minHeight: '100vh',
+          minHeight: '80vh',
           padding: '0px 0px',
           display: 'flex',
           flexDirection: 'column',
@@ -80,8 +71,8 @@ export default function Intro() {
             Empowering businesses with innovative data pipelines, cloud architectures, and real-time streaming solutions. Leveraging expertise in Python, SQL, and GCP to deliver impactful, data-driven insights.
           </Typography>
 
-          <Grid container>
-            <Grid item xs={4} md={2}>
+          <Grid container spacing={4}>
+            <Grid size="auto">
               <Box sx={{ maxWidth: '300px' }}>
                 <m.div
                   variants={fontVariants}
@@ -95,7 +86,7 @@ export default function Intro() {
                     href="https://www.linkedin.com/in/evan-rosa/"
                     target={'_blank'}
                     rel="noreferrer"
-                    onClick={handleBtnWalletClick}
+                    onClick={(e) => handleLinkClick(e, 'webEnv')}
                   >
                     <Button
                       variant="outlined"
@@ -113,7 +104,39 @@ export default function Intro() {
               </Box>
             </Grid>
 
-            <Grid item xs={4} md={2}>
+            <Grid size="auto">
+              <Box sx={{ maxWidth: '300px' }}>
+                <m.div
+                  variants={fontVariants}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.5 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Link
+                    href="https://github.com/evanrosa"
+                    target={'_blank'}
+                    rel="noreferrer"
+                    onClick={(e) => handleLinkClick(e, 'webEnv')}
+
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{
+                        paddingLeft: 4,
+                        paddingRight: 4,
+                        paddingTop: 2,
+                        paddingBottom: 1,
+                      }}
+                    >
+                      GitHub
+                    </Button>
+                  </Link>
+                </m.div>
+              </Box>
+            </Grid>
+            <Grid size="auto">
               <Box sx={{ maxWidth: '300px' }}>
                 <m.div
                   variants={fontVariants}
@@ -127,7 +150,7 @@ export default function Intro() {
                     href="https://drive.google.com/file/d/1n9ga9fpCzPKbVcLzDDhuiZ9_PuFlARut/view?usp=sharing"
                     target={'_blank'}
                     rel="noreferrer"
-                    onClick={handleBtnWalletClick}
+                    onClick={(e) => handleLinkClick(e, 'webEnv')}
                   >
                     <Button
                       variant="outlined"
@@ -145,6 +168,9 @@ export default function Intro() {
               </Box>
             </Grid>
           </Grid>
+
+
+
         </section>
       </Container>
     </>

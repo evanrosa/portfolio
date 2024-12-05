@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import Divider from '@mui/material/Divider';
+
 import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 interface TabPanelProps {
@@ -97,11 +97,11 @@ export default function Job() {
   return (
     <Container sx={{ padding: '100px 0 ' }}>
       <section id="Work">
-        <Divider textAlign="left">
-          <Typography variant="h4" component="h2" className="countContent">
-            Where I've Worked
-          </Typography>
-        </Divider>
+
+        <Typography variant="h4" component="h2" className="countContent">
+          Where I've Worked
+        </Typography>
+
 
         {isDesktop ? (
           <Box sx={{ height: '450px' }} paddingTop={4}>
@@ -121,8 +121,11 @@ export default function Job() {
                   borderRight: 1,
                   borderColor: 'divider',
                   minWidth: '175px',
-                  height: '165px',
+                  height: '250px',
                 }}
+                variant="scrollable"
+                scrollButtons
+                allowScrollButtonsMobile
               >
                 <Tab
                   onClick={() => handleTabClick('dt', 'desktop')}
@@ -250,7 +253,9 @@ export default function Job() {
         ) : (
           <Box sx={{ width: '100%', minHeight: '625px' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
+              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered variant="scrollable"
+                scrollButtons
+                allowScrollButtonsMobile>
                 <Tab
                   onClick={() => handleTabClick('dt', 'mobile')}
                   label="Digital Turbine"

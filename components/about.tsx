@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+
+import Grid from '@mui/material/Grid2';
 
 declare const window: any;
 
@@ -12,13 +12,13 @@ export default function About() {
       <Container sx={{ paddingBottom: '100px' }}>
         {/* ABOUT */}
         <section id="About">
-          <Grid container spacing={6} direction={{ xs: 'column-reverse', md: 'row' }}>
-            <Grid xs={12} md={12}>
-              <Divider textAlign="left">
-                <Typography variant="h4" component="h2" className="countContent">
-                  About Me: Turning Data Into Actionable Insights
-                </Typography>
-              </Divider>
+          <Grid container>
+            <Grid size={{ xs: 12, md: 12 }}>
+
+              <Typography variant="h4" component="h2" className="countContent">
+                About Me: Turning Data Into Actionable Insights
+              </Typography>
+
 
               <Typography variant="body1" paddingTop={4}>
                 My professional journey began in analytics, where I was deeply engaged in managing government website analytics, running reports, and identifying patterns to inform decision-making. As I delved into the underlying systems and code powering these insights, I discovered a passion for the technical challenges and creativity involved in building data solutions. This fascination drove me to expand my expertise into data engineering and full-stack development.
@@ -34,8 +34,8 @@ export default function About() {
                 Here are some of the technologies I work with regularly:
               </Typography>
 
-              <Grid container spacing={2}>
-                <Grid xs={4}>
+              <Grid container spacing={4}>
+                <Grid size="auto">
                   <ul>
                     <li>
                       <Typography variant="subtitle1" component="p">
@@ -75,7 +75,7 @@ export default function About() {
                   </ul>
                 </Grid>
 
-                <Grid xs={4}>
+                <Grid size="auto">
                   <ul>
                     <li>
                       <Typography variant="subtitle1" component="p">
@@ -116,7 +116,7 @@ export default function About() {
                 </Grid>
 
 
-                <Grid xs={4}>
+                <Grid size="auto">
                   <ul>
                     <li>
                       <Typography variant="subtitle1" component="p">

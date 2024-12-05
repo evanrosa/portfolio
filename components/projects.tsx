@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Link from 'next/link';
 import { ProjectPost } from '../data/types/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -8,7 +8,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Divider from '@mui/material/Divider';
+
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
@@ -36,11 +36,11 @@ export default function Work({ projects }: ProjectPost) {
   return (
     <>
       <Container>
-        <Divider textAlign="left">
-          <Typography variant="h4" component="h2" className="countContent">
-            Things I've Built
-          </Typography>
-        </Divider>
+
+        <Typography variant="h4" component="h2" className="countContent">
+          Things I've Built
+        </Typography>
+
         <section id="Projects">
           <Grid
             container
@@ -56,7 +56,7 @@ export default function Work({ projects }: ProjectPost) {
             {projects &&
               projects.map((projects) => {
                 return (
-                  <Grid xs={12} sm={6} md={4} lg={4} key={projects.slug}>
+                  <Grid size={{ xs: 12, md: 6, lg: 4 }} key={projects.slug}>
                     <m.div
                       whileHover={{
                         scale: 1.1,

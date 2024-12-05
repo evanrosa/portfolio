@@ -10,7 +10,7 @@ import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
+
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -114,7 +114,6 @@ export default function DrawerAppBar(props) {
 
 
 
-      <Divider />
       <List className="mobile-list">
         {navItems.map((item) => (
           <ListItem key={item} disablePadding onClick={() => handleNavMobileClick(item)}>
