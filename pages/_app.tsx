@@ -4,14 +4,16 @@ import { deepmerge } from '@mui/utils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { getDesignTokens, getThemedComponents } from '../themes/mainTheme';
 import { ColorModeContext } from '../themes/color-context';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import type { NextComponentType } from 'next';
 import type { AppProps } from 'next/app';
 import { FC, Fragment, useState, useEffect, useMemo } from 'react';
-import { GTMProvider } from '@elgorditosalsero/react-gtm-hook';
 
 import Loader from '../components/loader';
 import React from 'react';
+
+const GTM_ID = 'GTM-M8Z3L8M6';
 
 type CustomNextComponent = NextComponentType & { Layout?: FC };
 type CustomAppProps = AppProps & { Component: CustomNextComponent };
@@ -22,16 +24,13 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
     : Fragment;
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const [mode, setMode] = useState<string | undefined>();
+  const [mode, setMode] = useState<string | undefined>(prefersDarkMode ? 'dark' : 'light');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000);
+    const timeout = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timeout);
   }, []);
-
-  useEffect(() => {
-    setMode(prefersDarkMode ? 'dark' : 'light');
-  }, [prefersDarkMode]);
 
   const colorMode = useMemo(
     () => ({
@@ -49,42 +48,27 @@ function MyApp({ Component, pageProps }: CustomAppProps) {
 
   theme = responsiveFontSizes(theme);
 
-  const gtmParams = {
-    id: 'GTM-NL3W835',
-    dataLayerName: 'evroDataLayer',
-  };
   return (
-    /*     <>
-      {loading === false ? (
-        <GTMProvider state={gtmParams}>
-          <ColorModeContext.Provider value={colorMode}>
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            </ThemeProvider>
-          </ColorModeContext.Provider>
-        </GTMProvider>
-      ) : (
+    <>
+      <GoogleTagManager gtmId={GTM_ID} />
+      {loading ? (
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Loader />
           </ThemeProvider>
         </ColorModeContext.Provider>
+      ) : (
+        <ColorModeContext.Provider value={colorMode}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </ColorModeContext.Provider>
       )}
-    </> */
-    <GTMProvider state={gtmParams}>
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
-      </ColorModeContext.Provider>
-    </GTMProvider>
+    </>
   );
 }
 

@@ -6,8 +6,8 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import { sendGTMEvent } from '@next/third-parties/google'
 
-import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -28,27 +28,6 @@ export default function Job() {
     setValue(newValue);
   };
 
-  const sendDataToGTM = useGTMDispatch();
-  const handleTabClick = (e, device) =>
-    sendDataToGTM({
-      event: 'click_internal',
-      element: 'tab',
-      detail: e,
-      category: 'web2',
-      section: 'where_ive_worked',
-      device: device,
-    });
-
-  const handleLinkClick = (e, device) =>
-    sendDataToGTM({
-      event: 'click_external',
-      element: 'link',
-      detail: e,
-      category: 'web2',
-      sub_category: 'work',
-      section: 'where_ive_worked',
-      device: device,
-    });
 
   function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
@@ -128,17 +107,17 @@ export default function Job() {
                 allowScrollButtonsMobile
               >
                 <Tab
-                  onClick={() => handleTabClick('dt', 'desktop')}
+                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'dt' })}
                   label="Digital Turbine"
                   {...a11yProps(0)}
                 />
                 <Tab
-                  onClick={() => handleTabClick('bah', 'desktop')}
+                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'bah' })}
                   label="Booz Allen Hamilton"
                   {...a11yProps(1)}
                 />
                 <Tab
-                  onClick={() => handleTabClick('acs', 'desktop')}
+                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'acs' })}
                   label="The American Chemical Society"
                   {...a11yProps(2)}
                 />
@@ -147,7 +126,7 @@ export default function Job() {
                 <Typography variant="h4" component="h3">
                   Data Engineer at{' '}
                   <Link
-                    onClick={() => handleLinkClick('dt', 'desktop')}
+                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'dt' })}
                     href="https://www.digitalturbine.com/"
                     target={'_blank'}
                     rel="noreferrer"
@@ -185,7 +164,7 @@ export default function Job() {
                 <Typography variant="h4" component="h3">
                   Lead Web Analyst at{' '}
                   <Link
-                    onClick={() => handleLinkClick('bah', 'desktop')}
+                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'bah' })}
                     href="https://www.bah.com/"
                     target={'_blank'}
                     rel="noreferrer"
@@ -219,7 +198,7 @@ export default function Job() {
                 <Typography variant="h4" component="h3">
                   Web Analyst at{' '}
                   <Link
-                    onClick={() => handleLinkClick('acs', 'desktop')}
+                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'acs' })}
                     href="https://www.acs.org/"
                     target={'_blank'}
                     rel="noreferrer"
@@ -257,17 +236,17 @@ export default function Job() {
                 scrollButtons
                 allowScrollButtonsMobile>
                 <Tab
-                  onClick={() => handleTabClick('dt', 'mobile')}
+                  //onClick={() => handleTabClick('dt', 'mobile')}
                   label="Digital Turbine"
                   {...a11yProps(0)}
                 />
                 <Tab
-                  onClick={() => handleTabClick('bah', 'mobile')}
+                  //onClick={() => handleTabClick('bah', 'mobile')}
                   label="Booz Allen Hamilton"
                   {...a11yProps(1)}
                 />
                 <Tab
-                  onClick={() => handleTabClick('acs', 'mobile')}
+                  //onClick={() => handleTabClick('acs', 'mobile')}
                   label="The American Chemical Society"
                   {...a11yProps(2)}
                 />
@@ -277,7 +256,7 @@ export default function Job() {
               <Typography variant="h4" component="h3">
                 Data Engineer at <br />
                 <Link
-                  onClick={() => handleLinkClick('dt', 'mobile')}
+                  //onClick={() => handleLinkClick('dt', 'mobile')}
                   href="https://www.digitalturbine.com/"
                   target={'_blank'}
                   rel="noreferrer"
@@ -315,7 +294,7 @@ export default function Job() {
               <Typography variant="h4" component="h3">
                 Lead Web Analyst at <br />
                 <Link
-                  onClick={() => handleLinkClick('bah', 'mobile')}
+                  //onClick={() => handleLinkClick('bah', 'mobile')}
                   href="https://www.bah.com/"
                   target={'_blank'}
                   rel="noreferrer"
@@ -349,7 +328,7 @@ export default function Job() {
               <Typography variant="h4" component="h3">
                 Web Analyst at <br />
                 <Link
-                  onClick={() => handleLinkClick('acs', 'mobile')}
+                  //onClick={() => handleLinkClick('acs', 'mobile')}
                   href="https://www.acs.org/"
                   target={'_blank'}
                   rel="noreferrer"

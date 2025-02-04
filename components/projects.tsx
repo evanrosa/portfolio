@@ -8,11 +8,10 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-
+import { sendGTMEvent } from '@next/third-parties/google'
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
-import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 
 export default function Work({ projects }: ProjectPost) {
   const IsNotDesktop = useMediaQuery('(max-width:600px)');
@@ -23,15 +22,6 @@ export default function Work({ projects }: ProjectPost) {
     setIsMobile(IsNotDesktop);
   }, [IsNotDesktop]);
 
-  const sendDataToGTM = useGTMDispatch();
-  const handleProjectClick = (e) =>
-    sendDataToGTM({
-      event: 'click_external',
-      element: 'card',
-      detail: e,
-      category: 'web2',
-      section: 'things_ive_built',
-    });
 
   return (
     <>
@@ -72,7 +62,7 @@ export default function Work({ projects }: ProjectPost) {
                         target={'_blank'}
                         rel="noreferrer"
                         className="noUnderline"
-                        onClick={() => handleProjectClick(`${projects.frontMatter.gtmValue}`)}
+                        onClick={() => sendGTMEvent({ event: 'card_clicked', value: `${projects.frontMatter.gtmValue}` })}
                       >
 
                         {isMobile ? (

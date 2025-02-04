@@ -22,9 +22,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
-
-/* FRAMER m VARIANTS */
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const navLinkVariants: Variants = {
   hidden: {
@@ -65,25 +63,6 @@ export default function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const sendDataToGTM = useGTMDispatch();
-
-  let handleNavDesktopClick = (e) =>
-    sendDataToGTM({
-      event: 'click_internal',
-      element: 'link',
-      detail: e,
-      device: 'desktop',
-      section: 'navigation_head',
-    });
-
-  let handleNavMobileClick = (e) =>
-    sendDataToGTM({
-      event: 'click_internal',
-      element: 'link',
-      detail: e,
-      device: 'mobile',
-      section: 'navigation_head',
-    });
 
   React.useEffect(() => {
     setIsMobile(IsNotDesktop);
@@ -95,7 +74,7 @@ export default function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link href="http://www.evro.dev" className="no-underline">
+      <Link href="https://www.evro.dev" className="no-underline">
         <Typography
           variant="h6"
           component="div" // Use "div" instead of Framer Motion if not animating
@@ -116,7 +95,7 @@ export default function DrawerAppBar(props) {
 
       <List className="mobile-list">
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding onClick={() => handleNavMobileClick(item)}>
+          <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -170,7 +149,8 @@ export default function DrawerAppBar(props) {
               {navItems.map((item) => (
                 <Link href={`/#` + item} passHref key={item}>
                   <Button
-                    onClick={() => handleNavDesktopClick(item)}
+                    //onClick={() => handleNavDesktopClick(item)}
+                    onClick={() => sendGTMEvent({ event: 'nav_clicked', value: `${item}` })}
                     key={item}
                     sx={{ textTransform: 'capitalize' }}
                     variants={navLinkVariants}

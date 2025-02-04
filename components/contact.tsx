@@ -2,24 +2,13 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-
+import { sendGTMEvent } from '@next/third-parties/google'
 import Grid from '@mui/material/Grid2';
 import { m } from 'framer-motion';
 import Link from '@mui/material/Link';
-import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 import Footer from './footer';
 
 export default function Contact() {
-  const sendDataToGTM = useGTMDispatch();
-  const handleContactClick = () =>
-    sendDataToGTM({
-      event: 'click_external',
-      element: 'button',
-      detail: 'contact',
-      category: 'web2',
-      section: 'contact',
-    });
-
   return (
     <>
       <Container sx={{ textAlign: 'center' }}>
@@ -51,7 +40,7 @@ export default function Contact() {
               href="mailto:evandanrosa@gmail.com"
               target={'_blank'}
               rel="noreferrer"
-              onClick={handleContactClick}
+              onClick={() => sendGTMEvent({ event: 'link_clicked', value: 'contact' })}
             >
               <Button
                 variant="outlined"

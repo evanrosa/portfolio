@@ -1,6 +1,5 @@
 import type { PropsWithChildren, ReactElement } from 'react';
 import DrawerAppBar from '../navigation';
-import Footer from '../footer';
 import { m, Variants } from 'framer-motion';
 import React from 'react';
 

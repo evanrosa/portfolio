@@ -5,9 +5,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { useGTMDispatch } from '@elgorditosalsero/react-gtm-hook';
 import Grid from '@mui/material/Grid2';
-
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const fontVariants: Variants = {
   hidden: {
@@ -22,17 +21,7 @@ const fontVariants: Variants = {
 };
 
 export default function Intro() {
-  const sendDataToGTM = useGTMDispatch();
 
-  const handleLinkClick = (e, webEnv) =>
-    sendDataToGTM({
-      event: 'click_external',
-      element: 'link',
-      detail: e,
-      category: webEnv,
-      sub_category: 'work',
-      section: 'intro',
-    });
 
   return (
     <>
@@ -86,7 +75,7 @@ export default function Intro() {
                     href="https://www.linkedin.com/in/evan-rosa/"
                     target={'_blank'}
                     rel="noreferrer"
-                    onClick={(e) => handleLinkClick(e, 'webEnv')}
+                    onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'linkedin' })}
                   >
                     <Button
                       variant="outlined"
@@ -118,8 +107,7 @@ export default function Intro() {
                     href="https://github.com/evanrosa"
                     target={'_blank'}
                     rel="noreferrer"
-                    onClick={(e) => handleLinkClick(e, 'webEnv')}
-
+                    onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'git' })}
                   >
                     <Button
                       variant="outlined"
@@ -150,7 +138,7 @@ export default function Intro() {
                     href="https://drive.google.com/file/d/1n9ga9fpCzPKbVcLzDDhuiZ9_PuFlARut/view?usp=sharing"
                     target={'_blank'}
                     rel="noreferrer"
-                    onClick={(e) => handleLinkClick(e, 'webEnv')}
+                    onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'resume' })}
                   >
                     <Button
                       variant="outlined"
