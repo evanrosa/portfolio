@@ -33,36 +33,69 @@ function Home({ projects }: ProjectsProps) {
 
   return (
     <>
-      <GoogleTagManager gtmId={GTM_ID}/>
+      <GoogleTagManager gtmId={GTM_ID} />
       <Head>
         <title>Evan Rosa | Lead Data Engineer | Scalable ETL & Cloud Solutions</title>
         <meta
           name="description"
           content="Evan Rosa is a Lead Data Engineer specializing in batch ETL, scalable architectures, and workflow orchestration. Expert in Python, SQL, Airflow, Spark, Flink, and cloud-based data pipelines."
         />
-        <meta name="keywords" content="Data Engineer, ETL, Airflow, Spark, Flink, Cloud Data, BigQuery, Data Pipelines" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Lead Data Engineer, ETL Pipelines, Apache Airflow, Apache Flink, Apache Spark, Data Engineering, Cloud Data Architect, BigQuery, Real-time Streaming, Scalable Data Solutions"
+        />
+
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.evro.dev" />
         <script type="application/ld+json" dangerouslySetInnerHTML={profile()} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
 
+        <meta name="twitter:image" content="https://evro.dev/your-preview-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Evan Rosa | Lead Data Engineer | Scalable ETL & Cloud Solutions" />
-        <meta name="twitter:description" content="Evan Rosa specializes in building high-scale data pipelines, ETL automation, and cloud data solutions." />
+        <meta
+          name="twitter:description"
+          content="Evan Rosa specializes in building high-scale data pipelines, ETL automation, and cloud data solutions."
+        />
         <meta name="twitter:url" content="https://evro.dev" />
+        <meta property="og:title" content="Evan Rosa | Lead Data Engineer | Scalable ETL & Cloud Solutions" />
+        <meta
+          property="og:description"
+          content="Evan Rosa specializes in batch and streaming ETL, cloud architectures, and workflow orchestration."
+        />
+        <meta property="og:url" content="https://evro.dev" />
+        <meta property="og:image" content="https://evro.dev/your-preview-image.jpg" />
+        <meta property="og:type" content="website" />
       </Head>
       <Container fixed>
         <main>
           <Intro />
 
-          <m.div viewport={{ once: false }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}>
+          <m.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
             <About />
           </m.div>
 
-          <m.div viewport={{ once: false }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}>
+          <m.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
             <Job />
           </m.div>
 
-          <m.div viewport={{ once: false }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}>
+          <m.div
+            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+          >
             <Work projects={projects} />
           </m.div>
 
