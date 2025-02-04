@@ -26,7 +26,7 @@ function Home({ projects }: ProjectsProps) {
           "jobTitle": "Lead Data Engineer",
           "url": "https://evro.dev",
           "email": "mailto:evandanrosa@gmail.com",
-          "description": "Experienced Data Engineer specializing in batch ETL, scalable architectures, and workflow orchestration. Skilled in Python, SQL, and cloud technologies, optimizing data pipelines with Airflow, Spark, and Flink."
+          "description": "Experienced Data Engineer specializing in batch and streaming ETL, scalable architectures, and workflow orchestration. Skilled in Python, SQL, and cloud technologies, optimizing data pipelines with Airflow, Spark, Kafka, and Flink."
       }`
     };
   }
@@ -41,6 +41,7 @@ function Home({ projects }: ProjectsProps) {
           content="Evan Rosa is a Lead Data Engineer specializing in batch ETL, scalable architectures, and workflow orchestration. Expert in Python, SQL, Airflow, Spark, Flink, and cloud-based data pipelines."
         />
         <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
         <meta
           name="keywords"
           content="Lead Data Engineer, ETL Pipelines, Apache Airflow, Apache Flink, Apache Spark, Data Engineering, Cloud Data Architect, BigQuery, Real-time Streaming, Scalable Data Solutions"
