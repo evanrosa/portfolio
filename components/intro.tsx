@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid2';
-import { sendGTMEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from '@next/third-parties/google';
 
 const fontVariants: Variants = {
   hidden: {
@@ -21,15 +21,12 @@ const fontVariants: Variants = {
 };
 
 export default function Intro() {
-
-
   return (
     <>
       {/* INTRO */}
-
       <Container
         sx={{
-          minHeight: '80vh',
+          minHeight: '70vh',
           padding: '0px 0px',
           display: 'flex',
           flexDirection: 'column',
@@ -54,10 +51,10 @@ export default function Intro() {
             variants={fontVariants}
             style={{ fontWeight: 900 }}
           >
-            Experienced Data Engineer Specializing in Scalable Data Solutions
+            Lead Data Engineer | Streaming & Batch ETL | Cloud & Big Data Solutions
           </Typography>
           <Typography variant="body1" pb={3} component={m.p} variants={fontVariants}>
-            Empowering businesses with innovative data pipelines, cloud architectures, and real-time streaming solutions. Leveraging expertise in Python, SQL, and GCP to deliver impactful, data-driven insights.
+            Designing scalable streaming and batch ETL pipelines to transform raw data into actionable insights. Leveraging expertise in Python, SQL, Airflow, Kafka, Spark, Flink, and cloud platforms to drive business intelligence, optimize workflows, and build resilient data architectures.
           </Typography>
 
           <Grid container spacing={4}>
@@ -104,38 +101,7 @@ export default function Intro() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="https://github.com/evanrosa"
-                    target={'_blank'}
-                    rel="noreferrer"
-                    onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'git' })}
-                  >
-                    <Button
-                      variant="outlined"
-                      sx={{
-                        paddingLeft: 4,
-                        paddingRight: 4,
-                        paddingTop: 2,
-                        paddingBottom: 1,
-                      }}
-                    >
-                      GitHub
-                    </Button>
-                  </Link>
-                </m.div>
-              </Box>
-            </Grid>
-            <Grid size="auto">
-              <Box sx={{ maxWidth: '300px' }}>
-                <m.div
-                  variants={fontVariants}
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.5 },
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Link
-                    href="https://drive.google.com/file/d/1n9ga9fpCzPKbVcLzDDhuiZ9_PuFlARut/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1mVA6ANeZiu7NZQV4mLmS7K00s4Z9IBR3/view?usp=sharing"
                     target={'_blank'}
                     rel="noreferrer"
                     onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'resume' })}
@@ -156,9 +122,6 @@ export default function Intro() {
               </Box>
             </Grid>
           </Grid>
-
-
-
         </section>
       </Container>
     </>

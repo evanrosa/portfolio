@@ -5,28 +5,31 @@ import Container from '@mui/material/Container';
 import { TypeAnimation } from 'react-type-animation';
 
 const loadingContainer = {
-  width: '4rem',
-  height: '4rem',
+  width: '6rem',
+  height: '6rem',
   display: 'flex',
-  justifyContent: 'space-around',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '1rem',
 };
 const loadingCircle = {
   display: 'block',
-  width: '1rem',
-  height: '1rem',
-  backgroundColor: '#3A36DB',
-  borderRadius: '0.5rem',
+  width: '1.2rem',
+  height: '1.2rem',
+  backgroundColor: '#0a192f',
+  borderRadius: '50%',
+  boxShadow: '0px 0px 10px rgba(10, 25, 47, 0.6)',
 };
 
 const loadingContainerVariants = {
   start: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.25,
     },
   },
   end: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.25,
     },
   },
 };
@@ -34,16 +37,20 @@ const loadingContainerVariants = {
 const loadingCircleVariants = {
   start: {
     y: '0%',
+    scale: 1,
   },
   end: {
-    y: '60%',
+    y: '100%',
+    scale: 1.3,
   },
 };
 const loadingCircleTransition = {
-  duration: 0.4,
-  yoyo: Infinity,
-  ease: 'easeInOut',
+  duration: 0.6,
+  repeat: Infinity, // Ensures continuous animation
+  repeatType: "reverse", // Makes the bounce go up and down smoothly
+  ease: "easeInOut",
 };
+
 const Loader = () => {
   return (
     <Container
@@ -53,41 +60,21 @@ const Loader = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'flex-start',
+        alignItems: 'center',
+        color: '#0a192f',
       }}
     >
-      <Box
-        sx={{
-          alignItems: 'center',
-          alignText: 'center',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          paddingBottom: '5vw',
-        }}
-      >
+      <Box sx={{ textAlign: 'center', marginBottom: '3rem' }}>
         <TypeAnimation
-          sequence={[
-            'Please wait while our resources load...',
-            () => {
-              console.log('Done typing!'); // Place optional callbacks anywhere in the array
-            },
-          ]}
+          sequence={['Loading page...', 'Almost there...', 'Just a moment...']}
           wrapper="div"
           className="loader-text"
           cursor={true}
-          repeat={0}
-          speed={5}
+          repeat={Infinity}
+          speed={10}
         />
       </Box>
-      <Box
-        sx={{
-          alignItems: 'center',
-          alignText: 'center',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          paddingBottom: '5vw',
-        }}
-      >
+      <Box>
         <motion.div
           style={loadingContainer}
           variants={loadingContainerVariants}

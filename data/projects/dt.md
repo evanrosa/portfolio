@@ -1,7 +1,9 @@
 ---
 title: BigQuery ETL Pipelines for Digital Turbine
-headline: Optimizing Data Pipelines for 10M+ Daily Users
-description: Designed and optimized BigQuery ETL pipelines for scalable data processing, enabling efficient analytics for over 3 billion monthly ad impressions.
+headline: Scalable ETL Pipelines for High-Volume Data Processing
+
+description: Designed and optimized BigQuery ETL pipelines for scalable, high-performance data processing, supporting over 10M daily users and enabling analytics for 3B+ monthly ad impressions.
+
 website: https://digitalturbine.com/
 thumbnailUrl: '/projects/Digital_Turbine_Red_Black_Logo.jpg'
 gtmValue: 'bigquery_etl'
@@ -9,18 +11,25 @@ gtmValue: 'bigquery_etl'
 
 ### Overview
 
-At Digital Turbine, I spearheaded the development of scalable BigQuery ETL pipelines, leveraging tools like Apache Airflow, Python, and SQL. These pipelines supported the data needs of 20+ content products, delivering reliable analytics to over 10 million daily active users and processing more than 3 billion monthly ad impressions.
+At **Digital Turbine**, I led the development and optimization of **BigQuery ETL pipelines**, ensuring **high scalability, cost efficiency, and reliability**. Utilizing **Apache Airflow, Python, SQL, Flink, and Spark**, these pipelines powered **real-time and batch data workflows**, supporting **20+ content products** and **3 billion+ monthly ad impressions**.
 
 ### Key Contributions
 
-- Built and optimized ETL workflows for high-performance data processing.
-- Designed scalable solutions to handle structured and unstructured data efficiently.
-- Integrated API-based data ingestion for seamless interoperability.
+- **Optimized BigQuery ETL pipelines**, reducing **processing time** and cutting **cloud storage costs by $100K+ annually**.
+- **Refactored legacy workflows** to improve **scalability, maintainability, and ensure 99.99% data reliability**.
+- **Built and maintained real-time & batch data pipelines** leveraging **Apache Airflow, Flink, Spark, and Python**.
+- **Led Databricks workflow optimizations**, ensuring **100% uptime and troubleshooting critical pipeline issues**.
+- **Integrated API-based data ingestion pipelines**, improving **ETL efficiency and reducing processing time by 40%**.
+- **Designed scalable ETL solutions** to handle both **structured and unstructured data**, ensuring seamless **analytics integration**.
+- **Ensured GDPR and CCPA compliance** for all **data workflows and storage architectures**.
 
 ### Results
 
-- Enhanced pipeline scalability, reducing runtime by over 40%.
-- Delivered actionable insights to cross-functional teams including product, research, and growth.
-- Ensured GDPR and CCPA compliance for all data workflows.
+- **Enhanced pipeline efficiency**, reducing **data processing time by 40%**, leading to faster insights.
+- **Reduced cloud storage costs by $100K+ annually** through **optimized query execution and partitioning strategies**.
+- **Provided reliable data infrastructure** supporting **10M+ daily active users** and improving **data accessibility across teams**.
+- **Enabled cross-functional teams** (product, research, and growth) with **real-time and historical data insights**.
 
-Explore more about my contributions to high-scale data solutions on the [Digital Turbine website](https://digitalturbine.com/).
+### Learn More
+
+Discover more about **scalable data engineering solutions** at **[Digital Turbine](https://digitalturbine.com/)** or explore my other **data engineering projects** on [GitHub](https://github.com/evanrosa/).

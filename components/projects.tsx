@@ -27,8 +27,8 @@ export default function Work({ projects }: ProjectPost) {
     <>
       <Container>
 
-        <Typography variant="h4" component="h2" className="countContent">
-          Things I've Built
+        <Typography variant="h4" component="h2">
+          🛠️ Things I've Built
         </Typography>
 
         <section id="Projects">

@@ -1,7 +1,7 @@
 ---
 title: Wine Review Rating Prediction
-headline: Predictive Models for Wine Reviews Using Machine Learning
-description: Built machine learning models to predict wine review ratings based on price, region, and variety, achieving an RMSE of 2.3.
+headline: Predictive Data Pipelines for Wine Review Ratings Using Machine Learning
+description: Developed a data pipeline to preprocess and analyze wine reviews, using machine learning models to predict ratings based on price, region, and variety, achieving an RMSE of 2.3.
 website: https://github.com/evanrosa/wine-ML-capstone-2018
 thumbnailUrl: '/projects/wine.webp'
 gtmValue: 'wine_review_prediction'
@@ -9,17 +9,20 @@ gtmValue: 'wine_review_prediction'
 
 ### Overview
 
-This project involved building predictive models for wine ratings using machine learning techniques. I focused on data preprocessing, feature engineering, and model optimization to achieve high accuracy.
+This project demonstrates the **design and optimization of a data pipeline** for analyzing and predicting **wine review ratings**. Using **Python, Pandas, and Scikit-Learn**, I built a structured workflow that preprocesses, transforms, and models wine review data to derive meaningful insights.
 
 ### Key Contributions
 
-- Used Python (Pandas, Scikit-Learn) to clean, analyze, and process data.
-- Applied machine learning models, including Random Forest and Linear Regression.
-- Performed hyperparameter tuning for enhanced model performance.
+- **Developed a scalable ETL pipeline** to ingest, clean, and structure wine review datasets for machine learning applications.
+- **Applied advanced data preprocessing techniques**, including handling missing values, feature encoding, and outlier detection.
+- **Implemented predictive models** such as **Random Forest and Linear Regression** to analyze correlations between price, region, and rating.
+- **Optimized model performance** using **hyperparameter tuning**, reducing errors and improving prediction accuracy.
+- **Evaluated and visualized model outputs**, providing actionable insights into wine review trends and pricing strategies.
 
 ### Results
 
-- Achieved an RMSE of 2.3 on the dataset.
-- Provided insights into the relationship between price, region, and rating.
+- **Achieved an RMSE of 2.3**, demonstrating high accuracy in predicting wine review ratings.
+- **Created a reusable data pipeline**, ensuring consistent preprocessing and transformation of new datasets.
+- **Derived insights into consumer wine preferences**, offering potential applications for recommendation systems in the wine industry.
 
-Check out similar projects on my [GitHub](https://github.com/).
+Check out more of my **data-driven projects** on my [GitHub](https://github.com/evanrosa/).

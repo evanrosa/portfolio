@@ -13,20 +13,16 @@ export default function Contact() {
     <>
       <Container sx={{ textAlign: 'center' }}>
         <section id="Contact">
-          <Typography variant="subtitle1">So, after reading all that...</Typography>
-          <Typography variant="h4" component="h2" className="countContent">
-            Let's Get In Touch
+          <Typography variant="subtitle1" sx={{ marginBottom: 2 }}>So, after reading all that...</Typography>
+          <Typography variant="h4" component="h2" sx={{ paddingBottom: 4 }}>
+            📬 Let's Get In Touch
           </Typography>
 
 
-          <Grid container spacing={2} justifyContent={'center'} paddingBottom={6}>
-            <Grid display="flex" justifyContent="center" alignItems="center" paddingTop={4}>
+          <Grid container justifyContent={'center'} sx={{ paddingBottom: 3 }}>
               <Typography maxWidth={'750px'} variant="body1" textAlign={'center'}>
-                I'm always open to exploring new opportunities. If you'd like to discuss my
-                professional experience as a Lead Data Engineer, or if you're interested in collaborating on a project involving data architectures, cloud
-                projects, or full stack web applications, please don't hesitate to reach out!
+                I'm actively seeking new opportunities as a Lead Data Engineer, ready to bring my expertise in scalable data architectures, cloud platforms, and ETL pipeline optimization to a forward-thinking team. If you're looking for someone skilled in building high-performance batch and streaming data systems with tools like Spark, Flink, Airflow, and Kafka, let's connect!
               </Typography>
-            </Grid>
           </Grid>
 
           <m.div
@@ -45,10 +41,10 @@ export default function Contact() {
               <Button
                 variant="outlined"
                 sx={{
-                  paddingLeft: 4,
-                  paddingRight: 4,
-                  paddingTop: 2,
-                  paddingBottom: 1,
+                  paddingLeft: 6,
+                  paddingRight: 6,
+                  paddingTop: 3,
+                  paddingBottom: 2,
                 }}
               >
                 evandanrosa@gmail.com

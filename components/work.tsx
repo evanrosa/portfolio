@@ -6,8 +6,7 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { sendGTMEvent } from '@next/third-parties/google'
-
+import { sendGTMEvent } from '@next/third-parties/google';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -28,337 +27,141 @@ export default function Job() {
     setValue(newValue);
   };
 
-
   function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
-    if (isDesktop) {
-      return (
-        <div
-          role="tabpanel"
-          hidden={value !== index}
-          id={`vertical-tabpanel-${index}`}
-          aria-labelledby={`vertical-tab-${index}`}
-          {...other}
-        >
-          {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-        </div>
-      );
-    } else {
-      return (
-        <div
-          role="tabpanel"
-          hidden={value !== index}
-          id={`simple-tabpanel-${index}`}
-          aria-labelledby={`simple-tab-${index}`}
-          {...other}
-        >
-          {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-        </div>
-      );
-    }
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`tabpanel-${index}`}
+        aria-labelledby={`tab-${index}`}
+        {...other}
+      >
+        {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      </div>
+    );
   }
 
   function a11yProps(index: number) {
-    if (isDesktop) {
-      return {
-        id: `vertical-tab-${index}`,
-        'aria-controls': `vertical-tabpanel-${index}`,
-      };
-    } else {
-      return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
-      };
-    }
+    return {
+      id: `tab-${index}`,
+      'aria-controls': `tabpanel-${index}`,
+    };
   }
 
   return (
-    <Container sx={{ padding: '100px 0 ' }}>
+    <Container sx={{ padding: '60px 0' }}>
       <section id="Work">
-
-        <Typography variant="h4" component="h2" className="countContent">
-          Where I've Worked
+        <Typography variant="h4" component="h2">
+          💼 Where I've Worked
         </Typography>
-
-
-        {isDesktop ? (
-          <Box sx={{ height: '450px' }} paddingTop={4}>
-            <Box
-              sx={{
-                flexGrow: 1,
-                bgcolor: 'background.paper',
-                display: 'flex',
-              }}
+        <Box sx={{ width: '100%', minHeight: '500px' }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="job experience"
+              centered
+              variant="scrollable"
+              scrollButtons
+              allowScrollButtonsMobile
             >
-              <Tabs
-                orientation="vertical"
-                value={value}
-                onChange={handleChange}
-                aria-label="Vertical tabs example"
-                sx={{
-                  borderRight: 1,
-                  borderColor: 'divider',
-                  minWidth: '175px',
-                  height: '250px',
-                }}
-                variant="scrollable"
-                scrollButtons
-                allowScrollButtonsMobile
-              >
-                <Tab
-                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'dt' })}
-                  label="Digital Turbine"
-                  {...a11yProps(0)}
-                />
-                <Tab
-                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'bah' })}
-                  label="Booz Allen Hamilton"
-                  {...a11yProps(1)}
-                />
-                <Tab
-                  onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'acs' })}
-                  label="The American Chemical Society"
-                  {...a11yProps(2)}
-                />
-              </Tabs>
-              <TabPanel value={value} index={0}>
-                <Typography variant="h4" component="h3">
-                  Data Engineer at{' '}
-                  <Link
-                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'dt' })}
-                    href="https://www.digitalturbine.com/"
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    Digital Turbine
-                  </Link>
-                </Typography>
-                <Typography variant="subtitle1" component="div">
-                  <time dateTime="2020-03">March 2020</time> - Present
-                </Typography>
-                <ul>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Managed data architectures and led GA4 analytic migrations, optimizing
-                      BigQuery ETL pipelines for enhanced data accuracy and actionable insights.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery,
-                      with a focus on creating and maintaining BigQuery tables and GA schemas.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Utilized Google APIs, written in Python, to construct scalable data
-                      architectures that expedited setup processes and facilitated data-driven
-                      decision-making. Ensured the robustness and reliability of these solutions
-                      through comprehensive testing using pytest.
-                    </Typography>
-                  </li>
-                </ul>
-              </TabPanel>
-              <TabPanel value={value} index={1}>
-                <Typography variant="h4" component="h3">
-                  Lead Web Analyst at{' '}
-                  <Link
-                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'bah' })}
-                    href="https://www.bah.com/"
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    Booz Allen Hamilton
-                  </Link>
-                </Typography>
-                <Typography variant="subtitle1" component="div">
-                  <time dateTime="2015-05">May 2015</time> -{' '}
-                  <time dateTime="2020-03">March 2020</time>
-                </Typography>
-                <ul>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Managed analytics for multiple HHS government websites as part of the Digital
-                      Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal
-                      funneling strategies. Ensured 100% accuracy of analytics tagging and set up
-                      automated reports.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Initiated data warehousing to inform decision-making, regularly analyzed
-                      metrics data, and generated reports. Advised clients on metrics analysis best
-                      practices and implemented BI tool data dashboards.
-                    </Typography>
-                  </li>
-                </ul>
-              </TabPanel>
-              <TabPanel value={value} index={2}>
-                <Typography variant="h4" component="h3">
-                  Web Analyst at{' '}
-                  <Link
-                    onClick={() => sendGTMEvent({ event: 'tab_clicked', value: 'acs' })}
-                    href="https://www.acs.org/"
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    American Chemical Society
-                  </Link>
-                </Typography>
-                <Typography variant="subtitle1" component="div">
-                  <time dateTime="2010-12">December 2010</time> -{' '}
-                  <time dateTime="2015-05">May 2015</time>
-                </Typography>
-                <ul>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Assisted the Assistant Director by generating regular and ad hoc reports for
-                      various departments, and maintained advertising reports for multiple
-                      platforms, aiding in forecasting and enhancing ad server reporting.
-                    </Typography>
-                  </li>
-                  <li>
-                    <Typography variant="subtitle2" component="p">
-                      Validated web analytics with each new deployment or product enhancement, and
-                      developed new standard monthly internal reports, improving reporting systems
-                      based on stakeholder feedback.
-                    </Typography>
-                  </li>
-                </ul>
-              </TabPanel>
-            </Box>
+              <Tab label="Digital Turbine" {...a11yProps(0)} />
+              <Tab label="Booz Allen Hamilton" {...a11yProps(1)} />
+              <Tab label="American Chemical Society" {...a11yProps(2)} />
+            </Tabs>
           </Box>
-        ) : (
-          <Box sx={{ width: '100%', minHeight: '625px' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered variant="scrollable"
-                scrollButtons
-                allowScrollButtonsMobile>
-                <Tab
-                  //onClick={() => handleTabClick('dt', 'mobile')}
-                  label="Digital Turbine"
-                  {...a11yProps(0)}
-                />
-                <Tab
-                  //onClick={() => handleTabClick('bah', 'mobile')}
-                  label="Booz Allen Hamilton"
-                  {...a11yProps(1)}
-                />
-                <Tab
-                  //onClick={() => handleTabClick('acs', 'mobile')}
-                  label="The American Chemical Society"
-                  {...a11yProps(2)}
-                />
-              </Tabs>
-            </Box>
-            <TabPanel value={value} index={0}>
-              <Typography variant="h4" component="h3">
-                Data Engineer at <br />
-                <Link
-                  //onClick={() => handleLinkClick('dt', 'mobile')}
-                  href="https://www.digitalturbine.com/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  Digital Turbine
-                </Link>
-              </Typography>
-              <Typography variant="subtitle1" component="div">
-                <time dateTime="2020-03">March 2020</time> - Present
-              </Typography>
-              <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Managed data architectures and led GA4 analytic migrations, optimizing BigQuery
-                    ETL pipelines for enhanced data accuracy and actionable insights.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Demonstrated proficiency in Google Analytics (GA4 & UA), GCP, and BigQuery, with
-                    a focus on creating and maintaining BigQuery tables and GA schemas.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Utilized Google APIs, written in Python, to construct scalable data
-                    architectures that expedited setup processes and facilitated data-driven
-                    decision-making. Ensured the robustness and reliability of these solutions
-                    through comprehensive testing using pytest.
-                  </Typography>
-                </li>
-              </ul>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              <Typography variant="h4" component="h3">
-                Lead Web Analyst at <br />
-                <Link
-                  //onClick={() => handleLinkClick('bah', 'mobile')}
-                  href="https://www.bah.com/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  Booz Allen Hamilton
-                </Link>
-              </Typography>
-              <Typography variant="subtitle1" component="div">
-                <time dateTime="2015-05">May 2015</time> -{' '}
-                <time dateTime="2020-03">March 2020</time>
-              </Typography>
-              <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Managed analytics for multiple HHS government websites as part of the Digital
-                    Analytics Program (DAP), conducting site/SEO audits, A/B testing, and goal
-                    funneling strategies. Ensured 100% accuracy of analytics tagging and set up
-                    automated reports.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Initiated data warehousing to inform decision-making, regularly analyzed metrics
-                    data, and generated reports. Advised clients on metrics analysis best practices
-                    and implemented BI tool data dashboards.
-                  </Typography>
-                </li>
-              </ul>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <Typography variant="h4" component="h3">
-                Web Analyst at <br />
-                <Link
-                  //onClick={() => handleLinkClick('acs', 'mobile')}
-                  href="https://www.acs.org/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  American Chemical Society
-                </Link>
-              </Typography>
-              <Typography variant="subtitle1" component="div">
-                <time dateTime="2010-12">December 2010</time> -{' '}
-                <time dateTime="2015-05">May 2015</time>
-              </Typography>
-              <ul>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Assisted the Assistant Director by generating regular and ad hoc reports for
-                    various departments, and maintained advertising reports for multiple platforms,
-                    aiding in forecasting and enhancing ad server reporting.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="subtitle2" component="p">
-                    Validated web analytics with each new deployment or product enhancement, and
-                    developed new standard monthly internal reports, improving reporting systems
-                    based on stakeholder feedback.
-                  </Typography>
-                </li>
-              </ul>
-            </TabPanel>
-          </Box>
-        )}
+          <TabPanel value={value} index={0}>
+            <Typography variant="h4" component="h3">
+              Lead Data Engineer at <br />
+              <Link href="https://www.digitalturbine.com/" target={'_blank'} rel="noreferrer">
+                Digital Turbine
+              </Link>
+            </Typography>
+            <Typography variant="subtitle1" component="div">
+              <time dateTime="2020-03">March 2020</time>- <time dateTime="2024-11">November 2024</time>
+            </Typography>
+            <ul>
+              <li>
+                Optimized BigQuery ETL pipelines, reducing processing time and cutting cloud storage costs by $100K+
+                annually.
+              </li>
+              <li>
+                Refactored legacy workflows, enhancing scalability and ensuring 99.99% data reliability for 20+ content
+                products.
+              </li>
+              <li>
+                Built real-time & batch data pipelines using Apache Airflow, Flink, Spark, and Python, supporting 10M
+                daily active users and 3B+ monthly ad impressions.
+              </li>
+              <li>
+                Led Databricks workflow optimizations, troubleshooting and maintaining critical data pipelines to ensure
+                100% uptime.
+              </li>
+              <li>
+                Integrated API-based data ingestion pipelines, improving ETL efficiency and reducing data processing
+                time by 40%.
+              </li>
+            </ul>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Typography variant="h4" component="h3">
+              Lead Web Analyst at <br />
+              <Link href="https://www.bah.com/" target={'_blank'} rel="noreferrer">
+                Booz Allen Hamilton
+              </Link>
+            </Typography>
+            <Typography variant="subtitle1" component="div">
+              <time dateTime="2015-05">May 2015</time> - <time dateTime="2020-03">March 2020</time>
+            </Typography>
+            <ul>
+              <li>
+                Managed analytics strategies for HHS and NIH government websites, improving SEO performance and user
+                engagement.
+              </li>
+              <li>
+                Developed and maintained Google Analytics & GTM tracking strategies, ensuring 100% accuracy in
+                reporting.
+              </li>
+              <li>
+                Implemented metrics dashboards with Tableau and Google Data Studio for real-time web traffic monitoring.
+              </li>
+              <li>Automated monthly and quarterly analytics reporting, reducing manual effort by 50%.</li>
+              <li>
+                Built data warehousing solutions, enabling actionable insights into healthcare web traffic trends.
+              </li>
+              <li>
+                Conducted A/B testing and UX analysis, optimizing web experiences and boosting engagement metrics.
+              </li>
+            </ul>
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <Typography variant="h4" component="h3">
+              Web Analytics Associate at <br />
+              <Link href="https://www.acs.org/" target={'_blank'} rel="noreferrer">
+                American Chemical Society
+              </Link>
+            </Typography>
+            <Typography variant="subtitle1" component="div">
+              <time dateTime="2010-12">December 2010</time> - <time dateTime="2015-05">May 2015</time>
+            </Typography>
+            <ul>
+              <li>
+                Managed day-to-day operations of the ACS Web Stats System, ensuring seamless marketing and sales
+                analytics.
+              </li>
+              <li>
+                Developed monthly and annual analytics reports, providing strategic insights for editorial and marketing
+                teams.
+              </li>
+              <li>
+                Conducted ad performance analysis, optimizing Google Search, YouTube, and external advertising
+                campaigns.
+              </li>
+            </ul>
+          </TabPanel>
+        </Box>
       </section>
     </Container>
   );
