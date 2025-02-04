@@ -33,10 +33,10 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
           >
             <Link
-              href="mailto:evandanrosa@gmail.com"
+              href="mailto:evandanrosa@gmail.com?subject=Let's Connect&body=Hi Evan,"
               target={'_blank'}
-              rel="noreferrer"
-              onClick={() => sendGTMEvent({ event: 'link_clicked', value: 'contact' })}
+              rel="noopener noreferrer"
+              onClick={() => sendGTMEvent({ event: 'email_clicked', value: 'contact' })}
             >
               <Button
                 variant="outlined"
@@ -50,6 +50,7 @@ export default function Contact() {
                 evandanrosa@gmail.com
               </Button>
             </Link>
+
           </m.div>
         </section>
       </Container>
