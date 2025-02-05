@@ -84,24 +84,19 @@ export default function Job() {
             </Typography>
             <ul>
               <li>
-                Optimized BigQuery ETL pipelines, reducing processing time and cutting cloud storage costs by $100K+
-                annually.
+                Refactored and optimized legacy BigQuery ETL pipelines, reducing processing time and cutting data costs by $100K+ while enhancing scalability and reliability (99.99%) across 20+ content products.
               </li>
               <li>
-                Refactored legacy workflows, enhancing scalability and ensuring 99.99% data reliability for 20+ content
-                products.
+                Built real-time & batch data pipelines using Apache Airflow, Flink, Spark, and Python, supporting 10M daily active users and 3B+ monthly ad impressions.
               </li>
               <li>
-                Built real-time & batch data pipelines using Apache Airflow, Flink, Spark, and Python, supporting 10M
-                daily active users and 3B+ monthly ad impressions.
+                Maintained Databricks workflows, troubleshooting pipeline issues to ensure data integrity, availability, and operations ensuring 100% uptime.
               </li>
               <li>
-                Led Databricks workflow optimizations, troubleshooting and maintaining critical data pipelines to ensure
-                100% uptime.
+                Integrated API-based data ingestion pipelines, improving ETL efficiency, reducing data processing time and data management.
               </li>
               <li>
-                Integrated API-based data ingestion pipelines, improving ETL efficiency and reducing data processing
-                time by 40%.
+                Integrated Looker with BigQuery and other data sources to create interactive dashboards, improving data accessibility for stakeholders.
               </li>
             </ul>
           </TabPanel>
