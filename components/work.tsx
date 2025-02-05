@@ -52,8 +52,7 @@ export default function Job() {
   return (
     <Container sx={{ paddingTop: '60px', paddingBottom: '130px' }}>
       <section id="Work">
-        <Typography variant="h4" component="h2" sx={{ paddingBottom: 3, paddingTop: 4 }}
-        >
+        <Typography variant="h4" component="h2" sx={{ paddingBottom: 3, paddingTop: 4 }}>
           💼 Where I've Worked
         </Typography>
         <Box sx={{ width: '100%' }}>
@@ -84,19 +83,25 @@ export default function Job() {
             </Typography>
             <ul>
               <li>
-                Refactored and optimized legacy BigQuery ETL pipelines, reducing processing time and cutting data costs by $100K+ while enhancing scalability and reliability (99.99%) across 20+ content products.
+                Refactored and optimized legacy BigQuery ETL pipelines, reducing processing time and cutting data costs
+                by $100K+ while enhancing scalability and reliability (99.99%) across 20+ content products.
               </li>
               <li>
-                Built real-time & batch data pipelines using Apache Airflow, Flink, Spark, and Python, supporting 10M daily active users and 3B+ monthly ad impressions.
+                Built batch data pipelines using Airflow, Spark, SQL, and Python to support 10M daily active users and
+                3B+ monthly ad impressions, while experimenting with Flink for real-time streaming performance
+                improvements.
               </li>
               <li>
-                Maintained Databricks workflows, troubleshooting pipeline issues to ensure data integrity, availability, and operations ensuring 100% uptime.
+                Integrated API-based data ingestion pipelines, improving ETL efficiency, reducing data processing time
+                and data management.
               </li>
               <li>
-                Integrated API-based data ingestion pipelines, improving ETL efficiency, reducing data processing time and data management.
+                Integrated Looker with BigQuery and other data sources to create interactive dashboards, improving data
+                accessibility for stakeholders.
               </li>
               <li>
-                Integrated Looker with BigQuery and other data sources to create interactive dashboards, improving data accessibility for stakeholders.
+                Maintained Databricks workflows, troubleshooting Spark-based pipeline issues in notebooks to ensure data
+                integrity, availability, and 100% uptime.
               </li>
             </ul>
           </TabPanel>
