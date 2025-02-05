@@ -23,7 +23,7 @@ function Error() {
   return (
     <>
       <Head>
-        <title>evro.eth | 500 Error | NGMI | GG</title>
+        <title>404 Error | Data Not Found</title>
         <link rel="icon" href="/favicon-32x32.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
@@ -47,18 +47,16 @@ function Error() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
           >
-            <Typography variant="h1">500</Typography>
-            <Typography variant="h2">GGs to my coding skills.</Typography>
+            <Typography variant="h1">404</Typography>
+            <Typography variant="h2">Data Not Found</Typography>
 
             <Typography variant="body1">
-              NGMI! If your on this page then there's a big problem going on with the site and I
-              need to fix it. GGs...
+              Uh-oh! This query returned no results. Looks like the data you're looking for isn't in the pipeline.
+              Maybe it's still processing, or the schema has changed. Try a different endpoint or check your data source!
             </Typography>
           </motion.div>
         </Container>
       </motion.div>
-
-      {/* Inspired by - https://brittanychiang.com/ */}
     </>
   );
 }
