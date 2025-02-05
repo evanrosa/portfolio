@@ -1,9 +1,9 @@
-# *
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-# Host
+# Specify the preferred host URL
 Host: https://evro.dev
 
-# Sitemaps
+# Declare the sitemap for search engine indexing
 Sitemap: https://evro.dev/sitemap.xml
