@@ -25,9 +25,10 @@ export default function Work({ projects }: ProjectPost) {
 
   return (
     <>
-      <Container>
+      <Container sx={{ padding: '60px 0' }}>
 
-        <Typography variant="h4" component="h2">
+        <Typography variant="h4" component="h2" sx={{ paddingBottom: 4, paddingTop: 6 }}
+        >
           🛠️ Things I've Built
         </Typography>
 
@@ -37,7 +38,6 @@ export default function Work({ projects }: ProjectPost) {
             spacing={4}
             direction="row"
             sx={{
-              paddingBottom: 30,
               textAlign: { xs: '-webkit-center' },
             }}
             paddingTop={4}

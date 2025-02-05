@@ -78,6 +78,7 @@ function Home({ projects }: ProjectsProps) {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+            className="pb-6"
           >
             <About />
           </m.div>
@@ -87,8 +88,9 @@ function Home({ projects }: ProjectsProps) {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+            className="pb-6"
           >
-            <Job />
+            <Work projects={projects} />
           </m.div>
 
           <m.div
@@ -96,9 +98,11 @@ function Home({ projects }: ProjectsProps) {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: 'easeIn', duration: 2, delay: 0.1 }}
+            className="pb-6"
           >
-            <Work projects={projects} />
+            <Job />
           </m.div>
+
 
           <Contact />
         </main>

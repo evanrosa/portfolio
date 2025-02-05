@@ -6,11 +6,8 @@ import ThemeToggle from './ThemeToggler';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { m, Variants } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
-
 import AppBar from '@mui/material/AppBar';
-
 import Box from '@mui/material/Box';
-
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -37,7 +34,7 @@ const navLinkVariants: Variants = {
 };
 
 const drawerWidth = 240;
-const navItems = ['About', 'Work', 'Projects', 'Contact'];
+const navItems = ['About', 'Projects', 'Work', 'Contact'];
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -156,7 +153,7 @@ export default function DrawerAppBar(props) {
                     variants={navLinkVariants}
                     component={m.div}
                   >
-                    <Typography className="count" variant="body2">
+                    <Typography variant="body2">
                       {item}
                     </Typography>
                   </Button>

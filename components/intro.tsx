@@ -57,7 +57,7 @@ export default function Intro() {
             Designing scalable streaming and batch ETL pipelines to transform raw data into actionable insights. Leveraging expertise in Python, SQL, Airflow, Kafka, Spark, Flink, and cloud platforms to drive business intelligence, optimize workflows, and build resilient data architectures.
           </Typography>
 
-          <Grid container spacing={4}>
+          <Grid container spacing={4} sx={{ paddingBottom: 4 }}>
             <Grid size="auto">
               <Box sx={{ maxWidth: '300px' }}>
                 <m.div

@@ -6,7 +6,6 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { sendGTMEvent } from '@next/third-parties/google';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -17,7 +16,7 @@ interface TabPanelProps {
 export default function Job() {
   const IsNotMobile = useMediaQuery('(min-width:900px)');
   const [value, setValue] = React.useState(0);
-  const [isDesktop, setIsDesktop] = React.useState(false);
+  const [, setIsDesktop] = React.useState(false);
 
   React.useEffect(() => {
     setIsDesktop(IsNotMobile);
@@ -51,12 +50,13 @@ export default function Job() {
   }
 
   return (
-    <Container sx={{ padding: '60px 0' }}>
+    <Container sx={{ paddingTop: '60px', paddingBottom: '130px' }}>
       <section id="Work">
-        <Typography variant="h4" component="h2">
+        <Typography variant="h4" component="h2" sx={{ paddingBottom: 3, paddingTop: 4 }}
+        >
           💼 Where I've Worked
         </Typography>
-        <Box sx={{ width: '100%', minHeight: '500px' }}>
+        <Box sx={{ width: '100%' }}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs
               value={value}

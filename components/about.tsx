@@ -11,7 +11,7 @@ export default function About() {
       <Container sx={{ paddingBottom: '60px' }}>
         {/* ABOUT */}
         <section id="About">
-          <Grid container>
+          <Grid container sx={{ paddingBottom: 4 }}>
             <Grid size={{ xs: 12, md: 12 }}>
               <Typography variant="h4" component="h2">
                 🚀 Data Engineer | Scaling Data Pipelines | Cloud & Distributed Computing

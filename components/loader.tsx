@@ -66,7 +66,7 @@ const Loader = () => {
     >
       <Box sx={{ textAlign: 'center', marginBottom: '3rem' }}>
         <TypeAnimation
-          sequence={['Loading page...', 'Almost there...', 'Just a moment...']}
+          sequence={['Loading evro.dev...', 'Almost there...', 'Just a moment...']}
           wrapper="div"
           className="loader-text"
           cursor={true}
