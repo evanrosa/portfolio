@@ -101,7 +101,7 @@ export default function Intro() {
                   whileTap={{ scale: 0.9 }}
                 >
                   <Link
-                    href="https://drive.google.com/file/d/1nWhN_1u9V8RyiqjV6naVPuUE3gnjqqo0/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1eVJJDfaARY-l-4cmbPSjqzHHlEwo-pSb/view?usp=sharing"
                     target={'_blank'}
                     rel="noreferrer"
                     onClick={() => sendGTMEvent({ event: 'button_clicked', value: 'resume' })}
