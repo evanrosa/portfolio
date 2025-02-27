@@ -79,7 +79,7 @@ export default function Job() {
               </Link>
             </Typography>
             <Typography variant="subtitle1" component="div">
-              <time dateTime="2020-03">March 2020</time>- <time dateTime="2024-11">November 2024</time>
+              <time dateTime="2020-03">March 2020</time> - <time dateTime="2024-11">November 2024</time>
             </Typography>
             <ul>
               <li>
